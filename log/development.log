@@ -1,0 +1,1109 @@
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (39.0ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (6.0ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20100705214850)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "email" varchar(255), "phone" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100705214850')[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("users")[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20100705214850)
+Migrating to CreateMicroposts (20100705215413)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (28.0ms)[0m   [0mCREATE TABLE "microposts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "content" varchar(255), "user_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100705215413')[0m
+  [4;35;1mSQL (1.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("microposts")[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mPRAGMA index_list("users")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20100705214850)
+Migrating to CreateMicroposts (20100705215413)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (1.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("microposts")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("users")[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-07-05 23:04:55) [GET]
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" [0m
+Rendering template within layouts/users
+Rendering users/index
+Completed in 2610ms (View: 2482, DB: 0) | 200 OK [http://localhost/users]
+
+
+Processing MicropostsController#index (for 127.0.0.1 at 2010-07-05 23:05:07) [GET]
+
+ArgumentError (wrong number of arguments (0 for 1)):
+  app/models/micropost.rb:4:in `<class:Micropost>'
+  app/models/micropost.rb:1:in `<top (required)>'
+  app/controllers/microposts_controller.rb:5:in `index'
+  <internal:prelude>:8:in `synchronize'
+  C:/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  C:/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  C:/Ruby/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendered rescues/_trace (81.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (3.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20100705214850)
+Migrating to CreateMicroposts (20100705215413)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (1.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("microposts")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("users")[0m
+
+
+Processing MicropostsController#index (for 127.0.0.1 at 2010-07-05 23:12:26) [GET]
+  [4;36;1mSQL (1.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+NoMethodError (undefined method `validate_length_of' for #<Class:0x4bf6e20>):
+  app/models/micropost.rb:4:in `<class:Micropost>'
+  app/models/micropost.rb:1:in `<top (required)>'
+  app/controllers/microposts_controller.rb:5:in `index'
+  <internal:prelude>:8:in `synchronize'
+  C:/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  C:/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  C:/Ruby/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendered rescues/_trace (71.0ms)
+Rendered rescues/_request_and_response (2.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20100705214850)
+Migrating to CreateMicroposts (20100705215413)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (1.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("microposts")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("users")[0m
+
+
+Processing MicropostsController#index (for 127.0.0.1 at 2010-07-05 23:14:21) [GET]
+  [4;36;1mMicropost Load (0.0ms)[0m   [0;1mSELECT * FROM "microposts" [0m
+Rendering template within layouts/microposts
+Rendering microposts/index
+Completed in 169ms (View: 115, DB: 0) | 200 OK [http://localhost/microposts]
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (5.0ms)[0m   [0;1mCREATE TABLE "microposts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "content" varchar(255), "user_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (31.0ms)[0m   [0;1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "email" varchar(255), "phone" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (5.0ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (6.0ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM "schema_migrations"[0m
+  [4;36;1mSQL (94.0ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100705215413')[0m
+  [4;35;1mSQL (18.0ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20100705214850')[0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" [0m
+  [4;35;1mSQL (1.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" [0m
+  [4;36;1mUser Create (0.0ms)[0m   [0;1mINSERT INTO "users" ("name", "email", "phone", "created_at", "updated_at") VALUES('Deepak', 'dcdutt@gmail.com', '16132231113', '2010-07-06 17:08:55', '2010-07-06 17:08:55')[0m
+  [4;35;1mUser Create (0.0ms)[0m   [0mINSERT INTO "users" ("name", "email", "phone", "created_at", "updated_at") VALUES('Deepak1', 'dcdutta@gmail.com', '16132231114', '2010-07-06 17:09:25', '2010-07-06 17:09:25')[0m
+  [4;36;1mUser Create (1.0ms)[0m   [0;1mINSERT INTO "users" ("name", "email", "phone", "created_at", "updated_at") VALUES('dd', 'dd@gg.com', '12345678911', '2010-07-06 17:20:14', '2010-07-06 17:20:14')[0m
+  [4;36;1mUser Create (1.0ms)[0m   [0;1mINSERT INTO "users" ("name", "email", "phone", "created_at", "updated_at") VALUES('dd3', 'dd@gga.com', '12345678911', '2010-07-06 17:24:16', '2010-07-06 17:24:16')[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'dd@gg.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16132241414') LIMIT 1[0m
+  [4;36;1mUser Create (1.0ms)[0m   [0;1mINSERT INTO "users" ("name", "email", "phone", "created_at", "updated_at") VALUES('dd', 'dd@gg.com', '16132241414', '2010-07-06 18:01:43', '2010-07-06 18:01:43')[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'dd@gg.com') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16132241414') LIMIT 1[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20100705214850)
+Migrating to CreateMicroposts (20100705215413)
+Migrating to AddEmailUniquenessIndex (20100706173641)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSQLite3::BusyException: database is locked: CREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'dcdutt@gmail.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16136083297') LIMIT 1[0m
+  [4;36;1mUser Create (1.0ms)[0m   [0;1mINSERT INTO "users" ("name", "email", "phone", "created_at", "updated_at") VALUES('Deepak', 'dcdutt@gmail.com', '16136083297', '2010-07-06 18:35:38', '2010-07-06 18:35:38')[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2010-07-06 14:40:38) [GET]
+  Parameters: {"id"=>"show"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find User with ID=show):
+  app/controllers/users_controller.rb:16:in `show'
+  <internal:prelude>:8:in `synchronize'
+  C:/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  C:/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  C:/Ruby/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendered rescues/_trace (56.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (not_found)
+
+
+Processing UsersController#show (for 127.0.0.1 at 2010-07-06 14:40:41) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendering template within layouts/users
+Rendering users/show
+Completed in 106ms (View: 99, DB: 0) | 200 OK [http://localhost/users/show/1]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-07-06 14:41:05) [GET]
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" [0m
+Rendering template within layouts/users
+Rendering users/index
+Completed in 2457ms (View: 2449, DB: 0) | 200 OK [http://localhost/users]
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-07-06 14:41:21) [GET]
+Rendering template within layouts/users
+Rendering users/new
+Completed in 29ms (View: 18, DB: 0) | 200 OK [http://localhost/users/new]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-07-06 14:42:52) [GET]
+
+ActionController::RoutingError (No route matches "/show" with {:method=>:get}):
+  <internal:prelude>:8:in `synchronize'
+  C:/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  C:/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  C:/Ruby/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-07-06 14:44:50) [GET]
+
+ActionController::UnknownAction (No action responded to index. Actions: company, contact, home, product, and services):
+  <internal:prelude>:8:in `synchronize'
+  C:/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  C:/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  C:/Ruby/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing PagesController#home (for 127.0.0.1 at 2010-07-06 14:45:31) [GET]
+Rendering template within layouts/application
+Rendering pages/home
+
+ActionView::TemplateError (undefined local variable or method `title' for #<ActionView::Base:0x5d09f60>) on line #5 of app/views/layouts/application.html.erb:
+2:   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+3: <html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+4:   <head>
+5:     <title><%= title %></title>
+6: 	<%= render 'layouts/stylesheets' %>
+7: <!-- 
+8:     <%= stylesheet_link_tag 'blueprint/screen', :media => 'screen' %>
+
+    app/views/layouts/application.html.erb:5
+    <internal:prelude>:8:in `synchronize'
+    C:/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+    C:/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+    C:/Ruby/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendered rescues/_trace (62.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PagesController#home (for 127.0.0.1 at 2010-07-06 14:47:35) [GET]
+Rendering template within layouts/application
+Rendering pages/home
+
+ActionView::TemplateError (undefined local variable or method `title' for #<ActionView::Base:0x50d3860>) on line #5 of app/views/layouts/application.html.erb:
+2:   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+3: <html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+4:   <head>
+5:     <title><%= title %></title>
+6: 	<%= render 'layouts/stylesheets' %>
+7: <!-- 
+8:     <%= stylesheet_link_tag 'blueprint/screen', :media => 'screen' %>
+
+    app/views/layouts/application.html.erb:5
+    <internal:prelude>:8:in `synchronize'
+    C:/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+    C:/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+    C:/Ruby/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendered rescues/_trace (63.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PagesController#home (for 127.0.0.1 at 2010-07-06 14:49:21) [GET]
+Rendering template within layouts/application
+Rendering pages/home
+
+ActionView::TemplateError (undefined local variable or method `title' for #<ActionView::Base:0x40303c0>) on line #5 of app/views/layouts/application.html.erb:
+2:   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+3: <html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+4:   <head>
+5:     <title><%= title %></title>
+6: 	<%= render 'layouts/stylesheets' %>
+7: <!-- 
+8:     <%= stylesheet_link_tag 'blueprint/screen', :media => 'screen' %>
+
+    app/views/layouts/application.html.erb:5
+    <internal:prelude>:8:in `synchronize'
+    C:/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+    C:/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+    C:/Ruby/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendered rescues/_trace (125.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PagesController#home (for 127.0.0.1 at 2010-07-06 14:49:23) [GET]
+Rendering template within layouts/application
+Rendering pages/home
+
+ActionView::TemplateError (undefined local variable or method `title' for #<ActionView::Base:0x54b5100>) on line #5 of app/views/layouts/application.html.erb:
+2:   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+3: <html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+4:   <head>
+5:     <title><%= title %></title>
+6: 	<%= render 'layouts/stylesheets' %>
+7: <!-- 
+8:     <%= stylesheet_link_tag 'blueprint/screen', :media => 'screen' %>
+
+    app/views/layouts/application.html.erb:5
+    <internal:prelude>:8:in `synchronize'
+    C:/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+    C:/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+    C:/Ruby/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendered rescues/_trace (86.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PagesController#home (for 127.0.0.1 at 2010-07-06 14:52:42) [GET]
+Rendering template within layouts/application
+Rendering pages/home
+
+ActionView::TemplateError (Missing layout layouts/_stylesheets.erb in view path app/views) on line #6 of app/views/layouts/application.html.erb:
+3: <html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+4:   <head>
+5:     <title><%= title %></title>
+6: 	<%= render 'layouts/stylesheets' %>
+7: <!-- 
+8:     <%= stylesheet_link_tag 'blueprint/screen', :media => 'screen' %>
+9:     <%= stylesheet_link_tag 'blueprint/print',  :media => 'print' %> -->
+
+    app/views/layouts/application.html.erb:6
+    <internal:prelude>:8:in `synchronize'
+    C:/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+    C:/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+    C:/Ruby/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendered rescues/_trace (69.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PagesController#home (for 127.0.0.1 at 2010-07-06 15:05:49) [GET]
+Rendering template within layouts/application
+Rendering pages/home
+Rendered layouts/_stylesheets (3.0ms)
+Rendered layouts/_header (2.0ms)
+
+ActionView::TemplateError (Missing template layout/_footer.erb in view path app/views) on line #16 of app/views/layouts/application.html.erb:
+13:       <div id="content" class="round">
+14:         <%= yield %>
+15:       </div>
+16: 	<%= render 'layout/footer' %>
+17: 	<%= debug(params) if Rails.env.development? %>
+18:     </div>
+19:   </body>
+
+    app/views/layouts/application.html.erb:16
+    <internal:prelude>:8:in `synchronize'
+    C:/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+    C:/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+    C:/Ruby/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendered rescues/_trace (114.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PagesController#home (for 127.0.0.1 at 2010-07-06 15:08:55) [GET]
+Rendering template within layouts/application
+Rendering pages/home
+Rendered layouts/_stylesheets (1.0ms)
+Rendered layouts/_header (1.0ms)
+
+ActionView::TemplateError (Missing template layout/_footer.erb in view path app/views) on line #16 of app/views/layouts/application.html.erb:
+13:       <div id="content" class="round">
+14:         <%= yield %>
+15:       </div>
+16: 	<%= render 'layout/footer' %>
+17: 	<%= debug(params) if Rails.env.development? %>
+18:     </div>
+19:   </body>
+
+    app/views/layouts/application.html.erb:16
+    <internal:prelude>:8:in `synchronize'
+    C:/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+    C:/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+    C:/Ruby/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendered rescues/_trace (86.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PagesController#home (for 127.0.0.1 at 2010-07-06 15:09:35) [GET]
+Rendering template within layouts/application
+Rendering pages/home
+Rendered layouts/_stylesheets (2.0ms)
+Rendered layouts/_header (1.0ms)
+
+ActionView::TemplateError (undefined local variable or method `about_path' for #<ActionView::Base:0x4006760>) on line #3 of app/views/layouts/_footer.html.erb:
+1: <div id="footer">
+2: <ul class="navigation round">
+3: <li><%= link_to "About", about_path %></li>
+4: <li><%= link_to "Contact", contact_path %></li>
+5: <li><a href="http://news.railstutorial.org/">News</a></li>
+6: <li><a href="http://www.railstutorial.org/">Rails Tutorial</a></li>
+
+    app/views/layouts/_footer.html.erb:3
+    app/views/layouts/application.html.erb:16
+    <internal:prelude>:8:in `synchronize'
+    C:/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+    C:/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+    C:/Ruby/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendered rescues/_trace (126.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PagesController#home (for 127.0.0.1 at 2010-07-06 15:09:58) [GET]
+Rendering template within layouts/application
+Rendering pages/home
+Rendered layouts/_stylesheets (1.0ms)
+Rendered layouts/_header (0.0ms)
+Rendered layouts/_footer (1.0ms)
+Completed in 19ms (View: 17, DB: 0) | 200 OK [http://localhost/pages/home]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-07-06 15:09:58) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/blueprint/screen.css" with {:method=>:get}):
+  <internal:prelude>:8:in `synchronize'
+  C:/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  C:/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  C:/Ruby/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-07-06 15:09:59) [GET]
+
+ActionController::RoutingError (No route matches "/images/logo.png" with {:method=>:get}):
+  <internal:prelude>:8:in `synchronize'
+  C:/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  C:/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  C:/Ruby/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-07-06 15:10:00) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/blueprint/print.css" with {:method=>:get}):
+  <internal:prelude>:8:in `synchronize'
+  C:/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  C:/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  C:/Ruby/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing PagesController#home (for 127.0.0.1 at 2010-07-06 19:24:49) [GET]
+Rendering template within layouts/application
+Rendering pages/home
+Rendered layouts/_stylesheets (14.0ms)
+Rendered layouts/_header (131.0ms)
+Rendered layouts/_footer (12.0ms)
+Completed in 242ms (View: 241, DB: 0) | 200 OK [http://localhost/pages/home]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-07-06 19:24:49) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/blueprint/screen.css" with {:method=>:get}):
+  <internal:prelude>:8:in `synchronize'
+  C:/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  C:/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  C:/Ruby/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-07-06 19:24:50) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/blueprint/print.css" with {:method=>:get}):
+  <internal:prelude>:8:in `synchronize'
+  C:/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  C:/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  C:/Ruby/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-07-06 19:24:50) [GET]
+
+ActionController::RoutingError (No route matches "/images/logo.png" with {:method=>:get}):
+  <internal:prelude>:8:in `synchronize'
+  C:/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  C:/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  C:/Ruby/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-07-06 19:34:43) [GET]
+
+ActionController::RoutingError (No route matches "/pages/users/show/1" with {:method=>:get}):
+  <internal:prelude>:8:in `synchronize'
+  C:/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  C:/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  C:/Ruby/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing UsersController#show (for 127.0.0.1 at 2010-07-06 19:34:52) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendering template within layouts/users
+Rendering users/show
+Completed in 89ms (View: 54, DB: 0) | 200 OK [http://localhost/users/show/1]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-07-06 19:35:09) [GET]
+
+ActionController::RoutingError (No route matches "/hom/users/show/1" with {:method=>:get}):
+  <internal:prelude>:8:in `synchronize'
+  C:/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  C:/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  C:/Ruby/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-07-06 19:35:13) [GET]
+
+ActionController::RoutingError (No route matches "/home/users/show/1" with {:method=>:get}):
+  <internal:prelude>:8:in `synchronize'
+  C:/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  C:/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  C:/Ruby/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing PagesController#home (for 127.0.0.1 at 2010-07-06 23:33:54) [GET]
+Rendering template within layouts/application
+Rendering pages/home
+Rendered layouts/_stylesheets (1.0ms)
+Rendered layouts/_header (3.0ms)
+
+ActionView::TemplateError (undefined local variable or method `about_path' for #<ActionView::Base:0x65bed20>) on line #3 of app/views/layouts/_footer.html.erb:
+1: <div id="footer">
+2: <ul class="navigation round">
+3: <li><%= link_to "About", about_path %></li>
+4: <li><%= link_to "Contact", contact_path %></li>
+5: <li><a href="http://news.railstutorial.org/">News</a></li>
+6: <li><a href="http://www.railstutorial.org/">Rails Tutorial</a></li>
+
+    app/views/layouts/_footer.html.erb:3
+    app/views/layouts/application.html.erb:16
+    <internal:prelude>:8:in `synchronize'
+    C:/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+    C:/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+    C:/Ruby/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendered rescues/_trace (84.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PagesController#home (for 127.0.0.1 at 2010-07-06 23:35:39) [GET]
+Rendering template within layouts/application
+Rendering pages/home
+Rendered layouts/_stylesheets (1.0ms)
+Rendered layouts/_header (1.0ms)
+
+ActionView::TemplateError (undefined local variable or method `about_path' for #<ActionView::Base:0x4d37a80>) on line #3 of app/views/layouts/_footer.html.erb:
+1: <div id="footer">
+2: <ul class="navigation round">
+3: <li><%= link_to "About", about_path %></li>
+4: <li><%= link_to "Contact", contact_path %></li>
+5: <li><a href="http://news.railstutorial.org/">News</a></li>
+6: <li><a href="http://www.railstutorial.org/">Rails Tutorial</a></li>
+
+    app/views/layouts/_footer.html.erb:3
+    app/views/layouts/application.html.erb:16
+    <internal:prelude>:8:in `synchronize'
+    C:/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+    C:/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+    C:/Ruby/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendered rescues/_trace (122.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PagesController#home (for 127.0.0.1 at 2010-07-06 23:35:42) [GET]
+Rendering template within layouts/application
+Rendering pages/home
+Rendered layouts/_stylesheets (1.0ms)
+Rendered layouts/_header (0.0ms)
+
+ActionView::TemplateError (undefined local variable or method `about_path' for #<ActionView::Base:0x57f2020>) on line #3 of app/views/layouts/_footer.html.erb:
+1: <div id="footer">
+2: <ul class="navigation round">
+3: <li><%= link_to "About", about_path %></li>
+4: <li><%= link_to "Contact", contact_path %></li>
+5: <li><a href="http://news.railstutorial.org/">News</a></li>
+6: <li><a href="http://www.railstutorial.org/">Rails Tutorial</a></li>
+
+    app/views/layouts/_footer.html.erb:3
+    app/views/layouts/application.html.erb:16
+    <internal:prelude>:8:in `synchronize'
+    C:/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+    C:/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+    C:/Ruby/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendered rescues/_trace (103.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PagesController#home (for 127.0.0.1 at 2010-07-06 23:35:42) [GET]
+Rendering template within layouts/application
+Rendering pages/home
+Rendered layouts/_stylesheets (1.0ms)
+Rendered layouts/_header (1.0ms)
+
+ActionView::TemplateError (undefined local variable or method `about_path' for #<ActionView::Base:0x4f6e820>) on line #3 of app/views/layouts/_footer.html.erb:
+1: <div id="footer">
+2: <ul class="navigation round">
+3: <li><%= link_to "About", about_path %></li>
+4: <li><%= link_to "Contact", contact_path %></li>
+5: <li><a href="http://news.railstutorial.org/">News</a></li>
+6: <li><a href="http://www.railstutorial.org/">Rails Tutorial</a></li>
+
+    app/views/layouts/_footer.html.erb:3
+    app/views/layouts/application.html.erb:16
+    <internal:prelude>:8:in `synchronize'
+    C:/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+    C:/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+    C:/Ruby/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendered rescues/_trace (80.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PagesController#home (for 127.0.0.1 at 2010-07-06 23:36:02) [GET]
+Rendering template within layouts/application
+Rendering pages/home
+Rendered layouts/_stylesheets (1.0ms)
+Rendered layouts/_header (1.0ms)
+Rendered layouts/_footer (1.0ms)
+Completed in 8ms (View: 6, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-07-06 23:36:03) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/blueprint/screen.css" with {:method=>:get}):
+  <internal:prelude>:8:in `synchronize'
+  C:/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  C:/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  C:/Ruby/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-07-06 23:36:04) [GET]
+
+ActionController::RoutingError (No route matches "/images/logo.png" with {:method=>:get}):
+  <internal:prelude>:8:in `synchronize'
+  C:/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  C:/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  C:/Ruby/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-07-06 23:36:05) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/blueprint/print.css" with {:method=>:get}):
+  <internal:prelude>:8:in `synchronize'
+  C:/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  C:/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  C:/Ruby/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing PagesController#home (for 127.0.0.1 at 2010-07-06 23:36:09) [GET]
+Rendering template within layouts/application
+Rendering pages/home
+Rendered layouts/_stylesheets (1.0ms)
+Rendered layouts/_header (1.0ms)
+Rendered layouts/_footer (0.0ms)
+Completed in 8ms (View: 6, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-07-06 23:36:09) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/blueprint/print.css" with {:method=>:get}):
+  <internal:prelude>:8:in `synchronize'
+  C:/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  C:/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  C:/Ruby/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-07-06 23:36:09) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/blueprint/screen.css" with {:method=>:get}):
+  <internal:prelude>:8:in `synchronize'
+  C:/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  C:/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  C:/Ruby/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-07-06 23:36:09) [GET]
+
+ActionController::RoutingError (No route matches "/images/logo.png" with {:method=>:get}):
+  <internal:prelude>:8:in `synchronize'
+  C:/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  C:/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  C:/Ruby/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing PagesController#home (for 127.0.0.1 at 2010-07-06 23:37:34) [GET]
+Rendering template within layouts/application
+Rendering pages/home
+Rendered layouts/_stylesheets (1.0ms)
+Rendered layouts/_header (2.0ms)
+Rendered layouts/_footer (0.0ms)
+Completed in 23ms (View: 22, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-07-06 23:37:34) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/blueprint/screen.css" with {:method=>:get}):
+  <internal:prelude>:8:in `synchronize'
+  C:/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  C:/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  C:/Ruby/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-07-06 23:37:35) [GET]
+
+ActionController::RoutingError (No route matches "/images/logo.png" with {:method=>:get}):
+  <internal:prelude>:8:in `synchronize'
+  C:/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  C:/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  C:/Ruby/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-07-06 23:37:36) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/blueprint/print.css" with {:method=>:get}):
+  <internal:prelude>:8:in `synchronize'
+  C:/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  C:/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  C:/Ruby/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing UsersController#show (for 127.0.0.1 at 2010-07-06 23:43:41) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendering template within layouts/users
+Rendering users/show
+Completed in 37ms (View: 25, DB: 0) | 200 OK [http://localhost/users/show/1]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2010-07-06 23:52:05) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendering template within layouts/users
+Rendering users/show
+Completed in 10ms (View: 3, DB: 0) | 200 OK [http://localhost/users/show/1]
+
+
+Processing PagesController#home (for 127.0.0.1 at 2010-07-06 23:52:09) [GET]
+Rendering template within layouts/application
+Rendering pages/home
+Rendered layouts/_stylesheets (1.0ms)
+Rendered layouts/_header (1.0ms)
+Rendered layouts/_footer (1.0ms)
+Completed in 30ms (View: 28, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-07-06 23:52:09) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/blueprint/screen.css" with {:method=>:get}):
+  <internal:prelude>:8:in `synchronize'
+  C:/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  C:/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  C:/Ruby/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-07-06 23:52:10) [GET]
+
+ActionController::RoutingError (No route matches "/images/logo.png" with {:method=>:get}):
+  <internal:prelude>:8:in `synchronize'
+  C:/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  C:/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  C:/Ruby/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-07-06 23:52:10) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/blueprint/print.css" with {:method=>:get}):
+  <internal:prelude>:8:in `synchronize'
+  C:/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  C:/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  C:/Ruby/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-07-06 23:52:18) [GET]
+Rendering template within layouts/users
+Rendering users/new
+Completed in 30ms (View: 19, DB: 0) | 200 OK [http://localhost/signup]
+
+
+Processing UsersController#create (for 127.0.0.1 at 2010-07-06 23:52:38) [POST]
+  Parameters: {"authenticity_token"=>"1oFdl/nKRLRX9q5QOmQBOOAJJ72tZEDi6lsSPi07noE=", "user"=>{"name"=>"Rohini", "email"=>"ddutt@zighra.com", "phone"=>"16136083297"}, "commit"=>"Create"}
+  [4;35;1mUser Load (47.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'ddutt@zighra.com') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16136083297') LIMIT 1[0m
+Rendering template within layouts/users
+Rendering users/new
+Completed in 79ms (View: 16, DB: 47) | 200 OK [http://localhost/users]
+
+
+Processing UsersController#create (for 127.0.0.1 at 2010-07-06 23:52:45) [POST]
+  Parameters: {"authenticity_token"=>"1oFdl/nKRLRX9q5QOmQBOOAJJ72tZEDi6lsSPi07noE=", "user"=>{"name"=>"Rohini", "email"=>"ddutt@zighra.com", "phone"=>"16136083299"}, "commit"=>"Create"}
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'ddutt@zighra.com') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16136083299') LIMIT 1[0m
+  [4;35;1mUser Create (2.0ms)[0m   [0mINSERT INTO "users" ("name", "email", "phone", "created_at", "updated_at") VALUES('Rohini', 'ddutt@zighra.com', '16136083299', '2010-07-07 03:52:45', '2010-07-07 03:52:45')[0m
+Redirected to http://localhost:3000/users/2
+Completed in 36ms (DB: 3) | 302 Found [http://localhost/users]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2010-07-06 23:52:45) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+Rendering template within layouts/users
+Rendering users/show
+Completed in 17ms (View: 5, DB: 1) | 200 OK [http://localhost/users/2]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-07-06 23:55:21) [GET]
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" [0m
+Rendering template within layouts/users
+Rendering users/index
+Rendered layouts/_stylesheets (2.0ms)
+Rendered layouts/_header (1.0ms)
+Rendered layouts/_footer (0.0ms)
+Completed in 52ms (View: 43, DB: 1) | 200 OK [http://localhost/users]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-07-06 23:55:21) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/blueprint/screen.css" with {:method=>:get}):
+  <internal:prelude>:8:in `synchronize'
+  C:/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  C:/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  C:/Ruby/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-07-06 23:55:22) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/blueprint/print.css" with {:method=>:get}):
+  <internal:prelude>:8:in `synchronize'
+  C:/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  C:/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  C:/Ruby/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-07-06 23:55:22) [GET]
+
+ActionController::RoutingError (No route matches "/images/logo.png" with {:method=>:get}):
+  <internal:prelude>:8:in `synchronize'
+  C:/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  C:/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  C:/Ruby/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing UsersController#show (for 127.0.0.1 at 2010-07-06 23:55:33) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendering template within layouts/users
+Rendering users/show
+Rendered layouts/_stylesheets (1.0ms)
+Rendered layouts/_header (1.0ms)
+Rendered layouts/_footer (1.0ms)
+Completed in 18ms (View: 7, DB: 0) | 200 OK [http://localhost/users/1]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-07-06 23:55:33) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/blueprint/screen.css" with {:method=>:get}):
+  <internal:prelude>:8:in `synchronize'
+  C:/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  C:/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  C:/Ruby/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-07-06 23:55:33) [GET]
+
+ActionController::RoutingError (No route matches "/images/logo.png" with {:method=>:get}):
+  <internal:prelude>:8:in `synchronize'
+  C:/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  C:/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  C:/Ruby/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-07-06 23:55:33) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/blueprint/print.css" with {:method=>:get}):
+  <internal:prelude>:8:in `synchronize'
+  C:/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  C:/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  C:/Ruby/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing UsersController#show (for 127.0.0.1 at 2010-07-06 23:55:40) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendering template within layouts/users
+Rendering users/show
+Rendered layouts/_stylesheets (1.0ms)
+Rendered layouts/_header (0.0ms)
+Rendered layouts/_footer (0.0ms)
+Completed in 19ms (View: 8, DB: 1) | 200 OK [http://localhost/users/show/1]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-07-06 23:55:40) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/blueprint/print.css" with {:method=>:get}):
+  <internal:prelude>:8:in `synchronize'
+  C:/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  C:/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  C:/Ruby/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-07-06 23:55:40) [GET]
+
+ActionController::RoutingError (No route matches "/images/logo.png" with {:method=>:get}):
+  <internal:prelude>:8:in `synchronize'
+  C:/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  C:/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  C:/Ruby/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-07-06 23:55:40) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/blueprint/screen.css" with {:method=>:get}):
+  <internal:prelude>:8:in `synchronize'
+  C:/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  C:/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  C:/Ruby/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing UsersController#show (for 127.0.0.1 at 2010-07-06 23:55:44) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+Rendering template within layouts/users
+Rendering users/show
+Rendered layouts/_stylesheets (1.0ms)
+Rendered layouts/_header (1.0ms)
+Rendered layouts/_footer (0.0ms)
+Completed in 12ms (View: 5, DB: 1) | 200 OK [http://localhost/users/show/2]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-07-06 23:55:44) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/blueprint/screen.css" with {:method=>:get}):
+  <internal:prelude>:8:in `synchronize'
+  C:/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  C:/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  C:/Ruby/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-07-06 23:55:44) [GET]
+
+ActionController::RoutingError (No route matches "/images/logo.png" with {:method=>:get}):
+  <internal:prelude>:8:in `synchronize'
+  C:/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  C:/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  C:/Ruby/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-07-06 23:55:44) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/blueprint/print.css" with {:method=>:get}):
+  <internal:prelude>:8:in `synchronize'
+  C:/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  C:/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  C:/Ruby/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (not_found)

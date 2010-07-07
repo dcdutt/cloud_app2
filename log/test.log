@@ -1,0 +1,28 @@
+
+
+Processing PagesController#company (for 0.0.0.0 at 2010-07-05 23:14:56) [GET]
+Rendering pages/company
+Completed in 2ms (View: 1, DB: 0) | 200 OK [http://test.host/pages/company]
+
+
+Processing PagesController#services (for 0.0.0.0 at 2010-07-05 23:14:56) [GET]
+Rendering pages/services
+Completed in 0ms (View: 0, DB: 0) | 200 OK [http://test.host/pages/services]
+
+
+Processing PagesController#product (for 0.0.0.0 at 2010-07-05 23:14:56) [GET]
+Rendering pages/product
+Completed in 0ms (View: 0, DB: 0) | 200 OK [http://test.host/pages/product]
+
+
+Processing PagesController#contact (for 0.0.0.0 at 2010-07-05 23:14:56) [GET]
+Rendering pages/contact
+Completed in 0ms (View: 0, DB: 0) | 200 OK [http://test.host/pages/contact]
+
+
+Processing PagesController#home (for 0.0.0.0 at 2010-07-05 23:14:56) [GET]
+Rendering pages/home
+Completed in 1ms (View: 1, DB: 0) | 200 OK [http://test.host/pages/home]
+  [4;36;1mUser Create (1.0ms)[0m   [0;1mINSERT INTO "users" ("name", "email", "phone", "created_at", "updated_at") VALUES('Sample User', 'user@abc.com', 16138768788, '2010-07-06 14:54:48', '2010-07-06 14:54:48')[0m
+  [4;36;1mUser Create (0.0ms)[0m   [0;1mINSERT INTO "users" ("name", "email", "phone", "created_at", "updated_at") VALUES('Sample User', 'user@abc.com', 16138768788, '2010-07-06 14:56:11', '2010-07-06 14:56:11')[0m
+  [4;36;1mUser Create (1.0ms)[0m   [0;1mINSERT INTO "users" ("name", "email", "phone", "created_at", "updated_at") VALUES('Sample User', 'user@abc.com', 16138768788, '2010-07-06 15:42:11', '2010-07-06 15:42:11')[0m
