@@ -26,3 +26,31 @@ Completed in 1ms (View: 1, DB: 0) | 200 OK [http://test.host/pages/home]
   [4;36;1mUser Create (1.0ms)[0m   [0;1mINSERT INTO "users" ("name", "email", "phone", "created_at", "updated_at") VALUES('Sample User', 'user@abc.com', 16138768788, '2010-07-06 14:54:48', '2010-07-06 14:54:48')[0m
   [4;36;1mUser Create (0.0ms)[0m   [0;1mINSERT INTO "users" ("name", "email", "phone", "created_at", "updated_at") VALUES('Sample User', 'user@abc.com', 16138768788, '2010-07-06 14:56:11', '2010-07-06 14:56:11')[0m
   [4;36;1mUser Create (1.0ms)[0m   [0;1mINSERT INTO "users" ("name", "email", "phone", "created_at", "updated_at") VALUES('Sample User', 'user@abc.com', 16138768788, '2010-07-06 15:42:11', '2010-07-06 15:42:11')[0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'user@abc.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."phone" = '') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'user@abc.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16138768788') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'user@abc.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16138768788') LIMIT 1[0m
+  [4;36;1mUser Create (1.0ms)[0m   [0;1mINSERT INTO "users" ("name", "email", "phone", "created_at", "updated_at", "encrypted_password") VALUES('Sample User', 'user@abc.com', '16138768788', '2010-07-07 14:45:47', '2010-07-07 14:45:47', NULL)[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'user@abc.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16138768788') LIMIT 1[0m
+  [4;36;1mUser Create (1.0ms)[0m   [0;1mINSERT INTO "users" ("name", "email", "phone", "created_at", "updated_at", "encrypted_password", "salt") VALUES('Sample User', 'user@abc.com', '16138768788', '2010-07-07 15:27:27', '2010-07-07 15:27:27', '7d43bcae1ae3dd0529e0b29ddf064b8a32588ee1dd0b2ead1bf570513824d26f', 'd5de60ca8194ca11d5386be8ffc289e695af85403f924a51cb41e4d556e8e884')[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'user@abc.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16138768788') LIMIT 1[0m
+  [4;36;1mUser Create (1.0ms)[0m   [0;1mINSERT INTO "users" ("name", "email", "phone", "created_at", "updated_at", "encrypted_password", "salt") VALUES('Sample User', 'user@abc.com', '16138768788', '2010-07-07 15:28:03', '2010-07-07 15:28:03', '86c21418e06ad7e83d04d8d3290290d77e6b40cff664ad0b025f88da26e818a2', 'c379d809585c0ec8600a3c3e47ecf7dadc4a990549c2f63e9bff270431a7e8ca')[0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'user@abc.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16138768788') LIMIT 1[0m
+  [4;36;1mUser Create (1.0ms)[0m   [0;1mINSERT INTO "users" ("name", "email", "phone", "created_at", "updated_at", "encrypted_password", "salt") VALUES('Sample User', 'user@abc.com', '16138768788', '2010-07-07 15:33:02', '2010-07-07 15:33:02', 'ede2b9ed55df4e667a9148bafd2bab2f5618669f7cedc974eda1306ddb19c56c', 'f9e067239f1121caf2e0842c7f13c75ca4db63b11936fe3d331791ea084fbddf')[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'user@abc.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16138768788') LIMIT 1[0m
+  [4;36;1mUser Create (1.0ms)[0m   [0;1mINSERT INTO "users" ("name", "email", "phone", "created_at", "updated_at", "encrypted_password", "salt") VALUES('Sample User', 'user@abc.com', '16138768788', '2010-07-07 15:34:09', '2010-07-07 15:34:09', '67597db604acc6b25d3d1d06fbc4b0cae61e21405f2b9186dafabf22c78530b1', '0d5b61a55f5652a029dce00be77301e986779b7f870a68bca8e8b5790af67cd0')[0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'user@abc.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16138768788') LIMIT 1[0m
+  [4;36;1mUser Create (1.0ms)[0m   [0;1mINSERT INTO "users" ("name", "email", "phone", "created_at", "updated_at", "encrypted_password", "salt") VALUES('Sample User', 'user@abc.com', '16138768788', '2010-07-07 15:35:14', '2010-07-07 15:35:14', 'ee76d13a4ca4642645de5ac281bcf76e5458f8574a4bc1569ab065871fc58f47', '30f8fb8f270dcccbc171bcb40c3ca9837661742ac5beb8f63dce0093abb7a5f7')[0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'user@abc.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16138768788') LIMIT 1[0m
+  [4;36;1mUser Create (1.0ms)[0m   [0;1mINSERT INTO "users" ("name", "email", "phone", "created_at", "updated_at", "encrypted_password", "salt") VALUES('Sample User', 'user@abc.com', '16138768788', '2010-07-07 15:38:13', '2010-07-07 15:38:13', '0fbe3385dc332ec036cef59ad26a651baa8023c078ab6fad7110414ae0c05459', 'ae18a80ba9117328278624fc4ee9b7f273c011f1cafb6c1c2abc6a8407a545a7')[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'user@abc.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16138768788') LIMIT 1[0m
+  [4;36;1mUser Create (1.0ms)[0m   [0;1mINSERT INTO "users" ("name", "email", "phone", "created_at", "updated_at", "encrypted_password", "salt") VALUES('Sample User', 'user@abc.com', '16138768788', '2010-07-07 15:38:36', '2010-07-07 15:38:36', '1429505b97ebb6434e1e9dd9ef98d667000669260a67c20b8b14d84ec8f16ab4', '173a6c38c986bd90b099a6013b7f38cb26e6cf90a6444c605044b9227718c5ea')[0m
