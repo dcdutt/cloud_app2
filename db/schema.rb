@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100707151847) do
+ActiveRecord::Schema.define(:version => 20100708145739) do
 
   create_table "microposts", :force => true do |t|
     t.string   "content"
@@ -26,9 +26,11 @@ ActiveRecord::Schema.define(:version => 20100707151847) do
     t.datetime "updated_at"
     t.string   "encrypted_password"
     t.string   "salt"
+    t.string   "remember_token"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true
   add_index "users", ["phone"], :name => "index_users_on_phone", :unique => true
+  add_index "users", ["remember_token"], :name => "index_users_on_remember_token"
 
 end

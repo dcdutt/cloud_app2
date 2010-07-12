@@ -54,3 +54,478 @@ Completed in 1ms (View: 1, DB: 0) | 200 OK [http://test.host/pages/home]
   [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'user@abc.com') LIMIT 1[0m
   [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16138768788') LIMIT 1[0m
   [4;36;1mUser Create (1.0ms)[0m   [0;1mINSERT INTO "users" ("name", "email", "phone", "created_at", "updated_at", "encrypted_password", "salt") VALUES('Sample User', 'user@abc.com', '16138768788', '2010-07-07 15:38:36', '2010-07-07 15:38:36', '1429505b97ebb6434e1e9dd9ef98d667000669260a67c20b8b14d84ec8f16ab4', '173a6c38c986bd90b099a6013b7f38cb26e6cf90a6444c605044b9227718c5ea')[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'user@abc.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16138768788') LIMIT 1[0m
+  [4;36;1mUser Create (1.0ms)[0m   [0;1mINSERT INTO "users" ("name", "email", "phone", "created_at", "updated_at", "encrypted_password", "salt", "remember_token") VALUES('Sample User', 'user@abc.com', '16138768788', '2010-07-08 15:11:08', '2010-07-08 15:11:08', 'd90dd57445da4529ef9ab8d343c238851ea88fc579bf05b9c7ecde6714b1e655', 'b53c7ade77830d685a8772a09f98ef76a3c90e14e9653ae2e11d9febe2d44be1', NULL)[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'user@abc.com') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16138768788') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'user@abc.com') LIMIT 1[0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16138768788') LIMIT 1[0m
+  [4;35;1mUser Create (1.0ms)[0m   [0mINSERT INTO "users" ("name", "email", "phone", "created_at", "updated_at", "encrypted_password", "salt", "remember_token") VALUES('Sample User', 'user@abc.com', '16138768788', '2010-07-08 15:11:08', '2010-07-08 15:11:08', '2c63dab1f5046fdbf881eab7f74194a1994a4d333c37de1b8efba1667d62dfc7', '0d397313830c5141f117cad66bf801afddc810ba7edb3a73dbdf4a2e2fcd0320', NULL)[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'user@abc.com') LIMIT 1[0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16138768788') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'user@abc.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16138768788') LIMIT 1[0m
+  [4;36;1mUser Create (0.0ms)[0m   [0;1mINSERT INTO "users" ("name", "email", "phone", "created_at", "updated_at", "encrypted_password", "salt", "remember_token") VALUES('Sample User', 'user@abc.com', '16138768788', '2010-07-08 15:11:08', '2010-07-08 15:11:08', '2c63dab1f5046fdbf881eab7f74194a1994a4d333c37de1b8efba1667d62dfc7', '0d397313830c5141f117cad66bf801afddc810ba7edb3a73dbdf4a2e2fcd0320', NULL)[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'user@abc.com') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16138768788') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'user@abc.com') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16138768788') LIMIT 1[0m
+  [4;35;1mUser Create (1.0ms)[0m   [0mINSERT INTO "users" ("name", "email", "phone", "created_at", "updated_at", "encrypted_password", "salt", "remember_token") VALUES('Sample User', 'user@abc.com', '16138768788', '2010-07-08 15:11:08', '2010-07-08 15:11:08', '2c63dab1f5046fdbf881eab7f74194a1994a4d333c37de1b8efba1667d62dfc7', '0d397313830c5141f117cad66bf801afddc810ba7edb3a73dbdf4a2e2fcd0320', NULL)[0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."email" = 'user@abc.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'user@abc.com') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16138768788') LIMIT 1[0m
+  [4;35;1mUser Create (1.0ms)[0m   [0mINSERT INTO "users" ("name", "email", "phone", "created_at", "updated_at", "encrypted_password", "salt", "remember_token") VALUES('Sample User', 'user@abc.com', '16138768788', '2010-07-08 15:11:08', '2010-07-08 15:11:08', '2c63dab1f5046fdbf881eab7f74194a1994a4d333c37de1b8efba1667d62dfc7', '0d397313830c5141f117cad66bf801afddc810ba7edb3a73dbdf4a2e2fcd0320', NULL)[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."email" = 'nonuser@foo.com') LIMIT 1[0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'user@abc.com') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16138768788') LIMIT 1[0m
+  [4;35;1mUser Create (1.0ms)[0m   [0mINSERT INTO "users" ("name", "email", "phone", "created_at", "updated_at", "encrypted_password", "salt", "remember_token") VALUES('Sample User', 'user@abc.com', '16138768788', '2010-07-08 15:11:08', '2010-07-08 15:11:08', '2c63dab1f5046fdbf881eab7f74194a1994a4d333c37de1b8efba1667d62dfc7', '0d397313830c5141f117cad66bf801afddc810ba7edb3a73dbdf4a2e2fcd0320', NULL)[0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."email" = 'user@abc.com') LIMIT 1[0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'user@abc.com') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16138768788') LIMIT 1[0m
+  [4;35;1mUser Create (1.0ms)[0m   [0mINSERT INTO "users" ("name", "email", "phone", "created_at", "updated_at", "encrypted_password", "salt", "remember_token") VALUES('Sample User', 'user@abc.com', '16138768788', '2010-07-08 15:11:08', '2010-07-08 15:11:08', '2c63dab1f5046fdbf881eab7f74194a1994a4d333c37de1b8efba1667d62dfc7', '0d397313830c5141f117cad66bf801afddc810ba7edb3a73dbdf4a2e2fcd0320', NULL)[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'user@abc.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16138768788') LIMIT 1[0m
+  [4;36;1mUser Create (1.0ms)[0m   [0;1mINSERT INTO "users" ("name", "email", "phone", "created_at", "updated_at", "encrypted_password", "salt", "remember_token") VALUES('Sample User', 'user@abc.com', '16138768788', '2010-07-08 15:11:08', '2010-07-08 15:11:08', '2c63dab1f5046fdbf881eab7f74194a1994a4d333c37de1b8efba1667d62dfc7', '0d397313830c5141f117cad66bf801afddc810ba7edb3a73dbdf4a2e2fcd0320', NULL)[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'user@abc.com') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16138768788') LIMIT 1[0m
+  [4;35;1mUser Create (1.0ms)[0m   [0mINSERT INTO "users" ("name", "email", "phone", "created_at", "updated_at", "encrypted_password", "salt", "remember_token") VALUES('Sample User', 'user@abc.com', '16138768788', '2010-07-08 15:11:08', '2010-07-08 15:11:08', '2c63dab1f5046fdbf881eab7f74194a1994a4d333c37de1b8efba1667d62dfc7', '0d397313830c5141f117cad66bf801afddc810ba7edb3a73dbdf4a2e2fcd0320', NULL)[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'user@abc.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16138768788') LIMIT 1[0m
+  [4;36;1mUser Create (1.0ms)[0m   [0;1mINSERT INTO "users" ("name", "email", "phone", "created_at", "updated_at", "encrypted_password", "salt", "remember_token") VALUES('Sample User', 'user@abc.com', '16138768788', '2010-07-08 15:11:08', '2010-07-08 15:11:08', '2c63dab1f5046fdbf881eab7f74194a1994a4d333c37de1b8efba1667d62dfc7', '0d397313830c5141f117cad66bf801afddc810ba7edb3a73dbdf4a2e2fcd0320', NULL)[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'user@abc.com') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16138768788') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'user@abc.com') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16138768788') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'user@abc.com') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16138768788') LIMIT 1[0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'user@abc.com') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16138768788') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'user@abc.com') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16138768788') LIMIT 1[0m
+  [4;35;1mUser Create (1.0ms)[0m   [0mINSERT INTO "users" ("name", "email", "phone", "created_at", "updated_at", "encrypted_password", "salt", "remember_token") VALUES('Sample User', 'user@abc.com', '16138768788', '2010-07-08 15:11:08', '2010-07-08 15:11:08', '2c63dab1f5046fdbf881eab7f74194a1994a4d333c37de1b8efba1667d62dfc7', '0d397313830c5141f117cad66bf801afddc810ba7edb3a73dbdf4a2e2fcd0320', NULL)[0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'user@abc.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16138768788') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'user@abc.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16138768788') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = '') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16138768788') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'user@abc.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16138768788') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'first.last@abc.jp') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16138768788') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'last.first@xyz.bar.org') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16138768788') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'user@abc,com') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16138768788') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'first.last@abc.') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16138768788') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'first_at_xyz.org') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16138768788') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'user@abc.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16138768788') LIMIT 1[0m
+  [4;36;1mUser Create (0.0ms)[0m   [0;1mINSERT INTO "users" ("name", "email", "phone", "created_at", "updated_at", "encrypted_password", "salt", "remember_token") VALUES('Sample User', 'user@abc.com', '16138768788', '2010-07-08 15:11:08', '2010-07-08 15:11:08', '2c63dab1f5046fdbf881eab7f74194a1994a4d333c37de1b8efba1667d62dfc7', '0d397313830c5141f117cad66bf801afddc810ba7edb3a73dbdf4a2e2fcd0320', NULL)[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'user@abc.com') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16138768788') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'user@abc.com') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."phone" = '') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'user@abc.com') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16138768788') LIMIT 1[0m
+  [4;35;1mUser Create (1.0ms)[0m   [0mINSERT INTO "users" ("name", "email", "phone", "created_at", "updated_at", "encrypted_password", "salt", "remember_token") VALUES('Sample User', 'user@abc.com', '16138768788', '2010-07-08 15:11:08', '2010-07-08 15:11:08', '2c63dab1f5046fdbf881eab7f74194a1994a4d333c37de1b8efba1667d62dfc7', '0d397313830c5141f117cad66bf801afddc810ba7edb3a73dbdf4a2e2fcd0320', NULL)[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'user@abc.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16138768788') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'user@abc.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16138768788') LIMIT 1[0m
+  [4;36;1mUser Create (1.0ms)[0m   [0;1mINSERT INTO "users" ("name", "email", "phone", "created_at", "updated_at", "encrypted_password", "salt", "remember_token") VALUES('Sample User', 'user@abc.com', '16138768788', '2010-07-08 15:12:45', '2010-07-08 15:12:45', '21866f483d069e42442b5d2ee239284341088d1647761475d821b44fe949ba32', '0fc6d917ed868aca2ba08d1b64c88aa48b550f7873b2cbb6f1b3ac831f007895', NULL)[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'user@abc.com') LIMIT 1[0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16138768788') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'user@abc.com') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16138768788') LIMIT 1[0m
+  [4;35;1mUser Create (0.0ms)[0m   [0mINSERT INTO "users" ("name", "email", "phone", "created_at", "updated_at", "encrypted_password", "salt", "remember_token") VALUES('Sample User', 'user@abc.com', '16138768788', '2010-07-08 15:12:45', '2010-07-08 15:12:45', '21866f483d069e42442b5d2ee239284341088d1647761475d821b44fe949ba32', '0fc6d917ed868aca2ba08d1b64c88aa48b550f7873b2cbb6f1b3ac831f007895', NULL)[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'user@abc.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16138768788') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'user@abc.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16138768788') LIMIT 1[0m
+  [4;36;1mUser Create (1.0ms)[0m   [0;1mINSERT INTO "users" ("name", "email", "phone", "created_at", "updated_at", "encrypted_password", "salt", "remember_token") VALUES('Sample User', 'user@abc.com', '16138768788', '2010-07-08 15:12:45', '2010-07-08 15:12:45', '21866f483d069e42442b5d2ee239284341088d1647761475d821b44fe949ba32', '0fc6d917ed868aca2ba08d1b64c88aa48b550f7873b2cbb6f1b3ac831f007895', NULL)[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'user@abc.com') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16138768788') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'user@abc.com') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16138768788') LIMIT 1[0m
+  [4;35;1mUser Create (1.0ms)[0m   [0mINSERT INTO "users" ("name", "email", "phone", "created_at", "updated_at", "encrypted_password", "salt", "remember_token") VALUES('Sample User', 'user@abc.com', '16138768788', '2010-07-08 15:12:45', '2010-07-08 15:12:45', '21866f483d069e42442b5d2ee239284341088d1647761475d821b44fe949ba32', '0fc6d917ed868aca2ba08d1b64c88aa48b550f7873b2cbb6f1b3ac831f007895', NULL)[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."email" = 'user@abc.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'user@abc.com') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16138768788') LIMIT 1[0m
+  [4;35;1mUser Create (1.0ms)[0m   [0mINSERT INTO "users" ("name", "email", "phone", "created_at", "updated_at", "encrypted_password", "salt", "remember_token") VALUES('Sample User', 'user@abc.com', '16138768788', '2010-07-08 15:12:45', '2010-07-08 15:12:45', '21866f483d069e42442b5d2ee239284341088d1647761475d821b44fe949ba32', '0fc6d917ed868aca2ba08d1b64c88aa48b550f7873b2cbb6f1b3ac831f007895', NULL)[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."email" = 'nonuser@foo.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'user@abc.com') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16138768788') LIMIT 1[0m
+  [4;35;1mUser Create (0.0ms)[0m   [0mINSERT INTO "users" ("name", "email", "phone", "created_at", "updated_at", "encrypted_password", "salt", "remember_token") VALUES('Sample User', 'user@abc.com', '16138768788', '2010-07-08 15:12:45', '2010-07-08 15:12:45', '21866f483d069e42442b5d2ee239284341088d1647761475d821b44fe949ba32', '0fc6d917ed868aca2ba08d1b64c88aa48b550f7873b2cbb6f1b3ac831f007895', NULL)[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."email" = 'user@abc.com') LIMIT 1[0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'user@abc.com') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16138768788') LIMIT 1[0m
+  [4;35;1mUser Create (1.0ms)[0m   [0mINSERT INTO "users" ("name", "email", "phone", "created_at", "updated_at", "encrypted_password", "salt", "remember_token") VALUES('Sample User', 'user@abc.com', '16138768788', '2010-07-08 15:12:45', '2010-07-08 15:12:45', '21866f483d069e42442b5d2ee239284341088d1647761475d821b44fe949ba32', '0fc6d917ed868aca2ba08d1b64c88aa48b550f7873b2cbb6f1b3ac831f007895', NULL)[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'user@abc.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16138768788') LIMIT 1[0m
+  [4;36;1mUser Create (0.0ms)[0m   [0;1mINSERT INTO "users" ("name", "email", "phone", "created_at", "updated_at", "encrypted_password", "salt", "remember_token") VALUES('Sample User', 'user@abc.com', '16138768788', '2010-07-08 15:12:45', '2010-07-08 15:12:45', '21866f483d069e42442b5d2ee239284341088d1647761475d821b44fe949ba32', '0fc6d917ed868aca2ba08d1b64c88aa48b550f7873b2cbb6f1b3ac831f007895', NULL)[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'user@abc.com') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16138768788') LIMIT 1[0m
+  [4;35;1mUser Create (0.0ms)[0m   [0mINSERT INTO "users" ("name", "email", "phone", "created_at", "updated_at", "encrypted_password", "salt", "remember_token") VALUES('Sample User', 'user@abc.com', '16138768788', '2010-07-08 15:12:45', '2010-07-08 15:12:45', '21866f483d069e42442b5d2ee239284341088d1647761475d821b44fe949ba32', '0fc6d917ed868aca2ba08d1b64c88aa48b550f7873b2cbb6f1b3ac831f007895', NULL)[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'user@abc.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16138768788') LIMIT 1[0m
+  [4;36;1mUser Create (0.0ms)[0m   [0;1mINSERT INTO "users" ("name", "email", "phone", "created_at", "updated_at", "encrypted_password", "salt", "remember_token") VALUES('Sample User', 'user@abc.com', '16138768788', '2010-07-08 15:12:45', '2010-07-08 15:12:45', '21866f483d069e42442b5d2ee239284341088d1647761475d821b44fe949ba32', '0fc6d917ed868aca2ba08d1b64c88aa48b550f7873b2cbb6f1b3ac831f007895', NULL)[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'user@abc.com') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16138768788') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'user@abc.com') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16138768788') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'user@abc.com') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16138768788') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'user@abc.com') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16138768788') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'user@abc.com') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16138768788') LIMIT 1[0m
+  [4;35;1mUser Create (0.0ms)[0m   [0mINSERT INTO "users" ("name", "email", "phone", "created_at", "updated_at", "encrypted_password", "salt", "remember_token") VALUES('Sample User', 'user@abc.com', '16138768788', '2010-07-08 15:12:45', '2010-07-08 15:12:45', '21866f483d069e42442b5d2ee239284341088d1647761475d821b44fe949ba32', '0fc6d917ed868aca2ba08d1b64c88aa48b550f7873b2cbb6f1b3ac831f007895', NULL)[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'user@abc.com') LIMIT 1[0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16138768788') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'user@abc.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16138768788') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = '') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16138768788') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'user@abc.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16138768788') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'first.last@abc.jp') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16138768788') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'last.first@xyz.bar.org') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16138768788') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'user@abc,com') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16138768788') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'first.last@abc.') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16138768788') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'first_at_xyz.org') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16138768788') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'user@abc.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16138768788') LIMIT 1[0m
+  [4;36;1mUser Create (1.0ms)[0m   [0;1mINSERT INTO "users" ("name", "email", "phone", "created_at", "updated_at", "encrypted_password", "salt", "remember_token") VALUES('Sample User', 'user@abc.com', '16138768788', '2010-07-08 15:12:45', '2010-07-08 15:12:45', '21866f483d069e42442b5d2ee239284341088d1647761475d821b44fe949ba32', '0fc6d917ed868aca2ba08d1b64c88aa48b550f7873b2cbb6f1b3ac831f007895', NULL)[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'user@abc.com') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16138768788') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'user@abc.com') LIMIT 1[0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."phone" = '') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'user@abc.com') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16138768788') LIMIT 1[0m
+  [4;35;1mUser Create (1.0ms)[0m   [0mINSERT INTO "users" ("name", "email", "phone", "created_at", "updated_at", "encrypted_password", "salt", "remember_token") VALUES('Sample User', 'user@abc.com', '16138768788', '2010-07-08 15:12:45', '2010-07-08 15:12:45', '21866f483d069e42442b5d2ee239284341088d1647761475d821b44fe949ba32', '0fc6d917ed868aca2ba08d1b64c88aa48b550f7873b2cbb6f1b3ac831f007895', NULL)[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'user@abc.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16138768788') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'user@abc.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16138768788') LIMIT 1[0m
+  [4;36;1mUser Create (1.0ms)[0m   [0;1mINSERT INTO "users" ("name", "email", "phone", "created_at", "updated_at", "encrypted_password", "salt", "remember_token") VALUES('Sample User', 'user@abc.com', '16138768788', '2010-07-08 15:15:38', '2010-07-08 15:15:38', '938f7a1231a9551e78fcb1ea065c36fc848034a8df2b540270062b9a69e996a7', '380ba7a35a419344a9d8c0ceceab422e6054aad2de2d677ba56b635bc4017651', NULL)[0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'user@abc.com') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16138768788') LIMIT 1[0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'user@abc.com') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16138768788') LIMIT 1[0m
+  [4;35;1mUser Create (1.0ms)[0m   [0mINSERT INTO "users" ("name", "email", "phone", "created_at", "updated_at", "encrypted_password", "salt", "remember_token") VALUES('Sample User', 'user@abc.com', '16138768788', '2010-07-08 15:15:38', '2010-07-08 15:15:38', '938f7a1231a9551e78fcb1ea065c36fc848034a8df2b540270062b9a69e996a7', '380ba7a35a419344a9d8c0ceceab422e6054aad2de2d677ba56b635bc4017651', NULL)[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'user@abc.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16138768788') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'user@abc.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16138768788') LIMIT 1[0m
+  [4;36;1mUser Create (1.0ms)[0m   [0;1mINSERT INTO "users" ("name", "email", "phone", "created_at", "updated_at", "encrypted_password", "salt", "remember_token") VALUES('Sample User', 'user@abc.com', '16138768788', '2010-07-08 15:15:38', '2010-07-08 15:15:38', '938f7a1231a9551e78fcb1ea065c36fc848034a8df2b540270062b9a69e996a7', '380ba7a35a419344a9d8c0ceceab422e6054aad2de2d677ba56b635bc4017651', NULL)[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'user@abc.com') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16138768788') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'user@abc.com') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16138768788') LIMIT 1[0m
+  [4;35;1mUser Create (1.0ms)[0m   [0mINSERT INTO "users" ("name", "email", "phone", "created_at", "updated_at", "encrypted_password", "salt", "remember_token") VALUES('Sample User', 'user@abc.com', '16138768788', '2010-07-08 15:15:38', '2010-07-08 15:15:38', '938f7a1231a9551e78fcb1ea065c36fc848034a8df2b540270062b9a69e996a7', '380ba7a35a419344a9d8c0ceceab422e6054aad2de2d677ba56b635bc4017651', NULL)[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."email" = 'user@abc.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'user@abc.com') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16138768788') LIMIT 1[0m
+  [4;35;1mUser Create (1.0ms)[0m   [0mINSERT INTO "users" ("name", "email", "phone", "created_at", "updated_at", "encrypted_password", "salt", "remember_token") VALUES('Sample User', 'user@abc.com', '16138768788', '2010-07-08 15:15:38', '2010-07-08 15:15:38', '938f7a1231a9551e78fcb1ea065c36fc848034a8df2b540270062b9a69e996a7', '380ba7a35a419344a9d8c0ceceab422e6054aad2de2d677ba56b635bc4017651', NULL)[0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."email" = 'nonuser@foo.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'user@abc.com') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16138768788') LIMIT 1[0m
+  [4;35;1mUser Create (1.0ms)[0m   [0mINSERT INTO "users" ("name", "email", "phone", "created_at", "updated_at", "encrypted_password", "salt", "remember_token") VALUES('Sample User', 'user@abc.com', '16138768788', '2010-07-08 15:15:38', '2010-07-08 15:15:38', '938f7a1231a9551e78fcb1ea065c36fc848034a8df2b540270062b9a69e996a7', '380ba7a35a419344a9d8c0ceceab422e6054aad2de2d677ba56b635bc4017651', NULL)[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."email" = 'user@abc.com') LIMIT 1[0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'user@abc.com') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16138768788') LIMIT 1[0m
+  [4;35;1mUser Create (0.0ms)[0m   [0mINSERT INTO "users" ("name", "email", "phone", "created_at", "updated_at", "encrypted_password", "salt", "remember_token") VALUES('Sample User', 'user@abc.com', '16138768788', '2010-07-08 15:15:38', '2010-07-08 15:15:38', '938f7a1231a9551e78fcb1ea065c36fc848034a8df2b540270062b9a69e996a7', '380ba7a35a419344a9d8c0ceceab422e6054aad2de2d677ba56b635bc4017651', NULL)[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'user@abc.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16138768788') LIMIT 1[0m
+  [4;36;1mUser Create (1.0ms)[0m   [0;1mINSERT INTO "users" ("name", "email", "phone", "created_at", "updated_at", "encrypted_password", "salt", "remember_token") VALUES('Sample User', 'user@abc.com', '16138768788', '2010-07-08 15:15:38', '2010-07-08 15:15:38', '938f7a1231a9551e78fcb1ea065c36fc848034a8df2b540270062b9a69e996a7', '380ba7a35a419344a9d8c0ceceab422e6054aad2de2d677ba56b635bc4017651', NULL)[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'user@abc.com') LIMIT 1[0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16138768788') LIMIT 1[0m
+  [4;35;1mUser Create (1.0ms)[0m   [0mINSERT INTO "users" ("name", "email", "phone", "created_at", "updated_at", "encrypted_password", "salt", "remember_token") VALUES('Sample User', 'user@abc.com', '16138768788', '2010-07-08 15:15:38', '2010-07-08 15:15:38', '938f7a1231a9551e78fcb1ea065c36fc848034a8df2b540270062b9a69e996a7', '380ba7a35a419344a9d8c0ceceab422e6054aad2de2d677ba56b635bc4017651', NULL)[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'user@abc.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16138768788') LIMIT 1[0m
+  [4;36;1mUser Create (0.0ms)[0m   [0;1mINSERT INTO "users" ("name", "email", "phone", "created_at", "updated_at", "encrypted_password", "salt", "remember_token") VALUES('Sample User', 'user@abc.com', '16138768788', '2010-07-08 15:15:38', '2010-07-08 15:15:38', '938f7a1231a9551e78fcb1ea065c36fc848034a8df2b540270062b9a69e996a7', '380ba7a35a419344a9d8c0ceceab422e6054aad2de2d677ba56b635bc4017651', NULL)[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'user@abc.com') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16138768788') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'user@abc.com') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16138768788') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'user@abc.com') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16138768788') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'user@abc.com') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16138768788') LIMIT 1[0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'user@abc.com') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16138768788') LIMIT 1[0m
+  [4;35;1mUser Create (1.0ms)[0m   [0mINSERT INTO "users" ("name", "email", "phone", "created_at", "updated_at", "encrypted_password", "salt", "remember_token") VALUES('Sample User', 'user@abc.com', '16138768788', '2010-07-08 15:15:38', '2010-07-08 15:15:38', '938f7a1231a9551e78fcb1ea065c36fc848034a8df2b540270062b9a69e996a7', '380ba7a35a419344a9d8c0ceceab422e6054aad2de2d677ba56b635bc4017651', NULL)[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'user@abc.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16138768788') LIMIT 1[0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'user@abc.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16138768788') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = '') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16138768788') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'user@abc.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16138768788') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'first.last@abc.jp') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16138768788') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'last.first@xyz.bar.org') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16138768788') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'user@abc,com') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16138768788') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'first.last@abc.') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16138768788') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'first_at_xyz.org') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16138768788') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'user@abc.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16138768788') LIMIT 1[0m
+  [4;36;1mUser Create (1.0ms)[0m   [0;1mINSERT INTO "users" ("name", "email", "phone", "created_at", "updated_at", "encrypted_password", "salt", "remember_token") VALUES('Sample User', 'user@abc.com', '16138768788', '2010-07-08 15:15:38', '2010-07-08 15:15:38', '938f7a1231a9551e78fcb1ea065c36fc848034a8df2b540270062b9a69e996a7', '380ba7a35a419344a9d8c0ceceab422e6054aad2de2d677ba56b635bc4017651', NULL)[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'user@abc.com') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16138768788') LIMIT 1[0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'user@abc.com') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."phone" = '') LIMIT 1[0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'user@abc.com') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16138768788') LIMIT 1[0m
+  [4;35;1mUser Create (1.0ms)[0m   [0mINSERT INTO "users" ("name", "email", "phone", "created_at", "updated_at", "encrypted_password", "salt", "remember_token") VALUES('Sample User', 'user@abc.com', '16138768788', '2010-07-08 15:15:38', '2010-07-08 15:15:38', '938f7a1231a9551e78fcb1ea065c36fc848034a8df2b540270062b9a69e996a7', '380ba7a35a419344a9d8c0ceceab422e6054aad2de2d677ba56b635bc4017651', NULL)[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'user@abc.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16138768788') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'user@abc.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16138768788') LIMIT 1[0m
+  [4;36;1mUser Create (1.0ms)[0m   [0;1mINSERT INTO "users" ("name", "email", "phone", "created_at", "updated_at", "encrypted_password", "salt", "remember_token") VALUES('Sample User', 'user@abc.com', '16138768788', '2010-07-08 15:20:54', '2010-07-08 15:20:54', '8a47f30e935201f32962022c620e95b906599906f5c2b0775d44a78d6889861d', '3a8efe6245f3183977e307de4f04506fa2600906ad50e50a38c0ea92d8c21ecd', NULL)[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'user@abc.com') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16138768788') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'user@abc.com') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16138768788') LIMIT 1[0m
+  [4;35;1mUser Create (1.0ms)[0m   [0mINSERT INTO "users" ("name", "email", "phone", "created_at", "updated_at", "encrypted_password", "salt", "remember_token") VALUES('Sample User', 'user@abc.com', '16138768788', '2010-07-08 15:20:54', '2010-07-08 15:20:54', '8a47f30e935201f32962022c620e95b906599906f5c2b0775d44a78d6889861d', '3a8efe6245f3183977e307de4f04506fa2600906ad50e50a38c0ea92d8c21ecd', NULL)[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'user@abc.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16138768788') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'user@abc.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16138768788') LIMIT 1[0m
+  [4;36;1mUser Create (1.0ms)[0m   [0;1mINSERT INTO "users" ("name", "email", "phone", "created_at", "updated_at", "encrypted_password", "salt", "remember_token") VALUES('Sample User', 'user@abc.com', '16138768788', '2010-07-08 15:20:54', '2010-07-08 15:20:54', '8a47f30e935201f32962022c620e95b906599906f5c2b0775d44a78d6889861d', '3a8efe6245f3183977e307de4f04506fa2600906ad50e50a38c0ea92d8c21ecd', NULL)[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'user@abc.com') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16138768788') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'user@abc.com') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16138768788') LIMIT 1[0m
+  [4;35;1mUser Create (1.0ms)[0m   [0mINSERT INTO "users" ("name", "email", "phone", "created_at", "updated_at", "encrypted_password", "salt", "remember_token") VALUES('Sample User', 'user@abc.com', '16138768788', '2010-07-08 15:20:54', '2010-07-08 15:20:54', '8a47f30e935201f32962022c620e95b906599906f5c2b0775d44a78d6889861d', '3a8efe6245f3183977e307de4f04506fa2600906ad50e50a38c0ea92d8c21ecd', NULL)[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."email" = 'user@abc.com') LIMIT 1[0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'user@abc.com') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16138768788') LIMIT 1[0m
+  [4;35;1mUser Create (1.0ms)[0m   [0mINSERT INTO "users" ("name", "email", "phone", "created_at", "updated_at", "encrypted_password", "salt", "remember_token") VALUES('Sample User', 'user@abc.com', '16138768788', '2010-07-08 15:20:54', '2010-07-08 15:20:54', '8a47f30e935201f32962022c620e95b906599906f5c2b0775d44a78d6889861d', '3a8efe6245f3183977e307de4f04506fa2600906ad50e50a38c0ea92d8c21ecd', NULL)[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."email" = 'nonuser@foo.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'user@abc.com') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16138768788') LIMIT 1[0m
+  [4;35;1mUser Create (1.0ms)[0m   [0mINSERT INTO "users" ("name", "email", "phone", "created_at", "updated_at", "encrypted_password", "salt", "remember_token") VALUES('Sample User', 'user@abc.com', '16138768788', '2010-07-08 15:20:54', '2010-07-08 15:20:54', '8a47f30e935201f32962022c620e95b906599906f5c2b0775d44a78d6889861d', '3a8efe6245f3183977e307de4f04506fa2600906ad50e50a38c0ea92d8c21ecd', NULL)[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."email" = 'user@abc.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'user@abc.com') LIMIT 1[0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16138768788') LIMIT 1[0m
+  [4;35;1mUser Create (1.0ms)[0m   [0mINSERT INTO "users" ("name", "email", "phone", "created_at", "updated_at", "encrypted_password", "salt", "remember_token") VALUES('Sample User', 'user@abc.com', '16138768788', '2010-07-08 15:20:54', '2010-07-08 15:20:54', '8a47f30e935201f32962022c620e95b906599906f5c2b0775d44a78d6889861d', '3a8efe6245f3183977e307de4f04506fa2600906ad50e50a38c0ea92d8c21ecd', NULL)[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'user@abc.com') LIMIT 1[0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16138768788') LIMIT 1[0m
+  [4;36;1mUser Create (1.0ms)[0m   [0;1mINSERT INTO "users" ("name", "email", "phone", "created_at", "updated_at", "encrypted_password", "salt", "remember_token") VALUES('Sample User', 'user@abc.com', '16138768788', '2010-07-08 15:20:54', '2010-07-08 15:20:54', '8a47f30e935201f32962022c620e95b906599906f5c2b0775d44a78d6889861d', '3a8efe6245f3183977e307de4f04506fa2600906ad50e50a38c0ea92d8c21ecd', NULL)[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'user@abc.com') LIMIT 1[0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16138768788') LIMIT 1[0m
+  [4;35;1mUser Create (1.0ms)[0m   [0mINSERT INTO "users" ("name", "email", "phone", "created_at", "updated_at", "encrypted_password", "salt", "remember_token") VALUES('Sample User', 'user@abc.com', '16138768788', '2010-07-08 15:20:54', '2010-07-08 15:20:54', '8a47f30e935201f32962022c620e95b906599906f5c2b0775d44a78d6889861d', '3a8efe6245f3183977e307de4f04506fa2600906ad50e50a38c0ea92d8c21ecd', NULL)[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'user@abc.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16138768788') LIMIT 1[0m
+  [4;36;1mUser Create (0.0ms)[0m   [0;1mINSERT INTO "users" ("name", "email", "phone", "created_at", "updated_at", "encrypted_password", "salt", "remember_token") VALUES('Sample User', 'user@abc.com', '16138768788', '2010-07-08 15:20:54', '2010-07-08 15:20:54', '8a47f30e935201f32962022c620e95b906599906f5c2b0775d44a78d6889861d', '3a8efe6245f3183977e307de4f04506fa2600906ad50e50a38c0ea92d8c21ecd', NULL)[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'user@abc.com') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16138768788') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'user@abc.com') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16138768788') LIMIT 1[0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'user@abc.com') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16138768788') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'user@abc.com') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16138768788') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'user@abc.com') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16138768788') LIMIT 1[0m
+  [4;35;1mUser Create (1.0ms)[0m   [0mINSERT INTO "users" ("name", "email", "phone", "created_at", "updated_at", "encrypted_password", "salt", "remember_token") VALUES('Sample User', 'user@abc.com', '16138768788', '2010-07-08 15:20:54', '2010-07-08 15:20:54', '8a47f30e935201f32962022c620e95b906599906f5c2b0775d44a78d6889861d', '3a8efe6245f3183977e307de4f04506fa2600906ad50e50a38c0ea92d8c21ecd', NULL)[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'user@abc.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16138768788') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'user@abc.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16138768788') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = '') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16138768788') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'user@abc.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16138768788') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'first.last@abc.jp') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16138768788') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'last.first@xyz.bar.org') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16138768788') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'user@abc,com') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16138768788') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'first.last@abc.') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16138768788') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'first_at_xyz.org') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16138768788') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'user@abc.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16138768788') LIMIT 1[0m
+  [4;36;1mUser Create (1.0ms)[0m   [0;1mINSERT INTO "users" ("name", "email", "phone", "created_at", "updated_at", "encrypted_password", "salt", "remember_token") VALUES('Sample User', 'user@abc.com', '16138768788', '2010-07-08 15:20:54', '2010-07-08 15:20:54', '8a47f30e935201f32962022c620e95b906599906f5c2b0775d44a78d6889861d', '3a8efe6245f3183977e307de4f04506fa2600906ad50e50a38c0ea92d8c21ecd', NULL)[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'user@abc.com') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16138768788') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'user@abc.com') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."phone" = '') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'user@abc.com') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16138768788') LIMIT 1[0m
+  [4;35;1mUser Create (1.0ms)[0m   [0mINSERT INTO "users" ("name", "email", "phone", "created_at", "updated_at", "encrypted_password", "salt", "remember_token") VALUES('Sample User', 'user@abc.com', '16138768788', '2010-07-08 15:20:54', '2010-07-08 15:20:54', '8a47f30e935201f32962022c620e95b906599906f5c2b0775d44a78d6889861d', '3a8efe6245f3183977e307de4f04506fa2600906ad50e50a38c0ea92d8c21ecd', NULL)[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'user@abc.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16138768788') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'user@abc.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16138768788') LIMIT 1[0m
+  [4;36;1mUser Create (1.0ms)[0m   [0;1mINSERT INTO "users" ("name", "email", "phone", "created_at", "updated_at", "encrypted_password", "salt", "remember_token") VALUES('Sample User', 'user@abc.com', '16138768788', '2010-07-08 15:23:28', '2010-07-08 15:23:28', 'b69981628509c2882cb82daa9e469c3fb541bb06c30cb84a68014b16309860a0', 'cc3f446c21876c4e0afd4ad2fde2f53e2c3cd67841dd2430b5e6c83f40b81987', NULL)[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'user@abc.com') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16138768788') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'user@abc.com') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16138768788') LIMIT 1[0m
+  [4;35;1mUser Create (1.0ms)[0m   [0mINSERT INTO "users" ("name", "email", "phone", "created_at", "updated_at", "encrypted_password", "salt", "remember_token") VALUES('Sample User', 'user@abc.com', '16138768788', '2010-07-08 15:23:28', '2010-07-08 15:23:28', 'b69981628509c2882cb82daa9e469c3fb541bb06c30cb84a68014b16309860a0', 'cc3f446c21876c4e0afd4ad2fde2f53e2c3cd67841dd2430b5e6c83f40b81987', NULL)[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'user@abc.com') LIMIT 1[0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16138768788') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'user@abc.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16138768788') LIMIT 1[0m
+  [4;36;1mUser Create (1.0ms)[0m   [0;1mINSERT INTO "users" ("name", "email", "phone", "created_at", "updated_at", "encrypted_password", "salt", "remember_token") VALUES('Sample User', 'user@abc.com', '16138768788', '2010-07-08 15:23:28', '2010-07-08 15:23:28', 'b69981628509c2882cb82daa9e469c3fb541bb06c30cb84a68014b16309860a0', 'cc3f446c21876c4e0afd4ad2fde2f53e2c3cd67841dd2430b5e6c83f40b81987', NULL)[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'user@abc.com') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16138768788') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'user@abc.com') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16138768788') LIMIT 1[0m
+  [4;35;1mUser Create (1.0ms)[0m   [0mINSERT INTO "users" ("name", "email", "phone", "created_at", "updated_at", "encrypted_password", "salt", "remember_token") VALUES('Sample User', 'user@abc.com', '16138768788', '2010-07-08 15:23:28', '2010-07-08 15:23:28', 'b69981628509c2882cb82daa9e469c3fb541bb06c30cb84a68014b16309860a0', 'cc3f446c21876c4e0afd4ad2fde2f53e2c3cd67841dd2430b5e6c83f40b81987', NULL)[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."email" = 'user@abc.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'user@abc.com') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16138768788') LIMIT 1[0m
+  [4;35;1mUser Create (1.0ms)[0m   [0mINSERT INTO "users" ("name", "email", "phone", "created_at", "updated_at", "encrypted_password", "salt", "remember_token") VALUES('Sample User', 'user@abc.com', '16138768788', '2010-07-08 15:23:28', '2010-07-08 15:23:28', 'b69981628509c2882cb82daa9e469c3fb541bb06c30cb84a68014b16309860a0', 'cc3f446c21876c4e0afd4ad2fde2f53e2c3cd67841dd2430b5e6c83f40b81987', NULL)[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."email" = 'nonuser@foo.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'user@abc.com') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16138768788') LIMIT 1[0m
+  [4;35;1mUser Create (0.0ms)[0m   [0mINSERT INTO "users" ("name", "email", "phone", "created_at", "updated_at", "encrypted_password", "salt", "remember_token") VALUES('Sample User', 'user@abc.com', '16138768788', '2010-07-08 15:23:28', '2010-07-08 15:23:28', 'b69981628509c2882cb82daa9e469c3fb541bb06c30cb84a68014b16309860a0', 'cc3f446c21876c4e0afd4ad2fde2f53e2c3cd67841dd2430b5e6c83f40b81987', NULL)[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."email" = 'user@abc.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'user@abc.com') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16138768788') LIMIT 1[0m
+  [4;35;1mUser Create (3.0ms)[0m   [0mINSERT INTO "users" ("name", "email", "phone", "created_at", "updated_at", "encrypted_password", "salt", "remember_token") VALUES('Sample User', 'user@abc.com', '16138768788', '2010-07-08 15:23:28', '2010-07-08 15:23:28', 'b69981628509c2882cb82daa9e469c3fb541bb06c30cb84a68014b16309860a0', 'cc3f446c21876c4e0afd4ad2fde2f53e2c3cd67841dd2430b5e6c83f40b81987', NULL)[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'user@abc.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16138768788') LIMIT 1[0m
+  [4;36;1mUser Create (1.0ms)[0m   [0;1mINSERT INTO "users" ("name", "email", "phone", "created_at", "updated_at", "encrypted_password", "salt", "remember_token") VALUES('Sample User', 'user@abc.com', '16138768788', '2010-07-08 15:23:28', '2010-07-08 15:23:28', 'b69981628509c2882cb82daa9e469c3fb541bb06c30cb84a68014b16309860a0', 'cc3f446c21876c4e0afd4ad2fde2f53e2c3cd67841dd2430b5e6c83f40b81987', NULL)[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'user@abc.com') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16138768788') LIMIT 1[0m
+  [4;35;1mUser Create (20.0ms)[0m   [0mINSERT INTO "users" ("name", "email", "phone", "created_at", "updated_at", "encrypted_password", "salt", "remember_token") VALUES('Sample User', 'user@abc.com', '16138768788', '2010-07-08 15:23:28', '2010-07-08 15:23:28', 'b69981628509c2882cb82daa9e469c3fb541bb06c30cb84a68014b16309860a0', 'cc3f446c21876c4e0afd4ad2fde2f53e2c3cd67841dd2430b5e6c83f40b81987', NULL)[0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'user@abc.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16138768788') LIMIT 1[0m
+  [4;36;1mUser Create (1.0ms)[0m   [0;1mINSERT INTO "users" ("name", "email", "phone", "created_at", "updated_at", "encrypted_password", "salt", "remember_token") VALUES('Sample User', 'user@abc.com', '16138768788', '2010-07-08 15:23:28', '2010-07-08 15:23:28', 'b69981628509c2882cb82daa9e469c3fb541bb06c30cb84a68014b16309860a0', 'cc3f446c21876c4e0afd4ad2fde2f53e2c3cd67841dd2430b5e6c83f40b81987', NULL)[0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'user@abc.com') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16138768788') LIMIT 1[0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'user@abc.com') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16138768788') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'user@abc.com') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16138768788') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'user@abc.com') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16138768788') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'user@abc.com') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16138768788') LIMIT 1[0m
+  [4;35;1mUser Create (1.0ms)[0m   [0mINSERT INTO "users" ("name", "email", "phone", "created_at", "updated_at", "encrypted_password", "salt", "remember_token") VALUES('Sample User', 'user@abc.com', '16138768788', '2010-07-08 15:23:28', '2010-07-08 15:23:28', 'b69981628509c2882cb82daa9e469c3fb541bb06c30cb84a68014b16309860a0', 'cc3f446c21876c4e0afd4ad2fde2f53e2c3cd67841dd2430b5e6c83f40b81987', NULL)[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'user@abc.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16138768788') LIMIT 1[0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'user@abc.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16138768788') LIMIT 1[0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = '') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16138768788') LIMIT 1[0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'user@abc.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16138768788') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'first.last@abc.jp') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16138768788') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'last.first@xyz.bar.org') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16138768788') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'user@abc,com') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16138768788') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'first.last@abc.') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16138768788') LIMIT 1[0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'first_at_xyz.org') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16138768788') LIMIT 1[0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'user@abc.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16138768788') LIMIT 1[0m
+  [4;36;1mUser Create (1.0ms)[0m   [0;1mINSERT INTO "users" ("name", "email", "phone", "created_at", "updated_at", "encrypted_password", "salt", "remember_token") VALUES('Sample User', 'user@abc.com', '16138768788', '2010-07-08 15:23:28', '2010-07-08 15:23:28', 'b69981628509c2882cb82daa9e469c3fb541bb06c30cb84a68014b16309860a0', 'cc3f446c21876c4e0afd4ad2fde2f53e2c3cd67841dd2430b5e6c83f40b81987', NULL)[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'user@abc.com') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16138768788') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'user@abc.com') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."phone" = '') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'user@abc.com') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16138768788') LIMIT 1[0m
+  [4;35;1mUser Create (1.0ms)[0m   [0mINSERT INTO "users" ("name", "email", "phone", "created_at", "updated_at", "encrypted_password", "salt", "remember_token") VALUES('Sample User', 'user@abc.com', '16138768788', '2010-07-08 15:23:28', '2010-07-08 15:23:28', 'b69981628509c2882cb82daa9e469c3fb541bb06c30cb84a68014b16309860a0', 'cc3f446c21876c4e0afd4ad2fde2f53e2c3cd67841dd2430b5e6c83f40b81987', NULL)[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'user@abc.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16138768788') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'user@abc.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16138768788') LIMIT 1[0m
+  [4;36;1mUser Create (0.0ms)[0m   [0;1mINSERT INTO "users" ("name", "email", "phone", "created_at", "updated_at", "encrypted_password", "salt", "remember_token") VALUES('Sample User', 'user@abc.com', '16138768788', '2010-07-08 15:43:09', '2010-07-08 15:43:09', '17b33525116c46694f898c70097b3d83bfa04b91be2f77a6c75af6b7b6eb29dc', '7c450e5791751be0f703b63d545ea161604519eeb268d8fa1ab1834d66e48d7c', NULL)[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'user@abc.com') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16138768788') LIMIT 1[0m
+  [4;35;1mUser Create (0.0ms)[0m   [0mINSERT INTO "users" ("name", "email", "phone", "created_at", "updated_at", "encrypted_password", "salt", "remember_token") VALUES('Sample User', 'user@abc.com', '16138768788', '2010-07-08 15:43:09', '2010-07-08 15:43:09', '17b33525116c46694f898c70097b3d83bfa04b91be2f77a6c75af6b7b6eb29dc', '7c450e5791751be0f703b63d545ea161604519eeb268d8fa1ab1834d66e48d7c', NULL)[0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'user@abc.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16138768788') LIMIT 1[0m
+  [4;36;1mUser Create (1.0ms)[0m   [0;1mINSERT INTO "users" ("name", "email", "phone", "created_at", "updated_at", "encrypted_password", "salt", "remember_token") VALUES('Sample User', 'user@abc.com', '16138768788', '2010-07-08 15:43:09', '2010-07-08 15:43:09', '17b33525116c46694f898c70097b3d83bfa04b91be2f77a6c75af6b7b6eb29dc', '7c450e5791751be0f703b63d545ea161604519eeb268d8fa1ab1834d66e48d7c', NULL)[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE "users" SET "remember_token" = 'f8d28d99e69da989b83b317561660f26441d2c0d7313272c1a65d4fb68aa3020', "updated_at" = '2010-07-08 15:43:09' WHERE "id" = 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'user@abc.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16138768788') LIMIT 1[0m
+  [4;36;1mUser Create (1.0ms)[0m   [0;1mINSERT INTO "users" ("name", "email", "phone", "created_at", "updated_at", "encrypted_password", "salt", "remember_token") VALUES('Sample User', 'user@abc.com', '16138768788', '2010-07-08 15:43:09', '2010-07-08 15:43:09', '17b33525116c46694f898c70097b3d83bfa04b91be2f77a6c75af6b7b6eb29dc', '7c450e5791751be0f703b63d545ea161604519eeb268d8fa1ab1834d66e48d7c', NULL)[0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."email" = 'user@abc.com') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'user@abc.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16138768788') LIMIT 1[0m
+  [4;36;1mUser Create (0.0ms)[0m   [0;1mINSERT INTO "users" ("name", "email", "phone", "created_at", "updated_at", "encrypted_password", "salt", "remember_token") VALUES('Sample User', 'user@abc.com', '16138768788', '2010-07-08 15:43:09', '2010-07-08 15:43:09', '17b33525116c46694f898c70097b3d83bfa04b91be2f77a6c75af6b7b6eb29dc', '7c450e5791751be0f703b63d545ea161604519eeb268d8fa1ab1834d66e48d7c', NULL)[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."email" = 'nonuser@foo.com') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'user@abc.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16138768788') LIMIT 1[0m
+  [4;36;1mUser Create (0.0ms)[0m   [0;1mINSERT INTO "users" ("name", "email", "phone", "created_at", "updated_at", "encrypted_password", "salt", "remember_token") VALUES('Sample User', 'user@abc.com', '16138768788', '2010-07-08 15:43:09', '2010-07-08 15:43:09', '17b33525116c46694f898c70097b3d83bfa04b91be2f77a6c75af6b7b6eb29dc', '7c450e5791751be0f703b63d545ea161604519eeb268d8fa1ab1834d66e48d7c', NULL)[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."email" = 'user@abc.com') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'user@abc.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16138768788') LIMIT 1[0m
+  [4;36;1mUser Create (1.0ms)[0m   [0;1mINSERT INTO "users" ("name", "email", "phone", "created_at", "updated_at", "encrypted_password", "salt", "remember_token") VALUES('Sample User', 'user@abc.com', '16138768788', '2010-07-08 15:43:09', '2010-07-08 15:43:09', '17b33525116c46694f898c70097b3d83bfa04b91be2f77a6c75af6b7b6eb29dc', '7c450e5791751be0f703b63d545ea161604519eeb268d8fa1ab1834d66e48d7c', NULL)[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'user@abc.com') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16138768788') LIMIT 1[0m
+  [4;35;1mUser Create (0.0ms)[0m   [0mINSERT INTO "users" ("name", "email", "phone", "created_at", "updated_at", "encrypted_password", "salt", "remember_token") VALUES('Sample User', 'user@abc.com', '16138768788', '2010-07-08 15:43:09', '2010-07-08 15:43:09', '17b33525116c46694f898c70097b3d83bfa04b91be2f77a6c75af6b7b6eb29dc', '7c450e5791751be0f703b63d545ea161604519eeb268d8fa1ab1834d66e48d7c', NULL)[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'user@abc.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16138768788') LIMIT 1[0m
+  [4;36;1mUser Create (1.0ms)[0m   [0;1mINSERT INTO "users" ("name", "email", "phone", "created_at", "updated_at", "encrypted_password", "salt", "remember_token") VALUES('Sample User', 'user@abc.com', '16138768788', '2010-07-08 15:43:09', '2010-07-08 15:43:09', '17b33525116c46694f898c70097b3d83bfa04b91be2f77a6c75af6b7b6eb29dc', '7c450e5791751be0f703b63d545ea161604519eeb268d8fa1ab1834d66e48d7c', NULL)[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'user@abc.com') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16138768788') LIMIT 1[0m
+  [4;35;1mUser Create (1.0ms)[0m   [0mINSERT INTO "users" ("name", "email", "phone", "created_at", "updated_at", "encrypted_password", "salt", "remember_token") VALUES('Sample User', 'user@abc.com', '16138768788', '2010-07-08 15:43:09', '2010-07-08 15:43:09', '17b33525116c46694f898c70097b3d83bfa04b91be2f77a6c75af6b7b6eb29dc', '7c450e5791751be0f703b63d545ea161604519eeb268d8fa1ab1834d66e48d7c', NULL)[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'user@abc.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16138768788') LIMIT 1[0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'user@abc.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16138768788') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'user@abc.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16138768788') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'user@abc.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16138768788') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'user@abc.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16138768788') LIMIT 1[0m
+  [4;36;1mUser Create (1.0ms)[0m   [0;1mINSERT INTO "users" ("name", "email", "phone", "created_at", "updated_at", "encrypted_password", "salt", "remember_token") VALUES('Sample User', 'user@abc.com', '16138768788', '2010-07-08 15:43:09', '2010-07-08 15:43:09', '17b33525116c46694f898c70097b3d83bfa04b91be2f77a6c75af6b7b6eb29dc', '7c450e5791751be0f703b63d545ea161604519eeb268d8fa1ab1834d66e48d7c', NULL)[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'user@abc.com') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16138768788') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'user@abc.com') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16138768788') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = '') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16138768788') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'user@abc.com') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16138768788') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'first.last@abc.jp') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16138768788') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'last.first@xyz.bar.org') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16138768788') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'user@abc,com') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16138768788') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'first.last@abc.') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16138768788') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'first_at_xyz.org') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16138768788') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'user@abc.com') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16138768788') LIMIT 1[0m
+  [4;35;1mUser Create (1.0ms)[0m   [0mINSERT INTO "users" ("name", "email", "phone", "created_at", "updated_at", "encrypted_password", "salt", "remember_token") VALUES('Sample User', 'user@abc.com', '16138768788', '2010-07-08 15:43:09', '2010-07-08 15:43:09', '17b33525116c46694f898c70097b3d83bfa04b91be2f77a6c75af6b7b6eb29dc', '7c450e5791751be0f703b63d545ea161604519eeb268d8fa1ab1834d66e48d7c', NULL)[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'user@abc.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16138768788') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'user@abc.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."phone" = '') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'user@abc.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16138768788') LIMIT 1[0m
+  [4;36;1mUser Create (1.0ms)[0m   [0;1mINSERT INTO "users" ("name", "email", "phone", "created_at", "updated_at", "encrypted_password", "salt", "remember_token") VALUES('Sample User', 'user@abc.com', '16138768788', '2010-07-08 15:43:09', '2010-07-08 15:43:09', '17b33525116c46694f898c70097b3d83bfa04b91be2f77a6c75af6b7b6eb29dc', '7c450e5791751be0f703b63d545ea161604519eeb268d8fa1ab1834d66e48d7c', NULL)[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'user@abc.com') LIMIT 1[0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16138768788') LIMIT 1[0m
