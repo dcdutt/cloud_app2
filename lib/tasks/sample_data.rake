@@ -9,7 +9,7 @@ namespace :db do
                  :phone => "16132241400",
                  :password => "foobar",
                  :password_confirmation => "foobar")
-    admin.toggle(:admin)
+    admin.toggle!(:admin)
     99.times do |n|
       name  = Faker::Name.name
       email = "example#{n+1}@zighra.org"

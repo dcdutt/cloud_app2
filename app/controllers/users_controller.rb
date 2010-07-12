@@ -2,7 +2,7 @@ class UsersController < ApplicationController
   
   before_filter :authenticate, :only => [:index, :edit, :update]
   before_filter :correct_user, :only => [:edit, :update]
-  before:filter :admin_user,   :only => :destroy
+  before_filter :admin_user, :only => :destroy
 
   # GET /users
   # GET /users.xml
@@ -10,10 +10,10 @@ class UsersController < ApplicationController
     @users = User.paginate(:page => params[:page])
     @title = "All Users"
 
-#    respond_to do |format|
-#      format.html # index.html.erb
-#      format.xml  { render :xml => @users }
-#    end
+    respond_to do |format|
+      format.html # index.html.erb
+      format.xml  { render :xml => @users }
+    end
   end
 
   # GET /users/1
