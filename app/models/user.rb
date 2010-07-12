@@ -20,7 +20,7 @@ class User < ActiveRecord::Base
 #   self.phone = phone.gsub(/[^0-9]/, "")
 #  end
 
-  EmailRegex = /\A[a-z+\-\_.]+@[a-z\d\-.]+\.[a-z]+\z/i
+  EmailRegex = /\A[a-z,0-9+\-\_.]+@[a-z\d\-.]+\.[a-z]+\z/i
   PhoneRegex = /^[+\/\-() 0-9]+$/
 
   validates_presence_of :name, :email, :phone

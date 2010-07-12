@@ -92,6 +92,14 @@ a.signup_button {
   border-radius: 10px;
 }
 
+ul.users {
+  margin-top: lem;
+}
+
+.users li {
+  list-style:none;
+}
+
 #footer {
   text-align: center;
   margin-top: 10px;

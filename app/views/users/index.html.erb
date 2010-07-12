@@ -1,24 +1,16 @@
-<h1>Listing users</h1>
+<h2>All users</h2>
 
-<table>
-  <tr>
-    <th>Name</th>
-    <th>Email</th>
-    <th>Phone</th>
-  </tr>
+<%= will_paginate %>
 
-<% @users.each do |user| %>
-  <tr>
-    <td><%=h user.name %></td>
-    <td><%=h user.email %></td>
-    <td><%=h user.phone %></td>
-    <td><%= link_to 'Show', user %></td>
-    <td><%= link_to 'Edit', edit_user_path(user) %></td>
-    <td><%= link_to 'Destroy', user, :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
-<% end %>
-</table>
+<ul class="users">
+  <% @users.each do |user| %>
+    <li>
+      <%= link_to h(user.name), user %>
+      <% if current_user.admin? %>
+          <%= link_to "delete", user, :method => :delete, :confirm => "Are you sure?" %>
+      <% end %>
+    </li>
+  <% end %>
+</ul>
 
-<br />
-
-<%= link_to 'New user', new_user_path %>
+<%= will_paginate %>

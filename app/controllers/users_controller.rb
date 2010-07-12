@@ -1,17 +1,19 @@
 class UsersController < ApplicationController
   
-  before_filer :authenticate, :only => [:edit, :update]
-  before_filer :correct_user, :only => [:edit, :update]
+  before_filter :authenticate, :only => [:index, :edit, :update]
+  before_filter :correct_user, :only => [:edit, :update]
+  before:filter :admin_user,   :only => :destroy
 
   # GET /users
   # GET /users.xml
   def index
-    @users = User.all
+    @users = User.paginate(:page => params[:page])
+    @title = "All Users"
 
-    respond_to do |format|
-      format.html # index.html.erb
-      format.xml  { render :xml => @users }
-    end
+#    respond_to do |format|
+#      format.html # index.html.erb
+#      format.xml  { render :xml => @users }
+#    end
   end
 
   # GET /users/1
@@ -39,7 +41,6 @@ class UsersController < ApplicationController
 
   # GET /users/1/edit
   def edit
-    @user = User.find(params[:id])
     @title = "Edit user"
   end
 
@@ -63,7 +64,6 @@ class UsersController < ApplicationController
   # PUT /users/1
   # PUT /users/1.xml
   def update
-    @user = User.find(params[:id])
 
     respond_to do |format|
       if @user.update_attributes(params[:user])
@@ -71,6 +71,7 @@ class UsersController < ApplicationController
         format.html { redirect_to(@user) }
         format.xml  { head :ok }
       else
+        @title = "Edit user"
         format.html { render :action => "edit" }
         format.xml  { render :xml => @user.errors, :status => :unprocessable_entity }
       end
@@ -82,23 +83,23 @@ class UsersController < ApplicationController
   def destroy
     @user = User.find(params[:id])
     @user.destroy
+    flash[:success] = "User destroyed."
 
     respond_to do |format|
-      format.html { redirect_to(users_url) }
+      format.html { redirect_to(users_path) }
       format.xml  { head :ok }
     end
   end
   
-  def update
-     @user = User.find(params[:id])
-     if @user.update_attributes(params[:user])
- 	 flash[:success] = "Profile updated."
-	 redirect_to @user
-     else
-  	 @title = "Edit user"
- 	 render 'edit'
-     end
-  end
+#  def update
+#     if @user.update_attributes(params[:user])
+# 	 flash[:success] = "Profile updated."
+#	 redirect_to @user
+#     else
+#  	 @title = "Edit user"
+# 	 render 'edit'
+#     end
+#  end
 
   private
 
@@ -109,6 +110,10 @@ class UsersController < ApplicationController
     def correct_user
 	@user = User.find(params[:id])
       redirect_to(root_path) unless current_user?(@user)
+    end
+   
+    def admin_user
+       redirect_to(root_path) unless current_user.admin?
     end
 
 end
