@@ -14,7 +14,7 @@ require 'digest'
 
 class User < ActiveRecord::Base
   attr_accessor :password
-  attr_accessible :name, :email, :phone, :password, :password_confirmation
+  attr_accessible :name, :email, :phone, :password, :password_confirmation, :mobile_pin
 
 #  def before_validation_on_create
 #   self.phone = phone.gsub(/[^0-9]/, "")
@@ -22,6 +22,7 @@ class User < ActiveRecord::Base
 
   EmailRegex = /\A[a-z,0-9+\-\_.]+@[a-z\d\-.]+\.[a-z]+\z/i
   PhoneRegex = /^[+\/\-() 0-9]+$/
+  PinRegex = /^[0-9]+$/
 
   validates_presence_of :name, :email, :phone
   validates_length_of :name, :maximum => 40
@@ -37,6 +38,11 @@ class User < ActiveRecord::Base
   # Password validations.
   validates_presence_of :password
   validates_length_of :password, :within => 6..40
+
+  # PIN validations.
+  validates_presence_of :mobile_pin
+  validates_length_of :mobile_pin, :is => 4
+  validates_format_of :mobile_pin, :with => PinRegex
 
   before_save :encrypt_password
 

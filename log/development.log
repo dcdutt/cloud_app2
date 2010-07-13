@@ -4555,3 +4555,627 @@ Rendered layouts/_stylesheets (0.4ms)
 Rendered layouts/_header (79.8ms)
 Rendered layouts/_footer (0.9ms)
 Completed in 173ms (View: 159, DB: 3) | 200 OK [http://localhost/users]
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20100705214850)
+Migrating to CreateMicroposts (20100705215413)
+Migrating to AddEmailUniquenessIndex (20100706173641)
+Migrating to AddPhoneUniquenessIndex (20100706180329)
+Migrating to AddPasswordToUsers (20100707143338)
+Migrating to AddSaltToUsers (20100707151847)
+Migrating to AddRememberTokenToUsers (20100708145739)
+Migrating to AddAdminToUsers (20100712181801)
+Migrating to AddPinToUsers (20100713181457)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mALTER TABLE "users" ADD "mobile_pin" varchar(255)[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100713181457')[0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("microposts")[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mPRAGMA index_list("users")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_info('index_users_on_remember_token')[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_info('index_users_on_phone')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_info('index_users_on_email')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (2.8ms)[0m   [0;1mCREATE TABLE "microposts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "content" varchar(255), "user_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.7ms)[0m   [0;1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "email" varchar(255), "phone" varchar(255), "created_at" datetime, "updated_at" datetime, "encrypted_password" varchar(255), "salt" varchar(255), "remember_token" varchar(255), "admin" boolean DEFAULT 'f', "mobile_pin" varchar(255)) [0m
+  [4;35;1mSQL (1.6ms)[0m   [0mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [4;36;1mSQL (1.4ms)[0m   [0;1mCREATE UNIQUE INDEX "index_users_on_phone" ON "users" ("phone")[0m
+  [4;35;1mSQL (1.6ms)[0m   [0mCREATE INDEX "index_users_on_remember_token" ON "users" ("remember_token")[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (2.6ms)[0m   [0mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;36;1mSQL (1.5ms)[0m   [0;1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM "schema_migrations"[0m
+  [4;35;1mSQL (1.7ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20100713181457')[0m
+  [4;36;1mSQL (1.6ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100705214850')[0m
+  [4;35;1mSQL (1.4ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20100705215413')[0m
+  [4;36;1mSQL (2.3ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100706173641')[0m
+  [4;35;1mSQL (1.7ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20100706180329')[0m
+  [4;36;1mSQL (1.4ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100707143338')[0m
+  [4;35;1mSQL (1.5ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20100707151847')[0m
+  [4;36;1mSQL (1.6ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100708145739')[0m
+  [4;35;1mSQL (1.5ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20100712181801')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (2.2ms)[0m   [0;1mCREATE TABLE "microposts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "content" varchar(255), "user_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.5ms)[0m   [0;1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "email" varchar(255), "phone" varchar(255), "created_at" datetime, "updated_at" datetime, "encrypted_password" varchar(255), "salt" varchar(255), "remember_token" varchar(255), "admin" boolean DEFAULT 'f', "mobile_pin" varchar(255)) [0m
+  [4;35;1mSQL (1.4ms)[0m   [0mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [4;36;1mSQL (2.6ms)[0m   [0;1mCREATE UNIQUE INDEX "index_users_on_phone" ON "users" ("phone")[0m
+  [4;35;1mSQL (1.4ms)[0m   [0mCREATE INDEX "index_users_on_remember_token" ON "users" ("remember_token")[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (1.5ms)[0m   [0mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;36;1mSQL (1.6ms)[0m   [0;1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM "schema_migrations"[0m
+  [4;35;1mSQL (2.1ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20100713181457')[0m
+  [4;36;1mSQL (1.2ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100705214850')[0m
+  [4;35;1mSQL (1.2ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20100705215413')[0m
+  [4;36;1mSQL (1.6ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100706173641')[0m
+  [4;35;1mSQL (1.7ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20100706180329')[0m
+  [4;36;1mSQL (1.9ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100707143338')[0m
+  [4;35;1mSQL (1.4ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20100707151847')[0m
+  [4;36;1mSQL (2.4ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100708145739')[0m
+  [4;35;1mSQL (2.2ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20100712181801')[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'admin@zighra.org') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16132241400') LIMIT 1[0m
+  [4;36;1mUser Create (0.4ms)[0m   [0;1mINSERT INTO "users" ("name", "encrypted_password", "salt", "created_at", "updated_at", "admin", "mobile_pin", "phone", "remember_token", "email") VALUES('Admin User', '06af6c1804d72c6ba767e8a15400c051fc1b9947d3902d469af63f1bb2c7e546', '0c41f5698189831b4a3957a51644408b444aed087f05636f82547f85586a1c51', '2010-07-13 18:29:43', '2010-07-13 18:29:43', 'f', '1234', '16132241400', NULL, 'admin@zighra.org')[0m
+  [4;35;1mUser Update (0.3ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-07-13 18:29:43', "admin" = 't' WHERE "id" = 1[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'example1@zighra.org') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16132241401') LIMIT 1[0m
+  [4;36;1mUser Create (0.3ms)[0m   [0;1mINSERT INTO "users" ("name", "encrypted_password", "salt", "created_at", "updated_at", "admin", "mobile_pin", "phone", "remember_token", "email") VALUES('Emilie Runolfsdottir', '1a04a4f6a754ed9fa9b3ab13a5d037ef1549e3b748e60edc1bdace152ab738e5', 'e00e1c10ea7a301d6477659eb4bfbedc06eefe9fe3d81836821ce2939c047693', '2010-07-13 18:29:43', '2010-07-13 18:29:43', 'f', '1234', '16132241401', NULL, 'example1@zighra.org')[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'example2@zighra.org') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16132241402') LIMIT 1[0m
+  [4;35;1mUser Create (0.3ms)[0m   [0mINSERT INTO "users" ("name", "encrypted_password", "salt", "created_at", "updated_at", "admin", "mobile_pin", "phone", "remember_token", "email") VALUES('Arvid Walter', '1a04a4f6a754ed9fa9b3ab13a5d037ef1549e3b748e60edc1bdace152ab738e5', 'e00e1c10ea7a301d6477659eb4bfbedc06eefe9fe3d81836821ce2939c047693', '2010-07-13 18:29:43', '2010-07-13 18:29:43', 'f', '1234', '16132241402', NULL, 'example2@zighra.org')[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'example3@zighra.org') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16132241403') LIMIT 1[0m
+  [4;36;1mUser Create (0.4ms)[0m   [0;1mINSERT INTO "users" ("name", "encrypted_password", "salt", "created_at", "updated_at", "admin", "mobile_pin", "phone", "remember_token", "email") VALUES('Jamil Satterfield', '1a04a4f6a754ed9fa9b3ab13a5d037ef1549e3b748e60edc1bdace152ab738e5', 'e00e1c10ea7a301d6477659eb4bfbedc06eefe9fe3d81836821ce2939c047693', '2010-07-13 18:29:43', '2010-07-13 18:29:43', 'f', '1234', '16132241403', NULL, 'example3@zighra.org')[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'example4@zighra.org') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16132241404') LIMIT 1[0m
+  [4;35;1mUser Create (0.4ms)[0m   [0mINSERT INTO "users" ("name", "encrypted_password", "salt", "created_at", "updated_at", "admin", "mobile_pin", "phone", "remember_token", "email") VALUES('Dorthy Spencer', '1a04a4f6a754ed9fa9b3ab13a5d037ef1549e3b748e60edc1bdace152ab738e5', 'e00e1c10ea7a301d6477659eb4bfbedc06eefe9fe3d81836821ce2939c047693', '2010-07-13 18:29:43', '2010-07-13 18:29:43', 'f', '1234', '16132241404', NULL, 'example4@zighra.org')[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'example5@zighra.org') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16132241405') LIMIT 1[0m
+  [4;36;1mUser Create (0.4ms)[0m   [0;1mINSERT INTO "users" ("name", "encrypted_password", "salt", "created_at", "updated_at", "admin", "mobile_pin", "phone", "remember_token", "email") VALUES('Janiya Lesch', '1a04a4f6a754ed9fa9b3ab13a5d037ef1549e3b748e60edc1bdace152ab738e5', 'e00e1c10ea7a301d6477659eb4bfbedc06eefe9fe3d81836821ce2939c047693', '2010-07-13 18:29:43', '2010-07-13 18:29:43', 'f', '1234', '16132241405', NULL, 'example5@zighra.org')[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'example6@zighra.org') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16132241406') LIMIT 1[0m
+  [4;35;1mUser Create (0.3ms)[0m   [0mINSERT INTO "users" ("name", "encrypted_password", "salt", "created_at", "updated_at", "admin", "mobile_pin", "phone", "remember_token", "email") VALUES('Noemy Robel MD', '1a04a4f6a754ed9fa9b3ab13a5d037ef1549e3b748e60edc1bdace152ab738e5', 'e00e1c10ea7a301d6477659eb4bfbedc06eefe9fe3d81836821ce2939c047693', '2010-07-13 18:29:43', '2010-07-13 18:29:43', 'f', '1234', '16132241406', NULL, 'example6@zighra.org')[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'example7@zighra.org') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16132241407') LIMIT 1[0m
+  [4;36;1mUser Create (0.4ms)[0m   [0;1mINSERT INTO "users" ("name", "encrypted_password", "salt", "created_at", "updated_at", "admin", "mobile_pin", "phone", "remember_token", "email") VALUES('Kellen Prosacco', '1a04a4f6a754ed9fa9b3ab13a5d037ef1549e3b748e60edc1bdace152ab738e5', 'e00e1c10ea7a301d6477659eb4bfbedc06eefe9fe3d81836821ce2939c047693', '2010-07-13 18:29:43', '2010-07-13 18:29:43', 'f', '1234', '16132241407', NULL, 'example7@zighra.org')[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'example8@zighra.org') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16132241408') LIMIT 1[0m
+  [4;35;1mUser Create (0.3ms)[0m   [0mINSERT INTO "users" ("name", "encrypted_password", "salt", "created_at", "updated_at", "admin", "mobile_pin", "phone", "remember_token", "email") VALUES('Ms. Jordane Graham', '1a04a4f6a754ed9fa9b3ab13a5d037ef1549e3b748e60edc1bdace152ab738e5', 'e00e1c10ea7a301d6477659eb4bfbedc06eefe9fe3d81836821ce2939c047693', '2010-07-13 18:29:43', '2010-07-13 18:29:43', 'f', '1234', '16132241408', NULL, 'example8@zighra.org')[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'example9@zighra.org') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16132241409') LIMIT 1[0m
+  [4;36;1mUser Create (0.4ms)[0m   [0;1mINSERT INTO "users" ("name", "encrypted_password", "salt", "created_at", "updated_at", "admin", "mobile_pin", "phone", "remember_token", "email") VALUES('Lyric Schmidt', '1a04a4f6a754ed9fa9b3ab13a5d037ef1549e3b748e60edc1bdace152ab738e5', 'e00e1c10ea7a301d6477659eb4bfbedc06eefe9fe3d81836821ce2939c047693', '2010-07-13 18:29:43', '2010-07-13 18:29:43', 'f', '1234', '16132241409', NULL, 'example9@zighra.org')[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'example10@zighra.org') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16132241410') LIMIT 1[0m
+  [4;35;1mUser Create (0.4ms)[0m   [0mINSERT INTO "users" ("name", "encrypted_password", "salt", "created_at", "updated_at", "admin", "mobile_pin", "phone", "remember_token", "email") VALUES('Rupert Kirlin', '1a04a4f6a754ed9fa9b3ab13a5d037ef1549e3b748e60edc1bdace152ab738e5', 'e00e1c10ea7a301d6477659eb4bfbedc06eefe9fe3d81836821ce2939c047693', '2010-07-13 18:29:43', '2010-07-13 18:29:43', 'f', '1234', '16132241410', NULL, 'example10@zighra.org')[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'example11@zighra.org') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16132241411') LIMIT 1[0m
+  [4;36;1mUser Create (0.4ms)[0m   [0;1mINSERT INTO "users" ("name", "encrypted_password", "salt", "created_at", "updated_at", "admin", "mobile_pin", "phone", "remember_token", "email") VALUES('Sandrine Bergnaum', '1a04a4f6a754ed9fa9b3ab13a5d037ef1549e3b748e60edc1bdace152ab738e5', 'e00e1c10ea7a301d6477659eb4bfbedc06eefe9fe3d81836821ce2939c047693', '2010-07-13 18:29:43', '2010-07-13 18:29:43', 'f', '1234', '16132241411', NULL, 'example11@zighra.org')[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'example12@zighra.org') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16132241412') LIMIT 1[0m
+  [4;35;1mUser Create (0.4ms)[0m   [0mINSERT INTO "users" ("name", "encrypted_password", "salt", "created_at", "updated_at", "admin", "mobile_pin", "phone", "remember_token", "email") VALUES('Hans Dach', '1a04a4f6a754ed9fa9b3ab13a5d037ef1549e3b748e60edc1bdace152ab738e5', 'e00e1c10ea7a301d6477659eb4bfbedc06eefe9fe3d81836821ce2939c047693', '2010-07-13 18:29:43', '2010-07-13 18:29:43', 'f', '1234', '16132241412', NULL, 'example12@zighra.org')[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'example13@zighra.org') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16132241413') LIMIT 1[0m
+  [4;36;1mUser Create (0.4ms)[0m   [0;1mINSERT INTO "users" ("name", "encrypted_password", "salt", "created_at", "updated_at", "admin", "mobile_pin", "phone", "remember_token", "email") VALUES('Brandt Beer', '1a04a4f6a754ed9fa9b3ab13a5d037ef1549e3b748e60edc1bdace152ab738e5', 'e00e1c10ea7a301d6477659eb4bfbedc06eefe9fe3d81836821ce2939c047693', '2010-07-13 18:29:43', '2010-07-13 18:29:43', 'f', '1234', '16132241413', NULL, 'example13@zighra.org')[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'example14@zighra.org') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16132241414') LIMIT 1[0m
+  [4;35;1mUser Create (0.4ms)[0m   [0mINSERT INTO "users" ("name", "encrypted_password", "salt", "created_at", "updated_at", "admin", "mobile_pin", "phone", "remember_token", "email") VALUES('Camilla Conroy', '1a04a4f6a754ed9fa9b3ab13a5d037ef1549e3b748e60edc1bdace152ab738e5', 'e00e1c10ea7a301d6477659eb4bfbedc06eefe9fe3d81836821ce2939c047693', '2010-07-13 18:29:43', '2010-07-13 18:29:43', 'f', '1234', '16132241414', NULL, 'example14@zighra.org')[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'example15@zighra.org') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16132241415') LIMIT 1[0m
+  [4;36;1mUser Create (0.4ms)[0m   [0;1mINSERT INTO "users" ("name", "encrypted_password", "salt", "created_at", "updated_at", "admin", "mobile_pin", "phone", "remember_token", "email") VALUES('Dayana Parker', '1a04a4f6a754ed9fa9b3ab13a5d037ef1549e3b748e60edc1bdace152ab738e5', 'e00e1c10ea7a301d6477659eb4bfbedc06eefe9fe3d81836821ce2939c047693', '2010-07-13 18:29:43', '2010-07-13 18:29:43', 'f', '1234', '16132241415', NULL, 'example15@zighra.org')[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'example16@zighra.org') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16132241416') LIMIT 1[0m
+  [4;35;1mUser Create (0.4ms)[0m   [0mINSERT INTO "users" ("name", "encrypted_password", "salt", "created_at", "updated_at", "admin", "mobile_pin", "phone", "remember_token", "email") VALUES('Hallie Hettinger DVM', '1a04a4f6a754ed9fa9b3ab13a5d037ef1549e3b748e60edc1bdace152ab738e5', 'e00e1c10ea7a301d6477659eb4bfbedc06eefe9fe3d81836821ce2939c047693', '2010-07-13 18:29:43', '2010-07-13 18:29:43', 'f', '1234', '16132241416', NULL, 'example16@zighra.org')[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'example17@zighra.org') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16132241417') LIMIT 1[0m
+  [4;36;1mUser Create (0.4ms)[0m   [0;1mINSERT INTO "users" ("name", "encrypted_password", "salt", "created_at", "updated_at", "admin", "mobile_pin", "phone", "remember_token", "email") VALUES('Carmine Labadie', '1a04a4f6a754ed9fa9b3ab13a5d037ef1549e3b748e60edc1bdace152ab738e5', 'e00e1c10ea7a301d6477659eb4bfbedc06eefe9fe3d81836821ce2939c047693', '2010-07-13 18:29:43', '2010-07-13 18:29:43', 'f', '1234', '16132241417', NULL, 'example17@zighra.org')[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'example18@zighra.org') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16132241418') LIMIT 1[0m
+  [4;35;1mUser Create (0.4ms)[0m   [0mINSERT INTO "users" ("name", "encrypted_password", "salt", "created_at", "updated_at", "admin", "mobile_pin", "phone", "remember_token", "email") VALUES('Alycia Aufderhar', '1a04a4f6a754ed9fa9b3ab13a5d037ef1549e3b748e60edc1bdace152ab738e5', 'e00e1c10ea7a301d6477659eb4bfbedc06eefe9fe3d81836821ce2939c047693', '2010-07-13 18:29:43', '2010-07-13 18:29:43', 'f', '1234', '16132241418', NULL, 'example18@zighra.org')[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'example19@zighra.org') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16132241419') LIMIT 1[0m
+  [4;36;1mUser Create (0.4ms)[0m   [0;1mINSERT INTO "users" ("name", "encrypted_password", "salt", "created_at", "updated_at", "admin", "mobile_pin", "phone", "remember_token", "email") VALUES('Brook Spinka', '1a04a4f6a754ed9fa9b3ab13a5d037ef1549e3b748e60edc1bdace152ab738e5', 'e00e1c10ea7a301d6477659eb4bfbedc06eefe9fe3d81836821ce2939c047693', '2010-07-13 18:29:43', '2010-07-13 18:29:43', 'f', '1234', '16132241419', NULL, 'example19@zighra.org')[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'example20@zighra.org') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16132241420') LIMIT 1[0m
+  [4;35;1mUser Create (0.3ms)[0m   [0mINSERT INTO "users" ("name", "encrypted_password", "salt", "created_at", "updated_at", "admin", "mobile_pin", "phone", "remember_token", "email") VALUES('Darron Lesch', '1a04a4f6a754ed9fa9b3ab13a5d037ef1549e3b748e60edc1bdace152ab738e5', 'e00e1c10ea7a301d6477659eb4bfbedc06eefe9fe3d81836821ce2939c047693', '2010-07-13 18:29:43', '2010-07-13 18:29:43', 'f', '1234', '16132241420', NULL, 'example20@zighra.org')[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'example21@zighra.org') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16132241421') LIMIT 1[0m
+  [4;36;1mUser Create (0.4ms)[0m   [0;1mINSERT INTO "users" ("name", "encrypted_password", "salt", "created_at", "updated_at", "admin", "mobile_pin", "phone", "remember_token", "email") VALUES('Alene Harvey', '1a04a4f6a754ed9fa9b3ab13a5d037ef1549e3b748e60edc1bdace152ab738e5', 'e00e1c10ea7a301d6477659eb4bfbedc06eefe9fe3d81836821ce2939c047693', '2010-07-13 18:29:43', '2010-07-13 18:29:43', 'f', '1234', '16132241421', NULL, 'example21@zighra.org')[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'example22@zighra.org') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16132241422') LIMIT 1[0m
+  [4;35;1mUser Create (0.4ms)[0m   [0mINSERT INTO "users" ("name", "encrypted_password", "salt", "created_at", "updated_at", "admin", "mobile_pin", "phone", "remember_token", "email") VALUES('Dillon Reichel', '1a04a4f6a754ed9fa9b3ab13a5d037ef1549e3b748e60edc1bdace152ab738e5', 'e00e1c10ea7a301d6477659eb4bfbedc06eefe9fe3d81836821ce2939c047693', '2010-07-13 18:29:43', '2010-07-13 18:29:43', 'f', '1234', '16132241422', NULL, 'example22@zighra.org')[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'example23@zighra.org') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16132241423') LIMIT 1[0m
+  [4;36;1mUser Create (0.4ms)[0m   [0;1mINSERT INTO "users" ("name", "encrypted_password", "salt", "created_at", "updated_at", "admin", "mobile_pin", "phone", "remember_token", "email") VALUES('Tierra Thiel', '1a04a4f6a754ed9fa9b3ab13a5d037ef1549e3b748e60edc1bdace152ab738e5', 'e00e1c10ea7a301d6477659eb4bfbedc06eefe9fe3d81836821ce2939c047693', '2010-07-13 18:29:43', '2010-07-13 18:29:43', 'f', '1234', '16132241423', NULL, 'example23@zighra.org')[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'example24@zighra.org') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16132241424') LIMIT 1[0m
+  [4;35;1mUser Create (0.6ms)[0m   [0mINSERT INTO "users" ("name", "encrypted_password", "salt", "created_at", "updated_at", "admin", "mobile_pin", "phone", "remember_token", "email") VALUES('Mrs. Kathryne Harber', '1a04a4f6a754ed9fa9b3ab13a5d037ef1549e3b748e60edc1bdace152ab738e5', 'e00e1c10ea7a301d6477659eb4bfbedc06eefe9fe3d81836821ce2939c047693', '2010-07-13 18:29:43', '2010-07-13 18:29:43', 'f', '1234', '16132241424', NULL, 'example24@zighra.org')[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'example25@zighra.org') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16132241425') LIMIT 1[0m
+  [4;36;1mUser Create (0.4ms)[0m   [0;1mINSERT INTO "users" ("name", "encrypted_password", "salt", "created_at", "updated_at", "admin", "mobile_pin", "phone", "remember_token", "email") VALUES('Ashlee Gerhold', '1a04a4f6a754ed9fa9b3ab13a5d037ef1549e3b748e60edc1bdace152ab738e5', 'e00e1c10ea7a301d6477659eb4bfbedc06eefe9fe3d81836821ce2939c047693', '2010-07-13 18:29:43', '2010-07-13 18:29:43', 'f', '1234', '16132241425', NULL, 'example25@zighra.org')[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'example26@zighra.org') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16132241426') LIMIT 1[0m
+  [4;35;1mUser Create (0.3ms)[0m   [0mINSERT INTO "users" ("name", "encrypted_password", "salt", "created_at", "updated_at", "admin", "mobile_pin", "phone", "remember_token", "email") VALUES('Leilani Stracke', '1a04a4f6a754ed9fa9b3ab13a5d037ef1549e3b748e60edc1bdace152ab738e5', 'e00e1c10ea7a301d6477659eb4bfbedc06eefe9fe3d81836821ce2939c047693', '2010-07-13 18:29:43', '2010-07-13 18:29:43', 'f', '1234', '16132241426', NULL, 'example26@zighra.org')[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'example27@zighra.org') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16132241427') LIMIT 1[0m
+  [4;36;1mUser Create (0.4ms)[0m   [0;1mINSERT INTO "users" ("name", "encrypted_password", "salt", "created_at", "updated_at", "admin", "mobile_pin", "phone", "remember_token", "email") VALUES('Daija Labadie', '1a04a4f6a754ed9fa9b3ab13a5d037ef1549e3b748e60edc1bdace152ab738e5', 'e00e1c10ea7a301d6477659eb4bfbedc06eefe9fe3d81836821ce2939c047693', '2010-07-13 18:29:43', '2010-07-13 18:29:43', 'f', '1234', '16132241427', NULL, 'example27@zighra.org')[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'example28@zighra.org') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16132241428') LIMIT 1[0m
+  [4;35;1mUser Create (0.4ms)[0m   [0mINSERT INTO "users" ("name", "encrypted_password", "salt", "created_at", "updated_at", "admin", "mobile_pin", "phone", "remember_token", "email") VALUES('Allison Rath', '1a04a4f6a754ed9fa9b3ab13a5d037ef1549e3b748e60edc1bdace152ab738e5', 'e00e1c10ea7a301d6477659eb4bfbedc06eefe9fe3d81836821ce2939c047693', '2010-07-13 18:29:43', '2010-07-13 18:29:43', 'f', '1234', '16132241428', NULL, 'example28@zighra.org')[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'example29@zighra.org') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16132241429') LIMIT 1[0m
+  [4;36;1mUser Create (0.3ms)[0m   [0;1mINSERT INTO "users" ("name", "encrypted_password", "salt", "created_at", "updated_at", "admin", "mobile_pin", "phone", "remember_token", "email") VALUES('Freeman Weissnat', '1a04a4f6a754ed9fa9b3ab13a5d037ef1549e3b748e60edc1bdace152ab738e5', 'e00e1c10ea7a301d6477659eb4bfbedc06eefe9fe3d81836821ce2939c047693', '2010-07-13 18:29:43', '2010-07-13 18:29:43', 'f', '1234', '16132241429', NULL, 'example29@zighra.org')[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'example30@zighra.org') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16132241430') LIMIT 1[0m
+  [4;35;1mUser Create (0.3ms)[0m   [0mINSERT INTO "users" ("name", "encrypted_password", "salt", "created_at", "updated_at", "admin", "mobile_pin", "phone", "remember_token", "email") VALUES('Geoffrey Mitchell', '1a04a4f6a754ed9fa9b3ab13a5d037ef1549e3b748e60edc1bdace152ab738e5', 'e00e1c10ea7a301d6477659eb4bfbedc06eefe9fe3d81836821ce2939c047693', '2010-07-13 18:29:43', '2010-07-13 18:29:43', 'f', '1234', '16132241430', NULL, 'example30@zighra.org')[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'example31@zighra.org') LIMIT 1[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16132241431') LIMIT 1[0m
+  [4;36;1mUser Create (0.4ms)[0m   [0;1mINSERT INTO "users" ("name", "encrypted_password", "salt", "created_at", "updated_at", "admin", "mobile_pin", "phone", "remember_token", "email") VALUES('Jammie Langosh', '1a04a4f6a754ed9fa9b3ab13a5d037ef1549e3b748e60edc1bdace152ab738e5', 'e00e1c10ea7a301d6477659eb4bfbedc06eefe9fe3d81836821ce2939c047693', '2010-07-13 18:29:43', '2010-07-13 18:29:43', 'f', '1234', '16132241431', NULL, 'example31@zighra.org')[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'example32@zighra.org') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16132241432') LIMIT 1[0m
+  [4;35;1mUser Create (0.4ms)[0m   [0mINSERT INTO "users" ("name", "encrypted_password", "salt", "created_at", "updated_at", "admin", "mobile_pin", "phone", "remember_token", "email") VALUES('Janick Rempel', '1a04a4f6a754ed9fa9b3ab13a5d037ef1549e3b748e60edc1bdace152ab738e5', 'e00e1c10ea7a301d6477659eb4bfbedc06eefe9fe3d81836821ce2939c047693', '2010-07-13 18:29:43', '2010-07-13 18:29:43', 'f', '1234', '16132241432', NULL, 'example32@zighra.org')[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'example33@zighra.org') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16132241433') LIMIT 1[0m
+  [4;36;1mUser Create (0.4ms)[0m   [0;1mINSERT INTO "users" ("name", "encrypted_password", "salt", "created_at", "updated_at", "admin", "mobile_pin", "phone", "remember_token", "email") VALUES('Dorthy Wolf', '1a04a4f6a754ed9fa9b3ab13a5d037ef1549e3b748e60edc1bdace152ab738e5', 'e00e1c10ea7a301d6477659eb4bfbedc06eefe9fe3d81836821ce2939c047693', '2010-07-13 18:29:43', '2010-07-13 18:29:43', 'f', '1234', '16132241433', NULL, 'example33@zighra.org')[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'example34@zighra.org') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16132241434') LIMIT 1[0m
+  [4;35;1mUser Create (0.4ms)[0m   [0mINSERT INTO "users" ("name", "encrypted_password", "salt", "created_at", "updated_at", "admin", "mobile_pin", "phone", "remember_token", "email") VALUES('Mafalda Carter I', '1a04a4f6a754ed9fa9b3ab13a5d037ef1549e3b748e60edc1bdace152ab738e5', 'e00e1c10ea7a301d6477659eb4bfbedc06eefe9fe3d81836821ce2939c047693', '2010-07-13 18:29:43', '2010-07-13 18:29:43', 'f', '1234', '16132241434', NULL, 'example34@zighra.org')[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'example35@zighra.org') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16132241435') LIMIT 1[0m
+  [4;36;1mUser Create (0.4ms)[0m   [0;1mINSERT INTO "users" ("name", "encrypted_password", "salt", "created_at", "updated_at", "admin", "mobile_pin", "phone", "remember_token", "email") VALUES('Kayden Jast IV', '1a04a4f6a754ed9fa9b3ab13a5d037ef1549e3b748e60edc1bdace152ab738e5', 'e00e1c10ea7a301d6477659eb4bfbedc06eefe9fe3d81836821ce2939c047693', '2010-07-13 18:29:43', '2010-07-13 18:29:43', 'f', '1234', '16132241435', NULL, 'example35@zighra.org')[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'example36@zighra.org') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16132241436') LIMIT 1[0m
+  [4;35;1mUser Create (0.4ms)[0m   [0mINSERT INTO "users" ("name", "encrypted_password", "salt", "created_at", "updated_at", "admin", "mobile_pin", "phone", "remember_token", "email") VALUES('Davon Mills', '1a04a4f6a754ed9fa9b3ab13a5d037ef1549e3b748e60edc1bdace152ab738e5', 'e00e1c10ea7a301d6477659eb4bfbedc06eefe9fe3d81836821ce2939c047693', '2010-07-13 18:29:43', '2010-07-13 18:29:43', 'f', '1234', '16132241436', NULL, 'example36@zighra.org')[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'example37@zighra.org') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16132241437') LIMIT 1[0m
+  [4;36;1mUser Create (0.4ms)[0m   [0;1mINSERT INTO "users" ("name", "encrypted_password", "salt", "created_at", "updated_at", "admin", "mobile_pin", "phone", "remember_token", "email") VALUES('Newell Kreiger', '1a04a4f6a754ed9fa9b3ab13a5d037ef1549e3b748e60edc1bdace152ab738e5', 'e00e1c10ea7a301d6477659eb4bfbedc06eefe9fe3d81836821ce2939c047693', '2010-07-13 18:29:43', '2010-07-13 18:29:43', 'f', '1234', '16132241437', NULL, 'example37@zighra.org')[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'example38@zighra.org') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16132241438') LIMIT 1[0m
+  [4;35;1mUser Create (0.4ms)[0m   [0mINSERT INTO "users" ("name", "encrypted_password", "salt", "created_at", "updated_at", "admin", "mobile_pin", "phone", "remember_token", "email") VALUES('Paul Douglas', '1a04a4f6a754ed9fa9b3ab13a5d037ef1549e3b748e60edc1bdace152ab738e5', 'e00e1c10ea7a301d6477659eb4bfbedc06eefe9fe3d81836821ce2939c047693', '2010-07-13 18:29:43', '2010-07-13 18:29:43', 'f', '1234', '16132241438', NULL, 'example38@zighra.org')[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'example39@zighra.org') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16132241439') LIMIT 1[0m
+  [4;36;1mUser Create (0.3ms)[0m   [0;1mINSERT INTO "users" ("name", "encrypted_password", "salt", "created_at", "updated_at", "admin", "mobile_pin", "phone", "remember_token", "email") VALUES('Nayeli Waters V', '1a04a4f6a754ed9fa9b3ab13a5d037ef1549e3b748e60edc1bdace152ab738e5', 'e00e1c10ea7a301d6477659eb4bfbedc06eefe9fe3d81836821ce2939c047693', '2010-07-13 18:29:43', '2010-07-13 18:29:43', 'f', '1234', '16132241439', NULL, 'example39@zighra.org')[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'example40@zighra.org') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16132241440') LIMIT 1[0m
+  [4;35;1mUser Create (0.4ms)[0m   [0mINSERT INTO "users" ("name", "encrypted_password", "salt", "created_at", "updated_at", "admin", "mobile_pin", "phone", "remember_token", "email") VALUES('Jaydon Sawayn', '1a04a4f6a754ed9fa9b3ab13a5d037ef1549e3b748e60edc1bdace152ab738e5', 'e00e1c10ea7a301d6477659eb4bfbedc06eefe9fe3d81836821ce2939c047693', '2010-07-13 18:29:43', '2010-07-13 18:29:43', 'f', '1234', '16132241440', NULL, 'example40@zighra.org')[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'example41@zighra.org') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16132241441') LIMIT 1[0m
+  [4;36;1mUser Create (0.4ms)[0m   [0;1mINSERT INTO "users" ("name", "encrypted_password", "salt", "created_at", "updated_at", "admin", "mobile_pin", "phone", "remember_token", "email") VALUES('Henderson Lockman', '1a04a4f6a754ed9fa9b3ab13a5d037ef1549e3b748e60edc1bdace152ab738e5', 'e00e1c10ea7a301d6477659eb4bfbedc06eefe9fe3d81836821ce2939c047693', '2010-07-13 18:29:43', '2010-07-13 18:29:43', 'f', '1234', '16132241441', NULL, 'example41@zighra.org')[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'example42@zighra.org') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16132241442') LIMIT 1[0m
+  [4;35;1mUser Create (0.4ms)[0m   [0mINSERT INTO "users" ("name", "encrypted_password", "salt", "created_at", "updated_at", "admin", "mobile_pin", "phone", "remember_token", "email") VALUES('Annamae Ziemann', '1a04a4f6a754ed9fa9b3ab13a5d037ef1549e3b748e60edc1bdace152ab738e5', 'e00e1c10ea7a301d6477659eb4bfbedc06eefe9fe3d81836821ce2939c047693', '2010-07-13 18:29:43', '2010-07-13 18:29:43', 'f', '1234', '16132241442', NULL, 'example42@zighra.org')[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'example43@zighra.org') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16132241443') LIMIT 1[0m
+  [4;36;1mUser Create (0.4ms)[0m   [0;1mINSERT INTO "users" ("name", "encrypted_password", "salt", "created_at", "updated_at", "admin", "mobile_pin", "phone", "remember_token", "email") VALUES('Kyler Gaylord', '1a04a4f6a754ed9fa9b3ab13a5d037ef1549e3b748e60edc1bdace152ab738e5', 'e00e1c10ea7a301d6477659eb4bfbedc06eefe9fe3d81836821ce2939c047693', '2010-07-13 18:29:43', '2010-07-13 18:29:43', 'f', '1234', '16132241443', NULL, 'example43@zighra.org')[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'example44@zighra.org') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16132241444') LIMIT 1[0m
+  [4;35;1mUser Create (0.3ms)[0m   [0mINSERT INTO "users" ("name", "encrypted_password", "salt", "created_at", "updated_at", "admin", "mobile_pin", "phone", "remember_token", "email") VALUES('Juwan Ondricka', '1a04a4f6a754ed9fa9b3ab13a5d037ef1549e3b748e60edc1bdace152ab738e5', 'e00e1c10ea7a301d6477659eb4bfbedc06eefe9fe3d81836821ce2939c047693', '2010-07-13 18:29:43', '2010-07-13 18:29:43', 'f', '1234', '16132241444', NULL, 'example44@zighra.org')[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'example45@zighra.org') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16132241445') LIMIT 1[0m
+  [4;36;1mUser Create (0.4ms)[0m   [0;1mINSERT INTO "users" ("name", "encrypted_password", "salt", "created_at", "updated_at", "admin", "mobile_pin", "phone", "remember_token", "email") VALUES('Jamal Ryan', '1a04a4f6a754ed9fa9b3ab13a5d037ef1549e3b748e60edc1bdace152ab738e5', 'e00e1c10ea7a301d6477659eb4bfbedc06eefe9fe3d81836821ce2939c047693', '2010-07-13 18:29:43', '2010-07-13 18:29:43', 'f', '1234', '16132241445', NULL, 'example45@zighra.org')[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'example46@zighra.org') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16132241446') LIMIT 1[0m
+  [4;35;1mUser Create (0.3ms)[0m   [0mINSERT INTO "users" ("name", "encrypted_password", "salt", "created_at", "updated_at", "admin", "mobile_pin", "phone", "remember_token", "email") VALUES('Lucienne Fisher', '1a04a4f6a754ed9fa9b3ab13a5d037ef1549e3b748e60edc1bdace152ab738e5', 'e00e1c10ea7a301d6477659eb4bfbedc06eefe9fe3d81836821ce2939c047693', '2010-07-13 18:29:43', '2010-07-13 18:29:43', 'f', '1234', '16132241446', NULL, 'example46@zighra.org')[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'example47@zighra.org') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16132241447') LIMIT 1[0m
+  [4;36;1mUser Create (0.4ms)[0m   [0;1mINSERT INTO "users" ("name", "encrypted_password", "salt", "created_at", "updated_at", "admin", "mobile_pin", "phone", "remember_token", "email") VALUES('Santa Orn', '1a04a4f6a754ed9fa9b3ab13a5d037ef1549e3b748e60edc1bdace152ab738e5', 'e00e1c10ea7a301d6477659eb4bfbedc06eefe9fe3d81836821ce2939c047693', '2010-07-13 18:29:43', '2010-07-13 18:29:43', 'f', '1234', '16132241447', NULL, 'example47@zighra.org')[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'example48@zighra.org') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16132241448') LIMIT 1[0m
+  [4;35;1mUser Create (0.3ms)[0m   [0mINSERT INTO "users" ("name", "encrypted_password", "salt", "created_at", "updated_at", "admin", "mobile_pin", "phone", "remember_token", "email") VALUES('Robbie Kemmer', '1a04a4f6a754ed9fa9b3ab13a5d037ef1549e3b748e60edc1bdace152ab738e5', 'e00e1c10ea7a301d6477659eb4bfbedc06eefe9fe3d81836821ce2939c047693', '2010-07-13 18:29:43', '2010-07-13 18:29:43', 'f', '1234', '16132241448', NULL, 'example48@zighra.org')[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'example49@zighra.org') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16132241449') LIMIT 1[0m
+  [4;36;1mUser Create (0.4ms)[0m   [0;1mINSERT INTO "users" ("name", "encrypted_password", "salt", "created_at", "updated_at", "admin", "mobile_pin", "phone", "remember_token", "email") VALUES('Linda Lindgren', '1a04a4f6a754ed9fa9b3ab13a5d037ef1549e3b748e60edc1bdace152ab738e5', 'e00e1c10ea7a301d6477659eb4bfbedc06eefe9fe3d81836821ce2939c047693', '2010-07-13 18:29:43', '2010-07-13 18:29:43', 'f', '1234', '16132241449', NULL, 'example49@zighra.org')[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'example50@zighra.org') LIMIT 1[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16132241450') LIMIT 1[0m
+  [4;35;1mUser Create (0.4ms)[0m   [0mINSERT INTO "users" ("name", "encrypted_password", "salt", "created_at", "updated_at", "admin", "mobile_pin", "phone", "remember_token", "email") VALUES('Gillian Marks Sr.', '1a04a4f6a754ed9fa9b3ab13a5d037ef1549e3b748e60edc1bdace152ab738e5', 'e00e1c10ea7a301d6477659eb4bfbedc06eefe9fe3d81836821ce2939c047693', '2010-07-13 18:29:43', '2010-07-13 18:29:43', 'f', '1234', '16132241450', NULL, 'example50@zighra.org')[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'example51@zighra.org') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16132241451') LIMIT 1[0m
+  [4;36;1mUser Create (0.3ms)[0m   [0;1mINSERT INTO "users" ("name", "encrypted_password", "salt", "created_at", "updated_at", "admin", "mobile_pin", "phone", "remember_token", "email") VALUES('Heather Heathcote', '1a04a4f6a754ed9fa9b3ab13a5d037ef1549e3b748e60edc1bdace152ab738e5', 'e00e1c10ea7a301d6477659eb4bfbedc06eefe9fe3d81836821ce2939c047693', '2010-07-13 18:29:43', '2010-07-13 18:29:43', 'f', '1234', '16132241451', NULL, 'example51@zighra.org')[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'example52@zighra.org') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16132241452') LIMIT 1[0m
+  [4;35;1mUser Create (0.4ms)[0m   [0mINSERT INTO "users" ("name", "encrypted_password", "salt", "created_at", "updated_at", "admin", "mobile_pin", "phone", "remember_token", "email") VALUES('Geovanni Bauch', '1a04a4f6a754ed9fa9b3ab13a5d037ef1549e3b748e60edc1bdace152ab738e5', 'e00e1c10ea7a301d6477659eb4bfbedc06eefe9fe3d81836821ce2939c047693', '2010-07-13 18:29:43', '2010-07-13 18:29:43', 'f', '1234', '16132241452', NULL, 'example52@zighra.org')[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'example53@zighra.org') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16132241453') LIMIT 1[0m
+  [4;36;1mUser Create (0.4ms)[0m   [0;1mINSERT INTO "users" ("name", "encrypted_password", "salt", "created_at", "updated_at", "admin", "mobile_pin", "phone", "remember_token", "email") VALUES('Ewell Hickle', '1a04a4f6a754ed9fa9b3ab13a5d037ef1549e3b748e60edc1bdace152ab738e5', 'e00e1c10ea7a301d6477659eb4bfbedc06eefe9fe3d81836821ce2939c047693', '2010-07-13 18:29:43', '2010-07-13 18:29:43', 'f', '1234', '16132241453', NULL, 'example53@zighra.org')[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'example54@zighra.org') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16132241454') LIMIT 1[0m
+  [4;35;1mUser Create (0.4ms)[0m   [0mINSERT INTO "users" ("name", "encrypted_password", "salt", "created_at", "updated_at", "admin", "mobile_pin", "phone", "remember_token", "email") VALUES('Velda Prosacco', '1a04a4f6a754ed9fa9b3ab13a5d037ef1549e3b748e60edc1bdace152ab738e5', 'e00e1c10ea7a301d6477659eb4bfbedc06eefe9fe3d81836821ce2939c047693', '2010-07-13 18:29:43', '2010-07-13 18:29:43', 'f', '1234', '16132241454', NULL, 'example54@zighra.org')[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'example55@zighra.org') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16132241455') LIMIT 1[0m
+  [4;36;1mUser Create (0.4ms)[0m   [0;1mINSERT INTO "users" ("name", "encrypted_password", "salt", "created_at", "updated_at", "admin", "mobile_pin", "phone", "remember_token", "email") VALUES('Franco Emmerich', '1a04a4f6a754ed9fa9b3ab13a5d037ef1549e3b748e60edc1bdace152ab738e5', 'e00e1c10ea7a301d6477659eb4bfbedc06eefe9fe3d81836821ce2939c047693', '2010-07-13 18:29:43', '2010-07-13 18:29:43', 'f', '1234', '16132241455', NULL, 'example55@zighra.org')[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'example56@zighra.org') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16132241456') LIMIT 1[0m
+  [4;35;1mUser Create (0.4ms)[0m   [0mINSERT INTO "users" ("name", "encrypted_password", "salt", "created_at", "updated_at", "admin", "mobile_pin", "phone", "remember_token", "email") VALUES('Kirk Quitzon', '1a04a4f6a754ed9fa9b3ab13a5d037ef1549e3b748e60edc1bdace152ab738e5', 'e00e1c10ea7a301d6477659eb4bfbedc06eefe9fe3d81836821ce2939c047693', '2010-07-13 18:29:43', '2010-07-13 18:29:43', 'f', '1234', '16132241456', NULL, 'example56@zighra.org')[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'example57@zighra.org') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16132241457') LIMIT 1[0m
+  [4;36;1mUser Create (0.4ms)[0m   [0;1mINSERT INTO "users" ("name", "encrypted_password", "salt", "created_at", "updated_at", "admin", "mobile_pin", "phone", "remember_token", "email") VALUES('Virgie Ledner', '1a04a4f6a754ed9fa9b3ab13a5d037ef1549e3b748e60edc1bdace152ab738e5', 'e00e1c10ea7a301d6477659eb4bfbedc06eefe9fe3d81836821ce2939c047693', '2010-07-13 18:29:43', '2010-07-13 18:29:43', 'f', '1234', '16132241457', NULL, 'example57@zighra.org')[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'example58@zighra.org') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16132241458') LIMIT 1[0m
+  [4;35;1mUser Create (0.4ms)[0m   [0mINSERT INTO "users" ("name", "encrypted_password", "salt", "created_at", "updated_at", "admin", "mobile_pin", "phone", "remember_token", "email") VALUES('Xzavier Yost', '1a04a4f6a754ed9fa9b3ab13a5d037ef1549e3b748e60edc1bdace152ab738e5', 'e00e1c10ea7a301d6477659eb4bfbedc06eefe9fe3d81836821ce2939c047693', '2010-07-13 18:29:43', '2010-07-13 18:29:43', 'f', '1234', '16132241458', NULL, 'example58@zighra.org')[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'example59@zighra.org') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16132241459') LIMIT 1[0m
+  [4;36;1mUser Create (0.4ms)[0m   [0;1mINSERT INTO "users" ("name", "encrypted_password", "salt", "created_at", "updated_at", "admin", "mobile_pin", "phone", "remember_token", "email") VALUES('Gabriella Brakus', '1a04a4f6a754ed9fa9b3ab13a5d037ef1549e3b748e60edc1bdace152ab738e5', 'e00e1c10ea7a301d6477659eb4bfbedc06eefe9fe3d81836821ce2939c047693', '2010-07-13 18:29:43', '2010-07-13 18:29:43', 'f', '1234', '16132241459', NULL, 'example59@zighra.org')[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'example60@zighra.org') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16132241460') LIMIT 1[0m
+  [4;35;1mUser Create (0.5ms)[0m   [0mINSERT INTO "users" ("name", "encrypted_password", "salt", "created_at", "updated_at", "admin", "mobile_pin", "phone", "remember_token", "email") VALUES('Tyrique Carroll', '1a04a4f6a754ed9fa9b3ab13a5d037ef1549e3b748e60edc1bdace152ab738e5', 'e00e1c10ea7a301d6477659eb4bfbedc06eefe9fe3d81836821ce2939c047693', '2010-07-13 18:29:43', '2010-07-13 18:29:43', 'f', '1234', '16132241460', NULL, 'example60@zighra.org')[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'example61@zighra.org') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16132241461') LIMIT 1[0m
+  [4;36;1mUser Create (0.3ms)[0m   [0;1mINSERT INTO "users" ("name", "encrypted_password", "salt", "created_at", "updated_at", "admin", "mobile_pin", "phone", "remember_token", "email") VALUES('Layne Little', '1a04a4f6a754ed9fa9b3ab13a5d037ef1549e3b748e60edc1bdace152ab738e5', 'e00e1c10ea7a301d6477659eb4bfbedc06eefe9fe3d81836821ce2939c047693', '2010-07-13 18:29:43', '2010-07-13 18:29:43', 'f', '1234', '16132241461', NULL, 'example61@zighra.org')[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'example62@zighra.org') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16132241462') LIMIT 1[0m
+  [4;35;1mUser Create (0.4ms)[0m   [0mINSERT INTO "users" ("name", "encrypted_password", "salt", "created_at", "updated_at", "admin", "mobile_pin", "phone", "remember_token", "email") VALUES('Ms. Clark Lebsack', '1a04a4f6a754ed9fa9b3ab13a5d037ef1549e3b748e60edc1bdace152ab738e5', 'e00e1c10ea7a301d6477659eb4bfbedc06eefe9fe3d81836821ce2939c047693', '2010-07-13 18:29:43', '2010-07-13 18:29:43', 'f', '1234', '16132241462', NULL, 'example62@zighra.org')[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'example63@zighra.org') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16132241463') LIMIT 1[0m
+  [4;36;1mUser Create (0.3ms)[0m   [0;1mINSERT INTO "users" ("name", "encrypted_password", "salt", "created_at", "updated_at", "admin", "mobile_pin", "phone", "remember_token", "email") VALUES('Sharon Macejkovic', '1a04a4f6a754ed9fa9b3ab13a5d037ef1549e3b748e60edc1bdace152ab738e5', 'e00e1c10ea7a301d6477659eb4bfbedc06eefe9fe3d81836821ce2939c047693', '2010-07-13 18:29:43', '2010-07-13 18:29:43', 'f', '1234', '16132241463', NULL, 'example63@zighra.org')[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'example64@zighra.org') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16132241464') LIMIT 1[0m
+  [4;35;1mUser Create (0.3ms)[0m   [0mINSERT INTO "users" ("name", "encrypted_password", "salt", "created_at", "updated_at", "admin", "mobile_pin", "phone", "remember_token", "email") VALUES('Audreanne Lynch', '1a04a4f6a754ed9fa9b3ab13a5d037ef1549e3b748e60edc1bdace152ab738e5', 'e00e1c10ea7a301d6477659eb4bfbedc06eefe9fe3d81836821ce2939c047693', '2010-07-13 18:29:43', '2010-07-13 18:29:43', 'f', '1234', '16132241464', NULL, 'example64@zighra.org')[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'example65@zighra.org') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16132241465') LIMIT 1[0m
+  [4;36;1mUser Create (0.3ms)[0m   [0;1mINSERT INTO "users" ("name", "encrypted_password", "salt", "created_at", "updated_at", "admin", "mobile_pin", "phone", "remember_token", "email") VALUES('Juana Windler', '1a04a4f6a754ed9fa9b3ab13a5d037ef1549e3b748e60edc1bdace152ab738e5', 'e00e1c10ea7a301d6477659eb4bfbedc06eefe9fe3d81836821ce2939c047693', '2010-07-13 18:29:43', '2010-07-13 18:29:43', 'f', '1234', '16132241465', NULL, 'example65@zighra.org')[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'example66@zighra.org') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16132241466') LIMIT 1[0m
+  [4;35;1mUser Create (0.4ms)[0m   [0mINSERT INTO "users" ("name", "encrypted_password", "salt", "created_at", "updated_at", "admin", "mobile_pin", "phone", "remember_token", "email") VALUES('Ms. Blaise Nolan', '1a04a4f6a754ed9fa9b3ab13a5d037ef1549e3b748e60edc1bdace152ab738e5', 'e00e1c10ea7a301d6477659eb4bfbedc06eefe9fe3d81836821ce2939c047693', '2010-07-13 18:29:43', '2010-07-13 18:29:43', 'f', '1234', '16132241466', NULL, 'example66@zighra.org')[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'example67@zighra.org') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16132241467') LIMIT 1[0m
+  [4;36;1mUser Create (0.4ms)[0m   [0;1mINSERT INTO "users" ("name", "encrypted_password", "salt", "created_at", "updated_at", "admin", "mobile_pin", "phone", "remember_token", "email") VALUES('Vincenzo Kihn', '1a04a4f6a754ed9fa9b3ab13a5d037ef1549e3b748e60edc1bdace152ab738e5', 'e00e1c10ea7a301d6477659eb4bfbedc06eefe9fe3d81836821ce2939c047693', '2010-07-13 18:29:43', '2010-07-13 18:29:43', 'f', '1234', '16132241467', NULL, 'example67@zighra.org')[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'example68@zighra.org') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16132241468') LIMIT 1[0m
+  [4;35;1mUser Create (0.4ms)[0m   [0mINSERT INTO "users" ("name", "encrypted_password", "salt", "created_at", "updated_at", "admin", "mobile_pin", "phone", "remember_token", "email") VALUES('Amely Zieme', '1a04a4f6a754ed9fa9b3ab13a5d037ef1549e3b748e60edc1bdace152ab738e5', 'e00e1c10ea7a301d6477659eb4bfbedc06eefe9fe3d81836821ce2939c047693', '2010-07-13 18:29:43', '2010-07-13 18:29:43', 'f', '1234', '16132241468', NULL, 'example68@zighra.org')[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'example69@zighra.org') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16132241469') LIMIT 1[0m
+  [4;36;1mUser Create (0.3ms)[0m   [0;1mINSERT INTO "users" ("name", "encrypted_password", "salt", "created_at", "updated_at", "admin", "mobile_pin", "phone", "remember_token", "email") VALUES('Josianne Jewess', '1a04a4f6a754ed9fa9b3ab13a5d037ef1549e3b748e60edc1bdace152ab738e5', 'e00e1c10ea7a301d6477659eb4bfbedc06eefe9fe3d81836821ce2939c047693', '2010-07-13 18:29:43', '2010-07-13 18:29:43', 'f', '1234', '16132241469', NULL, 'example69@zighra.org')[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'example70@zighra.org') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16132241470') LIMIT 1[0m
+  [4;35;1mUser Create (0.4ms)[0m   [0mINSERT INTO "users" ("name", "encrypted_password", "salt", "created_at", "updated_at", "admin", "mobile_pin", "phone", "remember_token", "email") VALUES('Levi Leannon', '1a04a4f6a754ed9fa9b3ab13a5d037ef1549e3b748e60edc1bdace152ab738e5', 'e00e1c10ea7a301d6477659eb4bfbedc06eefe9fe3d81836821ce2939c047693', '2010-07-13 18:29:43', '2010-07-13 18:29:43', 'f', '1234', '16132241470', NULL, 'example70@zighra.org')[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'example71@zighra.org') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16132241471') LIMIT 1[0m
+  [4;36;1mUser Create (0.4ms)[0m   [0;1mINSERT INTO "users" ("name", "encrypted_password", "salt", "created_at", "updated_at", "admin", "mobile_pin", "phone", "remember_token", "email") VALUES('Maryse Willms', '1a04a4f6a754ed9fa9b3ab13a5d037ef1549e3b748e60edc1bdace152ab738e5', 'e00e1c10ea7a301d6477659eb4bfbedc06eefe9fe3d81836821ce2939c047693', '2010-07-13 18:29:43', '2010-07-13 18:29:43', 'f', '1234', '16132241471', NULL, 'example71@zighra.org')[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'example72@zighra.org') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16132241472') LIMIT 1[0m
+  [4;35;1mUser Create (0.4ms)[0m   [0mINSERT INTO "users" ("name", "encrypted_password", "salt", "created_at", "updated_at", "admin", "mobile_pin", "phone", "remember_token", "email") VALUES('Loyce Becker', '1a04a4f6a754ed9fa9b3ab13a5d037ef1549e3b748e60edc1bdace152ab738e5', 'e00e1c10ea7a301d6477659eb4bfbedc06eefe9fe3d81836821ce2939c047693', '2010-07-13 18:29:43', '2010-07-13 18:29:43', 'f', '1234', '16132241472', NULL, 'example72@zighra.org')[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'example73@zighra.org') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16132241473') LIMIT 1[0m
+  [4;36;1mUser Create (0.3ms)[0m   [0;1mINSERT INTO "users" ("name", "encrypted_password", "salt", "created_at", "updated_at", "admin", "mobile_pin", "phone", "remember_token", "email") VALUES('Fernando Smitham', '1a04a4f6a754ed9fa9b3ab13a5d037ef1549e3b748e60edc1bdace152ab738e5', 'e00e1c10ea7a301d6477659eb4bfbedc06eefe9fe3d81836821ce2939c047693', '2010-07-13 18:29:43', '2010-07-13 18:29:43', 'f', '1234', '16132241473', NULL, 'example73@zighra.org')[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'example74@zighra.org') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16132241474') LIMIT 1[0m
+  [4;35;1mUser Create (0.4ms)[0m   [0mINSERT INTO "users" ("name", "encrypted_password", "salt", "created_at", "updated_at", "admin", "mobile_pin", "phone", "remember_token", "email") VALUES('Emmet Hilpert', '1a04a4f6a754ed9fa9b3ab13a5d037ef1549e3b748e60edc1bdace152ab738e5', 'e00e1c10ea7a301d6477659eb4bfbedc06eefe9fe3d81836821ce2939c047693', '2010-07-13 18:29:43', '2010-07-13 18:29:43', 'f', '1234', '16132241474', NULL, 'example74@zighra.org')[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'example75@zighra.org') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16132241475') LIMIT 1[0m
+  [4;36;1mUser Create (0.4ms)[0m   [0;1mINSERT INTO "users" ("name", "encrypted_password", "salt", "created_at", "updated_at", "admin", "mobile_pin", "phone", "remember_token", "email") VALUES('Santina Jerde', '1a04a4f6a754ed9fa9b3ab13a5d037ef1549e3b748e60edc1bdace152ab738e5', 'e00e1c10ea7a301d6477659eb4bfbedc06eefe9fe3d81836821ce2939c047693', '2010-07-13 18:29:43', '2010-07-13 18:29:43', 'f', '1234', '16132241475', NULL, 'example75@zighra.org')[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'example76@zighra.org') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16132241476') LIMIT 1[0m
+  [4;35;1mUser Create (0.4ms)[0m   [0mINSERT INTO "users" ("name", "encrypted_password", "salt", "created_at", "updated_at", "admin", "mobile_pin", "phone", "remember_token", "email") VALUES('Greg Towne', '1a04a4f6a754ed9fa9b3ab13a5d037ef1549e3b748e60edc1bdace152ab738e5', 'e00e1c10ea7a301d6477659eb4bfbedc06eefe9fe3d81836821ce2939c047693', '2010-07-13 18:29:43', '2010-07-13 18:29:43', 'f', '1234', '16132241476', NULL, 'example76@zighra.org')[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'example77@zighra.org') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16132241477') LIMIT 1[0m
+  [4;36;1mUser Create (0.4ms)[0m   [0;1mINSERT INTO "users" ("name", "encrypted_password", "salt", "created_at", "updated_at", "admin", "mobile_pin", "phone", "remember_token", "email") VALUES('Wilford Conroy', '1a04a4f6a754ed9fa9b3ab13a5d037ef1549e3b748e60edc1bdace152ab738e5', 'e00e1c10ea7a301d6477659eb4bfbedc06eefe9fe3d81836821ce2939c047693', '2010-07-13 18:29:43', '2010-07-13 18:29:43', 'f', '1234', '16132241477', NULL, 'example77@zighra.org')[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'example78@zighra.org') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16132241478') LIMIT 1[0m
+  [4;35;1mUser Create (0.4ms)[0m   [0mINSERT INTO "users" ("name", "encrypted_password", "salt", "created_at", "updated_at", "admin", "mobile_pin", "phone", "remember_token", "email") VALUES('Zola Corwin', '1a04a4f6a754ed9fa9b3ab13a5d037ef1549e3b748e60edc1bdace152ab738e5', 'e00e1c10ea7a301d6477659eb4bfbedc06eefe9fe3d81836821ce2939c047693', '2010-07-13 18:29:43', '2010-07-13 18:29:43', 'f', '1234', '16132241478', NULL, 'example78@zighra.org')[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'example79@zighra.org') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16132241479') LIMIT 1[0m
+  [4;36;1mUser Create (0.4ms)[0m   [0;1mINSERT INTO "users" ("name", "encrypted_password", "salt", "created_at", "updated_at", "admin", "mobile_pin", "phone", "remember_token", "email") VALUES('Osvaldo O''Connell', '1a04a4f6a754ed9fa9b3ab13a5d037ef1549e3b748e60edc1bdace152ab738e5', 'e00e1c10ea7a301d6477659eb4bfbedc06eefe9fe3d81836821ce2939c047693', '2010-07-13 18:29:43', '2010-07-13 18:29:43', 'f', '1234', '16132241479', NULL, 'example79@zighra.org')[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'example80@zighra.org') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16132241480') LIMIT 1[0m
+  [4;35;1mUser Create (0.3ms)[0m   [0mINSERT INTO "users" ("name", "encrypted_password", "salt", "created_at", "updated_at", "admin", "mobile_pin", "phone", "remember_token", "email") VALUES('Celestino Wolf', '1a04a4f6a754ed9fa9b3ab13a5d037ef1549e3b748e60edc1bdace152ab738e5', 'e00e1c10ea7a301d6477659eb4bfbedc06eefe9fe3d81836821ce2939c047693', '2010-07-13 18:29:43', '2010-07-13 18:29:43', 'f', '1234', '16132241480', NULL, 'example80@zighra.org')[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'example81@zighra.org') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16132241481') LIMIT 1[0m
+  [4;36;1mUser Create (0.4ms)[0m   [0;1mINSERT INTO "users" ("name", "encrypted_password", "salt", "created_at", "updated_at", "admin", "mobile_pin", "phone", "remember_token", "email") VALUES('Rylan Stokes', '1a04a4f6a754ed9fa9b3ab13a5d037ef1549e3b748e60edc1bdace152ab738e5', 'e00e1c10ea7a301d6477659eb4bfbedc06eefe9fe3d81836821ce2939c047693', '2010-07-13 18:29:43', '2010-07-13 18:29:43', 'f', '1234', '16132241481', NULL, 'example81@zighra.org')[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'example82@zighra.org') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16132241482') LIMIT 1[0m
+  [4;35;1mUser Create (0.4ms)[0m   [0mINSERT INTO "users" ("name", "encrypted_password", "salt", "created_at", "updated_at", "admin", "mobile_pin", "phone", "remember_token", "email") VALUES('Austyn Bogan', '1a04a4f6a754ed9fa9b3ab13a5d037ef1549e3b748e60edc1bdace152ab738e5', 'e00e1c10ea7a301d6477659eb4bfbedc06eefe9fe3d81836821ce2939c047693', '2010-07-13 18:29:43', '2010-07-13 18:29:43', 'f', '1234', '16132241482', NULL, 'example82@zighra.org')[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'example83@zighra.org') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16132241483') LIMIT 1[0m
+  [4;36;1mUser Create (0.4ms)[0m   [0;1mINSERT INTO "users" ("name", "encrypted_password", "salt", "created_at", "updated_at", "admin", "mobile_pin", "phone", "remember_token", "email") VALUES('Allan Beatty III', '1a04a4f6a754ed9fa9b3ab13a5d037ef1549e3b748e60edc1bdace152ab738e5', 'e00e1c10ea7a301d6477659eb4bfbedc06eefe9fe3d81836821ce2939c047693', '2010-07-13 18:29:43', '2010-07-13 18:29:43', 'f', '1234', '16132241483', NULL, 'example83@zighra.org')[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'example84@zighra.org') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16132241484') LIMIT 1[0m
+  [4;35;1mUser Create (0.4ms)[0m   [0mINSERT INTO "users" ("name", "encrypted_password", "salt", "created_at", "updated_at", "admin", "mobile_pin", "phone", "remember_token", "email") VALUES('Pearl Huels', '1a04a4f6a754ed9fa9b3ab13a5d037ef1549e3b748e60edc1bdace152ab738e5', 'e00e1c10ea7a301d6477659eb4bfbedc06eefe9fe3d81836821ce2939c047693', '2010-07-13 18:29:43', '2010-07-13 18:29:43', 'f', '1234', '16132241484', NULL, 'example84@zighra.org')[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'example85@zighra.org') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16132241485') LIMIT 1[0m
+  [4;36;1mUser Create (0.4ms)[0m   [0;1mINSERT INTO "users" ("name", "encrypted_password", "salt", "created_at", "updated_at", "admin", "mobile_pin", "phone", "remember_token", "email") VALUES('Muhammad Stehr IV', '5a681de5d7e22f60b58054ea82d6b687e1ac5a60c173348d21667360569a871e', '0b41a8ad57a84f17cb9ff13939b4ab28b3ce7a81fcf64cf06e8f756da9992164', '2010-07-13 18:29:44', '2010-07-13 18:29:44', 'f', '1234', '16132241485', NULL, 'example85@zighra.org')[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'example86@zighra.org') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16132241486') LIMIT 1[0m
+  [4;35;1mUser Create (0.4ms)[0m   [0mINSERT INTO "users" ("name", "encrypted_password", "salt", "created_at", "updated_at", "admin", "mobile_pin", "phone", "remember_token", "email") VALUES('Zackery Hodkiewicz Jr.', '5a681de5d7e22f60b58054ea82d6b687e1ac5a60c173348d21667360569a871e', '0b41a8ad57a84f17cb9ff13939b4ab28b3ce7a81fcf64cf06e8f756da9992164', '2010-07-13 18:29:44', '2010-07-13 18:29:44', 'f', '1234', '16132241486', NULL, 'example86@zighra.org')[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'example87@zighra.org') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16132241487') LIMIT 1[0m
+  [4;36;1mUser Create (0.4ms)[0m   [0;1mINSERT INTO "users" ("name", "encrypted_password", "salt", "created_at", "updated_at", "admin", "mobile_pin", "phone", "remember_token", "email") VALUES('Lula Nader', '5a681de5d7e22f60b58054ea82d6b687e1ac5a60c173348d21667360569a871e', '0b41a8ad57a84f17cb9ff13939b4ab28b3ce7a81fcf64cf06e8f756da9992164', '2010-07-13 18:29:44', '2010-07-13 18:29:44', 'f', '1234', '16132241487', NULL, 'example87@zighra.org')[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'example88@zighra.org') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16132241488') LIMIT 1[0m
+  [4;35;1mUser Create (0.4ms)[0m   [0mINSERT INTO "users" ("name", "encrypted_password", "salt", "created_at", "updated_at", "admin", "mobile_pin", "phone", "remember_token", "email") VALUES('Graciela Friesen', '5a681de5d7e22f60b58054ea82d6b687e1ac5a60c173348d21667360569a871e', '0b41a8ad57a84f17cb9ff13939b4ab28b3ce7a81fcf64cf06e8f756da9992164', '2010-07-13 18:29:44', '2010-07-13 18:29:44', 'f', '1234', '16132241488', NULL, 'example88@zighra.org')[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'example89@zighra.org') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16132241489') LIMIT 1[0m
+  [4;36;1mUser Create (0.4ms)[0m   [0;1mINSERT INTO "users" ("name", "encrypted_password", "salt", "created_at", "updated_at", "admin", "mobile_pin", "phone", "remember_token", "email") VALUES('Lydia Bahringer', '5a681de5d7e22f60b58054ea82d6b687e1ac5a60c173348d21667360569a871e', '0b41a8ad57a84f17cb9ff13939b4ab28b3ce7a81fcf64cf06e8f756da9992164', '2010-07-13 18:29:44', '2010-07-13 18:29:44', 'f', '1234', '16132241489', NULL, 'example89@zighra.org')[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'example90@zighra.org') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16132241490') LIMIT 1[0m
+  [4;35;1mUser Create (0.4ms)[0m   [0mINSERT INTO "users" ("name", "encrypted_password", "salt", "created_at", "updated_at", "admin", "mobile_pin", "phone", "remember_token", "email") VALUES('Valentine Satterfield', '5a681de5d7e22f60b58054ea82d6b687e1ac5a60c173348d21667360569a871e', '0b41a8ad57a84f17cb9ff13939b4ab28b3ce7a81fcf64cf06e8f756da9992164', '2010-07-13 18:29:44', '2010-07-13 18:29:44', 'f', '1234', '16132241490', NULL, 'example90@zighra.org')[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'example91@zighra.org') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16132241491') LIMIT 1[0m
+  [4;36;1mUser Create (0.3ms)[0m   [0;1mINSERT INTO "users" ("name", "encrypted_password", "salt", "created_at", "updated_at", "admin", "mobile_pin", "phone", "remember_token", "email") VALUES('Jayda Wolf', '5a681de5d7e22f60b58054ea82d6b687e1ac5a60c173348d21667360569a871e', '0b41a8ad57a84f17cb9ff13939b4ab28b3ce7a81fcf64cf06e8f756da9992164', '2010-07-13 18:29:44', '2010-07-13 18:29:44', 'f', '1234', '16132241491', NULL, 'example91@zighra.org')[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'example92@zighra.org') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16132241492') LIMIT 1[0m
+  [4;35;1mUser Create (0.3ms)[0m   [0mINSERT INTO "users" ("name", "encrypted_password", "salt", "created_at", "updated_at", "admin", "mobile_pin", "phone", "remember_token", "email") VALUES('Zackary Beer Sr.', '5a681de5d7e22f60b58054ea82d6b687e1ac5a60c173348d21667360569a871e', '0b41a8ad57a84f17cb9ff13939b4ab28b3ce7a81fcf64cf06e8f756da9992164', '2010-07-13 18:29:44', '2010-07-13 18:29:44', 'f', '1234', '16132241492', NULL, 'example92@zighra.org')[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'example93@zighra.org') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16132241493') LIMIT 1[0m
+  [4;36;1mUser Create (0.4ms)[0m   [0;1mINSERT INTO "users" ("name", "encrypted_password", "salt", "created_at", "updated_at", "admin", "mobile_pin", "phone", "remember_token", "email") VALUES('Dashawn Becker V', '5a681de5d7e22f60b58054ea82d6b687e1ac5a60c173348d21667360569a871e', '0b41a8ad57a84f17cb9ff13939b4ab28b3ce7a81fcf64cf06e8f756da9992164', '2010-07-13 18:29:44', '2010-07-13 18:29:44', 'f', '1234', '16132241493', NULL, 'example93@zighra.org')[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'example94@zighra.org') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16132241494') LIMIT 1[0m
+  [4;35;1mUser Create (0.3ms)[0m   [0mINSERT INTO "users" ("name", "encrypted_password", "salt", "created_at", "updated_at", "admin", "mobile_pin", "phone", "remember_token", "email") VALUES('Cristina Carter', '5a681de5d7e22f60b58054ea82d6b687e1ac5a60c173348d21667360569a871e', '0b41a8ad57a84f17cb9ff13939b4ab28b3ce7a81fcf64cf06e8f756da9992164', '2010-07-13 18:29:44', '2010-07-13 18:29:44', 'f', '1234', '16132241494', NULL, 'example94@zighra.org')[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'example95@zighra.org') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16132241495') LIMIT 1[0m
+  [4;36;1mUser Create (0.4ms)[0m   [0;1mINSERT INTO "users" ("name", "encrypted_password", "salt", "created_at", "updated_at", "admin", "mobile_pin", "phone", "remember_token", "email") VALUES('Courtney Carter', '5a681de5d7e22f60b58054ea82d6b687e1ac5a60c173348d21667360569a871e', '0b41a8ad57a84f17cb9ff13939b4ab28b3ce7a81fcf64cf06e8f756da9992164', '2010-07-13 18:29:44', '2010-07-13 18:29:44', 'f', '1234', '16132241495', NULL, 'example95@zighra.org')[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'example96@zighra.org') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16132241496') LIMIT 1[0m
+  [4;35;1mUser Create (0.3ms)[0m   [0mINSERT INTO "users" ("name", "encrypted_password", "salt", "created_at", "updated_at", "admin", "mobile_pin", "phone", "remember_token", "email") VALUES('Beth Hauck', '5a681de5d7e22f60b58054ea82d6b687e1ac5a60c173348d21667360569a871e', '0b41a8ad57a84f17cb9ff13939b4ab28b3ce7a81fcf64cf06e8f756da9992164', '2010-07-13 18:29:44', '2010-07-13 18:29:44', 'f', '1234', '16132241496', NULL, 'example96@zighra.org')[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'example97@zighra.org') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16132241497') LIMIT 1[0m
+  [4;36;1mUser Create (0.4ms)[0m   [0;1mINSERT INTO "users" ("name", "encrypted_password", "salt", "created_at", "updated_at", "admin", "mobile_pin", "phone", "remember_token", "email") VALUES('Christophe DuBuque', '5a681de5d7e22f60b58054ea82d6b687e1ac5a60c173348d21667360569a871e', '0b41a8ad57a84f17cb9ff13939b4ab28b3ce7a81fcf64cf06e8f756da9992164', '2010-07-13 18:29:44', '2010-07-13 18:29:44', 'f', '1234', '16132241497', NULL, 'example97@zighra.org')[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'example98@zighra.org') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16132241498') LIMIT 1[0m
+  [4;35;1mUser Create (0.3ms)[0m   [0mINSERT INTO "users" ("name", "encrypted_password", "salt", "created_at", "updated_at", "admin", "mobile_pin", "phone", "remember_token", "email") VALUES('Reginald Boyer', '5a681de5d7e22f60b58054ea82d6b687e1ac5a60c173348d21667360569a871e', '0b41a8ad57a84f17cb9ff13939b4ab28b3ce7a81fcf64cf06e8f756da9992164', '2010-07-13 18:29:44', '2010-07-13 18:29:44', 'f', '1234', '16132241498', NULL, 'example98@zighra.org')[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'example99@zighra.org') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."phone" = '16132241499') LIMIT 1[0m
+  [4;36;1mUser Create (0.4ms)[0m   [0;1mINSERT INTO "users" ("name", "encrypted_password", "salt", "created_at", "updated_at", "admin", "mobile_pin", "phone", "remember_token", "email") VALUES('Mr. Dana Price', '5a681de5d7e22f60b58054ea82d6b687e1ac5a60c173348d21667360569a871e', '0b41a8ad57a84f17cb9ff13939b4ab28b3ce7a81fcf64cf06e8f756da9992164', '2010-07-13 18:29:44', '2010-07-13 18:29:44', 'f', '1234', '16132241499', NULL, 'example99@zighra.org')[0m
+
+
+Processing PagesController#home (for 127.0.0.1 at 2010-07-13 14:30:07) [GET]
+  Parameters: {"action"=>"home", "controller"=>"pages"}
+Rendering template within layouts/application
+Rendering pages/home
+Rendered layouts/_stylesheets (0.8ms)
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."remember_token" = 'cfd4d8565ea4072f2a3622d8d19cc9ea9f0f541fb37f977f6a7a012b7909dca1') LIMIT 1[0m
+Rendered layouts/_header (9.3ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."remember_token" = 'cfd4d8565ea4072f2a3622d8d19cc9ea9f0f541fb37f977f6a7a012b7909dca1') LIMIT 1[0m
+Rendered layouts/_footer (1.4ms)
+Completed in 46ms (View: 44, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-07-13 14:30:18) [GET]
+  Parameters: {"action"=>"new", "controller"=>"sessions"}
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered layouts/_stylesheets (0.4ms)
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."remember_token" = 'cfd4d8565ea4072f2a3622d8d19cc9ea9f0f541fb37f977f6a7a012b7909dca1') LIMIT 1[0m
+Rendered layouts/_header (8.5ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."remember_token" = 'cfd4d8565ea4072f2a3622d8d19cc9ea9f0f541fb37f977f6a7a012b7909dca1') LIMIT 1[0m
+Rendered layouts/_footer (0.5ms)
+Completed in 26ms (View: 25, DB: 0) | 200 OK [http://localhost/signin]
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-07-13 14:30:23) [GET]
+  Parameters: {"action"=>"new", "controller"=>"users"}
+Rendering template within layouts/users
+Rendering users/new
+Rendered layouts/_stylesheets (0.4ms)
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."remember_token" = 'cfd4d8565ea4072f2a3622d8d19cc9ea9f0f541fb37f977f6a7a012b7909dca1') LIMIT 1[0m
+Rendered layouts/_header (1.8ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."remember_token" = 'cfd4d8565ea4072f2a3622d8d19cc9ea9f0f541fb37f977f6a7a012b7909dca1') LIMIT 1[0m
+Rendered layouts/_footer (0.5ms)
+Completed in 87ms (View: 21, DB: 0) | 200 OK [http://localhost/signup]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-07-13 14:30:30) [GET]
+  Parameters: {"action"=>"new", "controller"=>"sessions"}
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered layouts/_stylesheets (0.4ms)
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."remember_token" = 'cfd4d8565ea4072f2a3622d8d19cc9ea9f0f541fb37f977f6a7a012b7909dca1') LIMIT 1[0m
+Rendered layouts/_header (8.0ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."remember_token" = 'cfd4d8565ea4072f2a3622d8d19cc9ea9f0f541fb37f977f6a7a012b7909dca1') LIMIT 1[0m
+Rendered layouts/_footer (0.5ms)
+Completed in 14ms (View: 13, DB: 0) | 200 OK [http://localhost/signin]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2010-07-13 14:30:50) [POST]
+  Parameters: {"commit"=>"Sign in", "session"=>{"password"=>"[FILTERED]", "email"=>"admin@zighra.org"}, "action"=>"create", "authenticity_token"=>"SEz0r6h1P+25g9HdnU1nTJSa1D6o+YvxP+thYhl4R9Y=", "controller"=>"sessions"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."email" = 'admin@zighra.org') LIMIT 1[0m
+  [4;35;1mUser Update (1.7ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-07-13 18:30:50', "remember_token" = '93b05301e7570abeded0aa7d228b5bac942d9363b76cd958d82469bf007fba72' WHERE "id" = 1[0m
+Redirected to http://localhost:3000/users/1
+Completed in 58ms (DB: 2) | 302 Found [http://localhost/sessions]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2010-07-13 14:30:50) [GET]
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"users"}
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendering template within layouts/users
+Rendering users/show
+Rendered layouts/_stylesheets (0.4ms)
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."remember_token" = '93b05301e7570abeded0aa7d228b5bac942d9363b76cd958d82469bf007fba72') LIMIT 1[0m
+Rendered layouts/_header (3.9ms)
+Rendered layouts/_footer (1.1ms)
+Completed in 80ms (View: 12, DB: 1) | 200 OK [http://localhost/users/1]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-07-13 14:30:53) [GET]
+  Parameters: {"action"=>"index", "controller"=>"users"}
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."remember_token" = '93b05301e7570abeded0aa7d228b5bac942d9363b76cd958d82469bf007fba72') LIMIT 1[0m
+  [4;35;1mUser Load (2.7ms)[0m   [0mSELECT * FROM "users" LIMIT 30 OFFSET 0[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+Rendering template within layouts/users
+Rendering users/index
+Rendered layouts/_stylesheets (0.4ms)
+Rendered layouts/_header (2.3ms)
+Rendered layouts/_footer (0.8ms)
+Completed in 96ms (View: 82, DB: 3) | 200 OK [http://localhost/users]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2010-07-13 14:30:59) [GET]
+  Parameters: {"action"=>"show", "id"=>"5", "controller"=>"users"}
+  [4;35;1mUser Load (0.7ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 5) [0m
+Rendering template within layouts/users
+Rendering users/show
+Rendered layouts/_stylesheets (0.4ms)
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."remember_token" = '93b05301e7570abeded0aa7d228b5bac942d9363b76cd958d82469bf007fba72') LIMIT 1[0m
+Rendered layouts/_header (3.7ms)
+Rendered layouts/_footer (1.1ms)
+Completed in 17ms (View: 8, DB: 1) | 200 OK [http://localhost/users/5]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-07-13 14:31:04) [GET]
+  Parameters: {"action"=>"index", "controller"=>"users"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."remember_token" = '93b05301e7570abeded0aa7d228b5bac942d9363b76cd958d82469bf007fba72') LIMIT 1[0m
+  [4;36;1mUser Load (2.8ms)[0m   [0;1mSELECT * FROM "users" LIMIT 30 OFFSET 0[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+Rendering template within layouts/users
+Rendering users/index
+Rendered layouts/_stylesheets (0.5ms)
+Rendered layouts/_header (2.3ms)
+Rendered layouts/_footer (0.8ms)
+Completed in 93ms (View: 79, DB: 3) | 200 OK [http://localhost/users]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2010-07-13 14:31:11) [GET]
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"users"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendering template within layouts/users
+Rendering users/show
+Rendered layouts/_stylesheets (0.4ms)
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."remember_token" = '93b05301e7570abeded0aa7d228b5bac942d9363b76cd958d82469bf007fba72') LIMIT 1[0m
+Rendered layouts/_header (3.8ms)
+Rendered layouts/_footer (1.1ms)
+Completed in 17ms (View: 8, DB: 1) | 200 OK [http://localhost/users/1]
+
+
+Processing UsersController#edit (for 127.0.0.1 at 2010-07-13 14:31:14) [GET]
+  Parameters: {"action"=>"edit", "id"=>"1", "controller"=>"users"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."remember_token" = '93b05301e7570abeded0aa7d228b5bac942d9363b76cd958d82469bf007fba72') LIMIT 1[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendering template within layouts/users
+Rendering users/edit
+Rendered layouts/_stylesheets (0.4ms)
+Rendered layouts/_header (2.3ms)
+Rendered layouts/_footer (0.8ms)
+Completed in 25ms (View: 15, DB: 1) | 200 OK [http://localhost/users/1/edit]
+
+
+Processing SessionsController#destroy (for 127.0.0.1 at 2010-07-13 14:31:35) [DELETE]
+  Parameters: {"action"=>"destroy", "_method"=>"delete", "authenticity_token"=>"SEz0r6h1P+25g9HdnU1nTJSa1D6o+YvxP+thYhl4R9Y=", "controller"=>"sessions"}
+Redirected to http://localhost:3000/
+Completed in 2ms (DB: 0) | 302 Found [http://localhost/signout]
+
+
+Processing PagesController#home (for 127.0.0.1 at 2010-07-13 14:31:35) [GET]
+  Parameters: {"action"=>"home", "controller"=>"pages"}
+Rendering template within layouts/application
+Rendering pages/home
+Rendered layouts/_stylesheets (0.4ms)
+Rendered layouts/_header (0.7ms)
+Rendered layouts/_footer (0.2ms)
+Completed in 5ms (View: 3, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-07-13 14:33:48) [GET]
+  Parameters: {"action"=>"new", "controller"=>"sessions"}
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered layouts/_stylesheets (0.9ms)
+Rendered layouts/_header (1.5ms)
+Rendered layouts/_footer (1.0ms)
+Completed in 38ms (View: 36, DB: 0) | 200 OK [http://localhost/signin]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2010-07-13 14:34:01) [POST]
+  Parameters: {"commit"=>"Sign in", "session"=>{"password"=>"[FILTERED]", "email"=>"admin@zighra.com"}, "action"=>"create", "authenticity_token"=>"SEz0r6h1P+25g9HdnU1nTJSa1D6o+YvxP+thYhl4R9Y=", "controller"=>"sessions"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."email" = 'admin@zighra.com') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered layouts/_stylesheets (0.4ms)
+Rendered layouts/_header (0.6ms)
+Rendered layouts/_footer (0.2ms)
+Completed in 15ms (View: 5, DB: 0) | 200 OK [http://localhost/sessions]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2010-07-13 14:34:30) [POST]
+  Parameters: {"commit"=>"Sign in", "session"=>{"password"=>"[FILTERED]", "email"=>"admin@zighra.org"}, "action"=>"create", "authenticity_token"=>"SEz0r6h1P+25g9HdnU1nTJSa1D6o+YvxP+thYhl4R9Y=", "controller"=>"sessions"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."email" = 'admin@zighra.org') LIMIT 1[0m
+  [4;36;1mUser Update (1.7ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-07-13 18:34:30', "remember_token" = '3b77d729792ece3d418877a824086558a9fb1b9d60c4a81af740412df8efa38e' WHERE "id" = 1[0m
+Redirected to http://localhost:3000/users/1
+Completed in 117ms (DB: 2) | 302 Found [http://localhost/sessions]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2010-07-13 14:34:31) [GET]
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"users"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendering template within layouts/users
+Rendering users/show
+Rendered layouts/_stylesheets (0.4ms)
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."remember_token" = '3b77d729792ece3d418877a824086558a9fb1b9d60c4a81af740412df8efa38e') LIMIT 1[0m
+Rendered layouts/_header (4.0ms)
+Rendered layouts/_footer (1.1ms)
+Completed in 29ms (View: 19, DB: 1) | 200 OK [http://localhost/users/1]
+
+
+Processing UsersController#edit (for 127.0.0.1 at 2010-07-13 14:34:47) [GET]
+  Parameters: {"action"=>"edit", "id"=>"1", "controller"=>"users"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."remember_token" = '3b77d729792ece3d418877a824086558a9fb1b9d60c4a81af740412df8efa38e') LIMIT 1[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendering template within layouts/users
+Rendering users/edit
+Rendered layouts/_stylesheets (0.4ms)
+Rendered layouts/_header (2.3ms)
+Rendered layouts/_footer (1.0ms)
+Completed in 25ms (View: 16, DB: 1) | 200 OK [http://localhost/users/1/edit]
+
+
+Processing SessionsController#destroy (for 127.0.0.1 at 2010-07-13 14:35:00) [DELETE]
+  Parameters: {"action"=>"destroy", "_method"=>"delete", "authenticity_token"=>"SEz0r6h1P+25g9HdnU1nTJSa1D6o+YvxP+thYhl4R9Y=", "controller"=>"sessions"}
+Redirected to http://localhost:3000/
+Completed in 2ms (DB: 0) | 302 Found [http://localhost/signout]
+
+
+Processing PagesController#home (for 127.0.0.1 at 2010-07-13 14:35:00) [GET]
+  Parameters: {"action"=>"home", "controller"=>"pages"}
+Rendering template within layouts/application
+Rendering pages/home
+Rendered layouts/_stylesheets (0.4ms)
+Rendered layouts/_header (0.7ms)
+Rendered layouts/_footer (0.2ms)
+Completed in 72ms (View: 71, DB: 0) | 200 OK [http://localhost/]
