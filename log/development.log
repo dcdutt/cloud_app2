@@ -5179,3 +5179,602 @@ Rendered layouts/_stylesheets (0.4ms)
 Rendered layouts/_header (0.7ms)
 Rendered layouts/_footer (0.2ms)
 Completed in 72ms (View: 71, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."email" = 'admin@zighra.org') LIMIT 1[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."email" = 'admin@zighra.org') LIMIT 1[0m
+
+
+Processing PagesController#home (for 127.0.0.1 at 2010-07-14 00:39:55) [GET]
+  Parameters: {"action"=>"home", "controller"=>"pages"}
+Rendering template within layouts/application
+Rendering pages/home
+Rendered layouts/_stylesheets (0.9ms)
+Rendered layouts/_header (1.6ms)
+Rendered layouts/_footer (1.0ms)
+Completed in 36ms (View: 35, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-07-14 00:39:58) [GET]
+  Parameters: {"action"=>"new", "controller"=>"sessions"}
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered layouts/_stylesheets (0.4ms)
+Rendered layouts/_header (0.7ms)
+Rendered layouts/_footer (0.2ms)
+Completed in 18ms (View: 16, DB: 0) | 200 OK [http://localhost/signin]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2010-07-14 00:40:13) [POST]
+  Parameters: {"commit"=>"Sign in", "session"=>{"password"=>"[FILTERED]", "email"=>"admin@zighra.org"}, "action"=>"create", "authenticity_token"=>"iDcIzDoVCCR49MES06bG5Y8re8p+PSAWo/2gjRlrPjU=", "controller"=>"sessions"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."email" = 'admin@zighra.org') LIMIT 1[0m
+  [4;35;1mUser Update (3.1ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-07-14 04:40:14', "remember_token" = 'ee9ca714fb6940f24a8d9373d0fad78c3473960c592e59f3ecdf17b6821e4fdb' WHERE "id" = 1[0m
+Redirected to http://localhost:3000/users/1
+Completed in 290ms (DB: 3) | 302 Found [http://localhost/sessions]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2010-07-14 00:40:14) [GET]
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"users"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendering template within layouts/users
+Rendering users/show
+Rendered layouts/_stylesheets (0.4ms)
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."remember_token" = 'ee9ca714fb6940f24a8d9373d0fad78c3473960c592e59f3ecdf17b6821e4fdb') LIMIT 1[0m
+Rendered layouts/_header (3.8ms)
+Rendered layouts/_footer (1.1ms)
+Completed in 32ms (View: 20, DB: 1) | 200 OK [http://localhost/users/1]
+
+
+Processing SessionsController#destroy (for 127.0.0.1 at 2010-07-14 00:40:17) [DELETE]
+  Parameters: {"action"=>"destroy", "_method"=>"delete", "authenticity_token"=>"iDcIzDoVCCR49MES06bG5Y8re8p+PSAWo/2gjRlrPjU=", "controller"=>"sessions"}
+Redirected to http://localhost:3000/
+Completed in 2ms (DB: 0) | 302 Found [http://localhost/signout]
+
+
+Processing PagesController#home (for 127.0.0.1 at 2010-07-14 00:40:17) [GET]
+  Parameters: {"action"=>"home", "controller"=>"pages"}
+Rendering template within layouts/application
+Rendering pages/home
+Rendered layouts/_stylesheets (1.0ms)
+Rendered layouts/_header (0.8ms)
+Rendered layouts/_footer (0.2ms)
+Completed in 6ms (View: 4, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing PagesController#home (for 127.0.0.1 at 2010-07-15 11:41:48) [GET]
+  Parameters: {"action"=>"home", "controller"=>"pages"}
+Rendering template within layouts/application
+Rendering pages/home
+Rendered layouts/_stylesheets (0.9ms)
+Rendered layouts/_header (1.6ms)
+Rendered layouts/_footer (1.0ms)
+Completed in 36ms (View: 35, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-07-15 11:41:56) [GET]
+  Parameters: {"action"=>"new", "controller"=>"sessions"}
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered layouts/_stylesheets (0.4ms)
+Rendered layouts/_header (0.6ms)
+Rendered layouts/_footer (0.2ms)
+Completed in 13ms (View: 11, DB: 0) | 200 OK [http://localhost/signin]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2010-07-15 11:42:22) [POST]
+  Parameters: {"commit"=>"Sign in", "session"=>{"password"=>"[FILTERED]", "email"=>"admin@zighra.org"}, "action"=>"create", "authenticity_token"=>"iDcIzDoVCCR49MES06bG5Y8re8p+PSAWo/2gjRlrPjU=", "controller"=>"sessions"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."email" = 'admin@zighra.org') LIMIT 1[0m
+
+NoMethodError (undefined method `testauth' for #<User:0x1040809f8>):
+  app/models/user.rb:61:in `has_pin?'
+  app/models/user.rb:69:in `authenticate'
+  app/controllers/sessions_controller.rb:8:in `create'
+
+Rendered rescues/_trace (109.0ms)
+Rendered rescues/_request_and_response (1.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PagesController#home (for 127.0.0.1 at 2010-07-15 11:45:30) [GET]
+  Parameters: {"action"=>"home", "controller"=>"pages"}
+Rendering template within layouts/application
+Rendering pages/home
+Rendered layouts/_stylesheets (0.9ms)
+Rendered layouts/_header (1.9ms)
+Rendered layouts/_footer (0.9ms)
+Completed in 38ms (View: 36, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-07-15 11:45:32) [GET]
+  Parameters: {"action"=>"new", "controller"=>"sessions"}
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered layouts/_stylesheets (0.4ms)
+Rendered layouts/_header (0.6ms)
+Rendered layouts/_footer (0.2ms)
+Completed in 13ms (View: 11, DB: 0) | 200 OK [http://localhost/signin]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2010-07-15 11:45:48) [POST]
+  Parameters: {"commit"=>"Sign in", "session"=>{"password"=>"[FILTERED]", "email"=>"admin@zighra.org"}, "action"=>"create", "authenticity_token"=>"iDcIzDoVCCR49MES06bG5Y8re8p+PSAWo/2gjRlrPjU=", "controller"=>"sessions"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."email" = 'admin@zighra.org') LIMIT 1[0m
+
+NoMethodError (undefined method `post' for #<User:0x10409a830>):
+  app/models/user.rb:104:in `testauth'
+  app/models/user.rb:60:in `has_pin?'
+  app/models/user.rb:68:in `authenticate'
+  app/controllers/sessions_controller.rb:8:in `create'
+
+Rendered rescues/_trace (104.6ms)
+Rendered rescues/_request_and_response (1.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PagesController#home (for 127.0.0.1 at 2010-07-15 11:47:16) [GET]
+  Parameters: {"action"=>"home", "controller"=>"pages"}
+Rendering template within layouts/application
+Rendering pages/home
+Rendered layouts/_stylesheets (0.9ms)
+Rendered layouts/_header (1.6ms)
+Rendered layouts/_footer (0.9ms)
+Completed in 39ms (View: 37, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-07-15 11:47:19) [GET]
+  Parameters: {"action"=>"new", "controller"=>"sessions"}
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered layouts/_stylesheets (0.4ms)
+Rendered layouts/_header (0.6ms)
+Rendered layouts/_footer (0.2ms)
+Completed in 13ms (View: 11, DB: 0) | 200 OK [http://localhost/signin]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2010-07-15 11:47:34) [POST]
+  Parameters: {"commit"=>"Sign in", "session"=>{"password"=>"[FILTERED]", "email"=>"admin@zighra.org"}, "action"=>"create", "authenticity_token"=>"iDcIzDoVCCR49MES06bG5Y8re8p+PSAWo/2gjRlrPjU=", "controller"=>"sessions"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."email" = 'admin@zighra.org') LIMIT 1[0m
+
+NameError (uninitialized constant User::Httparty):
+  app/models/user.rb:104:in `testauth'
+  app/models/user.rb:60:in `has_pin?'
+  app/models/user.rb:68:in `authenticate'
+  app/controllers/sessions_controller.rb:8:in `create'
+
+Rendered rescues/_trace (105.2ms)
+Rendered rescues/_request_and_response (1.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PagesController#home (for 127.0.0.1 at 2010-07-15 11:49:21) [GET]
+  Parameters: {"action"=>"home", "controller"=>"pages"}
+Rendering template within layouts/application
+Rendering pages/home
+Rendered layouts/_stylesheets (1.2ms)
+Rendered layouts/_header (2.2ms)
+Rendered layouts/_footer (0.9ms)
+Completed in 43ms (View: 42, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-07-15 11:49:23) [GET]
+  Parameters: {"action"=>"new", "controller"=>"sessions"}
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered layouts/_stylesheets (0.4ms)
+Rendered layouts/_header (0.7ms)
+Rendered layouts/_footer (0.2ms)
+Completed in 13ms (View: 12, DB: 0) | 200 OK [http://localhost/signin]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2010-07-15 11:49:36) [POST]
+  Parameters: {"commit"=>"Sign in", "session"=>{"password"=>"[FILTERED]", "email"=>"admin@zighra.org"}, "action"=>"create", "authenticity_token"=>"iDcIzDoVCCR49MES06bG5Y8re8p+PSAWo/2gjRlrPjU=", "controller"=>"sessions"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."email" = 'admin@zighra.org') LIMIT 1[0m
+
+NameError (uninitialized constant User::Httparty):
+  app/models/user.rb:116:in `testauth'
+  app/models/user.rb:60:in `has_pin?'
+  app/models/user.rb:68:in `authenticate'
+  app/controllers/sessions_controller.rb:8:in `create'
+
+Rendered rescues/_trace (104.0ms)
+Rendered rescues/_request_and_response (1.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PagesController#home (for 127.0.0.1 at 2010-07-15 11:50:15) [GET]
+  Parameters: {"action"=>"home", "controller"=>"pages"}
+Rendering template within layouts/application
+Rendering pages/home
+Rendered layouts/_stylesheets (0.9ms)
+Rendered layouts/_header (1.6ms)
+Rendered layouts/_footer (0.9ms)
+Completed in 36ms (View: 35, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-07-15 11:50:18) [GET]
+  Parameters: {"action"=>"new", "controller"=>"sessions"}
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered layouts/_stylesheets (0.4ms)
+Rendered layouts/_header (0.6ms)
+Rendered layouts/_footer (0.2ms)
+Completed in 13ms (View: 11, DB: 0) | 200 OK [http://localhost/signin]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2010-07-15 11:50:32) [POST]
+  Parameters: {"commit"=>"Sign in", "session"=>{"password"=>"[FILTERED]", "email"=>"admin@zighra.org"}, "action"=>"create", "authenticity_token"=>"iDcIzDoVCCR49MES06bG5Y8re8p+PSAWo/2gjRlrPjU=", "controller"=>"sessions"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."email" = 'admin@zighra.org') LIMIT 1[0m
+
+NoMethodError (undefined method `post' for #<User:0x10409a880>):
+  app/models/user.rb:83:in `testauth'
+  app/models/user.rb:60:in `has_pin?'
+  app/models/user.rb:68:in `authenticate'
+  app/controllers/sessions_controller.rb:8:in `create'
+
+Rendered rescues/_trace (105.0ms)
+Rendered rescues/_request_and_response (1.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PagesController#home (for 127.0.0.1 at 2010-07-15 11:55:03) [GET]
+  Parameters: {"action"=>"home", "controller"=>"pages"}
+Rendering template within layouts/application
+Rendering pages/home
+Rendered layouts/_stylesheets (0.9ms)
+Rendered layouts/_header (1.7ms)
+Rendered layouts/_footer (0.9ms)
+Completed in 36ms (View: 35, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-07-15 11:55:06) [GET]
+  Parameters: {"action"=>"new", "controller"=>"sessions"}
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered layouts/_stylesheets (0.4ms)
+Rendered layouts/_header (0.6ms)
+Rendered layouts/_footer (0.2ms)
+Completed in 13ms (View: 12, DB: 0) | 200 OK [http://localhost/signin]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2010-07-15 11:55:17) [POST]
+  Parameters: {"commit"=>"Sign in", "session"=>{"password"=>"[FILTERED]", "email"=>"admin@zighra.org"}, "action"=>"create", "authenticity_token"=>"iDcIzDoVCCR49MES06bG5Y8re8p+PSAWo/2gjRlrPjU=", "controller"=>"sessions"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."email" = 'admin@zighra.org') LIMIT 1[0m
+  [4;35;1mUser Update (2.1ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-07-15 15:55:37', "remember_token" = '77756b1dbdf60f3b55e364297595e27310b8fb17c66bb78dc20ecff17be2b05f' WHERE "id" = 1[0m
+Redirected to http://localhost:3000/users/1
+Completed in 20102ms (DB: 2) | 302 Found [http://localhost/sessions]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2010-07-15 11:55:37) [GET]
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"users"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendering template within layouts/users
+Rendering users/show
+Rendered layouts/_stylesheets (0.4ms)
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."remember_token" = '77756b1dbdf60f3b55e364297595e27310b8fb17c66bb78dc20ecff17be2b05f') LIMIT 1[0m
+Rendered layouts/_header (3.8ms)
+Rendered layouts/_footer (1.1ms)
+Completed in 30ms (View: 18, DB: 1) | 200 OK [http://localhost/users/1]
+
+
+Processing SessionsController#destroy (for 127.0.0.1 at 2010-07-15 11:55:50) [DELETE]
+  Parameters: {"action"=>"destroy", "_method"=>"delete", "authenticity_token"=>"iDcIzDoVCCR49MES06bG5Y8re8p+PSAWo/2gjRlrPjU=", "controller"=>"sessions"}
+Redirected to http://localhost:3000/
+Completed in 2ms (DB: 0) | 302 Found [http://localhost/signout]
+
+
+Processing PagesController#home (for 127.0.0.1 at 2010-07-15 11:55:50) [GET]
+  Parameters: {"action"=>"home", "controller"=>"pages"}
+Rendering template within layouts/application
+Rendering pages/home
+Rendered layouts/_stylesheets (0.4ms)
+Rendered layouts/_header (0.8ms)
+Rendered layouts/_footer (0.2ms)
+Completed in 6ms (View: 4, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-07-15 11:56:00) [GET]
+  Parameters: {"action"=>"new", "controller"=>"sessions"}
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered layouts/_stylesheets (0.4ms)
+Rendered layouts/_header (0.7ms)
+Rendered layouts/_footer (0.2ms)
+Completed in 7ms (View: 5, DB: 0) | 200 OK [http://localhost/signin]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2010-07-15 11:57:06) [POST]
+  Parameters: {"commit"=>"Sign in", "session"=>{"password"=>"[FILTERED]", "email"=>"admin@zighra.org"}, "action"=>"create", "authenticity_token"=>"iDcIzDoVCCR49MES06bG5Y8re8p+PSAWo/2gjRlrPjU=", "controller"=>"sessions"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."email" = 'admin@zighra.org') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered layouts/_stylesheets (0.5ms)
+Rendered layouts/_header (0.8ms)
+Rendered layouts/_footer (0.2ms)
+Completed in 25261ms (View: 7, DB: 0) | 200 OK [http://localhost/sessions]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2010-07-15 11:59:32) [POST]
+  Parameters: {"commit"=>"Sign in", "session"=>{"password"=>"[FILTERED]", "email"=>"admin@zighra.org"}, "action"=>"create", "authenticity_token"=>"iDcIzDoVCCR49MES06bG5Y8re8p+PSAWo/2gjRlrPjU=", "controller"=>"sessions"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."email" = 'admin@zighra.org') LIMIT 1[0m
+  [4;35;1mUser Update (2.1ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-07-15 15:59:46', "remember_token" = '4f8af967612d080619742ccf9c22b04f85f5f6830cb6c8a69dceb597573cea7b' WHERE "id" = 1[0m
+Redirected to http://localhost:3000/users/1
+Completed in 13863ms (DB: 2) | 302 Found [http://localhost/sessions]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2010-07-15 11:59:46) [GET]
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"users"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendering template within layouts/users
+Rendering users/show
+Rendered layouts/_stylesheets (0.9ms)
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."remember_token" = '4f8af967612d080619742ccf9c22b04f85f5f6830cb6c8a69dceb597573cea7b') LIMIT 1[0m
+Rendered layouts/_header (4.7ms)
+Rendered layouts/_footer (1.8ms)
+Completed in 43ms (View: 32, DB: 1) | 200 OK [http://localhost/users/1]
+
+
+Processing UsersController#edit (for 127.0.0.1 at 2010-07-15 11:59:58) [GET]
+  Parameters: {"action"=>"edit", "id"=>"1", "controller"=>"users"}
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."remember_token" = '4f8af967612d080619742ccf9c22b04f85f5f6830cb6c8a69dceb597573cea7b') LIMIT 1[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendering template within layouts/users
+Rendering users/edit
+Rendered layouts/_stylesheets (0.4ms)
+Rendered layouts/_header (2.3ms)
+Rendered layouts/_footer (0.8ms)
+Completed in 88ms (View: 16, DB: 1) | 200 OK [http://localhost/users/1/edit]
+
+
+Processing SessionsController#destroy (for 127.0.0.1 at 2010-07-15 12:00:29) [DELETE]
+  Parameters: {"action"=>"destroy", "_method"=>"delete", "authenticity_token"=>"iDcIzDoVCCR49MES06bG5Y8re8p+PSAWo/2gjRlrPjU=", "controller"=>"sessions"}
+Redirected to http://localhost:3000/
+Completed in 2ms (DB: 0) | 302 Found [http://localhost/signout]
+
+
+Processing PagesController#home (for 127.0.0.1 at 2010-07-15 12:00:29) [GET]
+  Parameters: {"action"=>"home", "controller"=>"pages"}
+Rendering template within layouts/application
+Rendering pages/home
+Rendered layouts/_stylesheets (0.4ms)
+Rendered layouts/_header (0.7ms)
+Rendered layouts/_footer (0.2ms)
+Completed in 16ms (View: 14, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-07-15 12:01:08) [GET]
+  Parameters: {"action"=>"new", "controller"=>"sessions"}
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered layouts/_stylesheets (0.9ms)
+Rendered layouts/_header (1.6ms)
+Rendered layouts/_footer (0.9ms)
+Completed in 41ms (View: 39, DB: 0) | 200 OK [http://localhost/signin]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2010-07-15 12:01:29) [POST]
+  Parameters: {"commit"=>"Sign in", "session"=>{"password"=>"[FILTERED]", "email"=>"admin@zighra.org"}, "action"=>"create", "authenticity_token"=>"iDcIzDoVCCR49MES06bG5Y8re8p+PSAWo/2gjRlrPjU=", "controller"=>"sessions"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."email" = 'admin@zighra.org') LIMIT 1[0m
+  [4;35;1mUser Update (3.0ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-07-15 16:01:43', "remember_token" = '04afe5bb978a6723bceb04041f4540ca43bd3bf7eba3afe8bd9ac2ec16dd7d8f' WHERE "id" = 1[0m
+Redirected to http://localhost:3000/users/1
+Completed in 13726ms (DB: 3) | 302 Found [http://localhost/sessions]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2010-07-15 12:01:43) [GET]
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"users"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendering template within layouts/users
+Rendering users/show
+Rendered layouts/_stylesheets (0.4ms)
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."remember_token" = '04afe5bb978a6723bceb04041f4540ca43bd3bf7eba3afe8bd9ac2ec16dd7d8f') LIMIT 1[0m
+Rendered layouts/_header (4.0ms)
+Rendered layouts/_footer (1.2ms)
+Completed in 87ms (View: 75, DB: 1) | 200 OK [http://localhost/users/1]
+
+
+Processing UsersController#edit (for 127.0.0.1 at 2010-07-15 12:01:54) [GET]
+  Parameters: {"action"=>"edit", "id"=>"1", "controller"=>"users"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."remember_token" = '04afe5bb978a6723bceb04041f4540ca43bd3bf7eba3afe8bd9ac2ec16dd7d8f') LIMIT 1[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendering template within layouts/users
+Rendering users/edit
+Rendered layouts/_stylesheets (0.4ms)
+Rendered layouts/_header (2.3ms)
+Rendered layouts/_footer (0.8ms)
+Completed in 29ms (View: 16, DB: 1) | 200 OK [http://localhost/users/1/edit]
+
+
+Processing UsersController#update (for 127.0.0.1 at 2010-07-15 12:02:20) [PUT]
+  Parameters: {"commit"=>"Update", "action"=>"update", "_method"=>"put", "authenticity_token"=>"iDcIzDoVCCR49MES06bG5Y8re8p+PSAWo/2gjRlrPjU=", "id"=>"1", "controller"=>"users", "user"=>{"name"=>"Admin User", "password_confirmation"=>"[FILTERED]", "mobile_pin"=>"1234", "phone"=>"6132241479", "password"=>"[FILTERED]", "email"=>"admin@zighra.org"}}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."remember_token" = '04afe5bb978a6723bceb04041f4540ca43bd3bf7eba3afe8bd9ac2ec16dd7d8f') LIMIT 1[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'admin@zighra.org' AND "users".id <> 1) LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."phone" = '6132241479' AND "users".id <> 1) LIMIT 1[0m
+Rendering template within layouts/users
+Rendering users/edit
+Rendered layouts/_stylesheets (0.5ms)
+Rendered layouts/_header (2.4ms)
+Rendered layouts/_footer (0.9ms)
+Completed in 176ms (View: 19, DB: 1) | 200 OK [http://localhost/users/1]
+
+
+Processing UsersController#update (for 127.0.0.1 at 2010-07-15 12:02:36) [PUT]
+  Parameters: {"commit"=>"Update", "action"=>"update", "_method"=>"put", "authenticity_token"=>"iDcIzDoVCCR49MES06bG5Y8re8p+PSAWo/2gjRlrPjU=", "id"=>"1", "controller"=>"users", "user"=>{"name"=>"Admin User", "password_confirmation"=>"[FILTERED]", "mobile_pin"=>"1234", "phone"=>"6132241479", "password"=>"[FILTERED]", "email"=>"admin@zighra.org"}}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."remember_token" = '04afe5bb978a6723bceb04041f4540ca43bd3bf7eba3afe8bd9ac2ec16dd7d8f') LIMIT 1[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'admin@zighra.org' AND "users".id <> 1) LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."phone" = '6132241479' AND "users".id <> 1) LIMIT 1[0m
+  [4;36;1mUser Update (0.6ms)[0m   [0;1mUPDATE "users" SET "phone" = '6132241479', "updated_at" = '2010-07-15 16:02:37', "encrypted_password" = '0da0dded636d4bd5db2c9c5ecf0311f9efad04466ca4a80449b105f57432d3b6', "salt" = '4b2941f1dee429ac542a1d46a66b8eb572780006d46636625f6b70b0bc18a5c2' WHERE "id" = 1[0m
+Redirected to http://localhost:3000/users/1
+Completed in 77ms (DB: 2) | 302 Found [http://localhost/users/1]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2010-07-15 12:02:37) [GET]
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"users"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendering template within layouts/users
+Rendering users/show
+Rendered layouts/_stylesheets (0.4ms)
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."remember_token" = '04afe5bb978a6723bceb04041f4540ca43bd3bf7eba3afe8bd9ac2ec16dd7d8f') LIMIT 1[0m
+Rendered layouts/_header (4.2ms)
+Rendered layouts/_footer (1.1ms)
+Completed in 23ms (View: 9, DB: 1) | 200 OK [http://localhost/users/1]
+
+
+Processing SessionsController#destroy (for 127.0.0.1 at 2010-07-15 12:02:48) [DELETE]
+  Parameters: {"action"=>"destroy", "_method"=>"delete", "authenticity_token"=>"iDcIzDoVCCR49MES06bG5Y8re8p+PSAWo/2gjRlrPjU=", "controller"=>"sessions"}
+Redirected to http://localhost:3000/
+Completed in 2ms (DB: 0) | 302 Found [http://localhost/signout]
+
+
+Processing PagesController#home (for 127.0.0.1 at 2010-07-15 12:02:48) [GET]
+  Parameters: {"action"=>"home", "controller"=>"pages"}
+Rendering template within layouts/application
+Rendering pages/home
+Rendered layouts/_stylesheets (0.4ms)
+Rendered layouts/_header (0.7ms)
+Rendered layouts/_footer (0.2ms)
+Completed in 15ms (View: 13, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-07-15 12:03:52) [GET]
+  Parameters: {"action"=>"new", "controller"=>"sessions"}
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered layouts/_stylesheets (0.9ms)
+Rendered layouts/_header (1.6ms)
+Rendered layouts/_footer (0.9ms)
+Completed in 40ms (View: 38, DB: 0) | 200 OK [http://localhost/signin]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2010-07-15 12:04:08) [POST]
+  Parameters: {"commit"=>"Sign in", "session"=>{"password"=>"[FILTERED]", "email"=>"admin@zighra.org"}, "action"=>"create", "authenticity_token"=>"iDcIzDoVCCR49MES06bG5Y8re8p+PSAWo/2gjRlrPjU=", "controller"=>"sessions"}
+
+SyntaxError (/Users/deepakdutt/Dev/rails_apps/cloud_app2/app/models/user.rb:88: syntax error, unexpected tIDENTIFIER, expecting ')'
+           #puts status[1]['result']
+                                  ^
+/Users/deepakdutt/Dev/rails_apps/cloud_app2/app/models/user.rb:90: syntax error, unexpected tIDENTIFIER, expecting kEND
+           return status[1]['result']
+                                   ^
+/Users/deepakdutt/Dev/rails_apps/cloud_app2/app/models/user.rb:90: unterminated string meets end of file
+/Users/deepakdutt/Dev/rails_apps/cloud_app2/app/models/user.rb:90: syntax error, unexpected $end, expecting kEND):
+  app/controllers/sessions_controller.rb:8:in `create'
+
+Rendered rescues/_trace (112.1ms)
+Rendered rescues/_request_and_response (1.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PagesController#home (for 127.0.0.1 at 2010-07-15 12:05:32) [GET]
+  Parameters: {"action"=>"home", "controller"=>"pages"}
+Rendering template within layouts/application
+Rendering pages/home
+Rendered layouts/_stylesheets (0.9ms)
+Rendered layouts/_header (1.6ms)
+Rendered layouts/_footer (0.9ms)
+Completed in 38ms (View: 36, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-07-15 12:05:35) [GET]
+  Parameters: {"action"=>"new", "controller"=>"sessions"}
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered layouts/_stylesheets (0.4ms)
+Rendered layouts/_header (0.6ms)
+Rendered layouts/_footer (0.2ms)
+Completed in 13ms (View: 11, DB: 0) | 200 OK [http://localhost/signin]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2010-07-15 12:05:50) [POST]
+  Parameters: {"commit"=>"Sign in", "session"=>{"password"=>"[FILTERED]", "email"=>"admin@zighra.org"}, "action"=>"create", "authenticity_token"=>"iDcIzDoVCCR49MES06bG5Y8re8p+PSAWo/2gjRlrPjU=", "controller"=>"sessions"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."email" = 'admin@zighra.org') LIMIT 1[0m
+
+URI::InvalidURIError (bad URI(is not URI?): https://secure.ifbyphone.com/ibp_api.php?api_key=2933aadaf1119975ce4cd8aa4890ad3017722db6&action=verifymenow.verify&verify_id=1541&phone_number=#{phone}&pin=#{mobile_pin}):
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/uri/common.rb:436:in `split'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/uri/common.rb:485:in `parse'
+  httparty (0.6.1) lib/httparty/request.rb:27:in `path='
+  httparty (0.6.1) lib/httparty/request.rb:18:in `initialize'
+  httparty (0.6.1) lib/httparty.rb:280:in `new'
+  httparty (0.6.1) lib/httparty.rb:280:in `perform_request'
+  httparty (0.6.1) lib/httparty.rb:248:in `post'
+  app/models/user.rb:83:in `testauth'
+  app/models/user.rb:60:in `has_pin?'
+  app/models/user.rb:68:in `authenticate'
+  app/controllers/sessions_controller.rb:8:in `create'
+
+Rendered rescues/_trace (107.2ms)
+Rendered rescues/_request_and_response (1.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PagesController#home (for 127.0.0.1 at 2010-07-15 12:11:28) [GET]
+  Parameters: {"action"=>"home", "controller"=>"pages"}
+Rendering template within layouts/application
+Rendering pages/home
+Rendered layouts/_stylesheets (0.9ms)
+Rendered layouts/_header (1.7ms)
+Rendered layouts/_footer (0.9ms)
+Completed in 39ms (View: 37, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-07-15 12:11:30) [GET]
+  Parameters: {"action"=>"new", "controller"=>"sessions"}
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered layouts/_stylesheets (0.4ms)
+Rendered layouts/_header (0.6ms)
+Rendered layouts/_footer (0.2ms)
+Completed in 13ms (View: 11, DB: 0) | 200 OK [http://localhost/signin]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2010-07-15 12:11:42) [POST]
+  Parameters: {"commit"=>"Sign in", "session"=>{"password"=>"[FILTERED]", "email"=>"admin@zighra.org"}, "action"=>"create", "authenticity_token"=>"iDcIzDoVCCR49MES06bG5Y8re8p+PSAWo/2gjRlrPjU=", "controller"=>"sessions"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."email" = 'admin@zighra.org') LIMIT 1[0m
+  [4;35;1mUser Update (2.6ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-07-15 16:12:03', "remember_token" = '5eed2965e8f938e1db2c3eccc5552647d794e312d8fed3ca2ebbfbff8c6a71cd' WHERE "id" = 1[0m
+Redirected to http://localhost:3000/users/1
+Completed in 20818ms (DB: 3) | 302 Found [http://localhost/sessions]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2010-07-15 12:12:03) [GET]
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"users"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendering template within layouts/users
+Rendering users/show
+Rendered layouts/_stylesheets (0.4ms)
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."remember_token" = '5eed2965e8f938e1db2c3eccc5552647d794e312d8fed3ca2ebbfbff8c6a71cd') LIMIT 1[0m
+Rendered layouts/_header (3.8ms)
+Rendered layouts/_footer (1.1ms)
+Completed in 30ms (View: 18, DB: 1) | 200 OK [http://localhost/users/1]

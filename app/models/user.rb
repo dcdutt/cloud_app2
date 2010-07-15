@@ -11,10 +11,15 @@
 #  updated_at :datetime
 #
 require 'digest'
+require 'rubygems'
+require 'httparty'
 
 class User < ActiveRecord::Base
   attr_accessor :password
   attr_accessible :name, :email, :phone, :password, :password_confirmation, :mobile_pin
+ 
+  include HTTParty
+  format :xml
 
 #  def before_validation_on_create
 #   self.phone = phone.gsub(/[^0-9]/, "")
@@ -28,7 +33,7 @@ class User < ActiveRecord::Base
   validates_length_of :name, :maximum => 40
   validates_format_of :email, :with => EmailRegex
   validates_uniqueness_of :email, :case_sensitive => false
-  validates_length_of :phone, :is => 11
+  validates_length_of :phone, :is => 10
   validates_format_of :phone, :with => PhoneRegex
   validates_uniqueness_of :phone
 
@@ -50,11 +55,22 @@ class User < ActiveRecord::Base
      def has_password?(submitted_password)
         encrypted_password == encrypt(submitted_password)
      end
+ 
+     def has_pin?
+        "verified" == testauth()
+     end
 
      def self.authenticate(email, submitted_password)
         user = find_by_email(email)
         return nil if user.nil?
-        return user if user.has_password?(submitted_password)
+        if user.has_password?(submitted_password)
+           #-- make phone call to verify pin
+           return user if user.has_pin?
+        else  
+           return nil
+        end
+     
+         
      end
 
      def remember_me!
@@ -62,6 +78,20 @@ class User < ActiveRecord::Base
 	  save_without_validation
      end
 
+     # Make web service call to phone based authentication!
+      def testauth()
+        wsuser = self.class.post('https://secure.ifbyphone.com/ibp_api.php?api_key=2933aadaf1119975ce4cd8aa4890ad3017722db6&action=verifymenow.verify&verify_id=1541', :query => {:phone_number => phone, :pin => mobile_pin})
+        # Write exception code here
+
+        #puts wsuser
+        wsuser.each do |status|
+           #puts status[1]['result']
+           #-- code for user sign in session goes here...
+           return status[1]['result']
+        end
+        return nil
+     end
+  
   private
      def encrypt_password
 	  unless password.nil?
@@ -81,5 +111,6 @@ class User < ActiveRecord::Base
      def secure_hash(string)
 	   Digest::SHA2.hexdigest(string)
      end
+
 
 end
