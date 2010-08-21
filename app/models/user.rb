@@ -57,7 +57,8 @@ class User < ActiveRecord::Base
      end
  
      def has_pin?
-        "verified" == testauth()
+       # "verified" == testauth()
+       phoneOTP()
      end
 
      def self.authenticate(email, submitted_password)
@@ -76,6 +77,12 @@ class User < ActiveRecord::Base
      def remember_me!
 	  self.remember_token = encrypt("#{salt}--#{id}--#{Time.now.utc}")
 	  save_without_validation
+     end
+
+     # Phone based OTP
+     def phoneOTP()
+         mobile_msg = 'The pin is 1234'
+         self.class.post('http://api.tropo.com/1.0/sessions?action=create&token=6ac7af075442e54fb60d1f7638a3e552211a6744df32a7a22c1e36ee45aead120cad176533b5db4ffa42d653&customerName=Dipak&message=MESSAGE', :query => {:numberToDial => phone, :message => mobile_msg})
      end
 
      # Make web service call to phone based authentication!
