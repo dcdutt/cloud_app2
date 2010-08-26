@@ -6013,3 +6013,100 @@ Rendered layouts/_stylesheets (0.4ms)
 Rendered layouts/_header (0.7ms)
 Rendered layouts/_footer (0.2ms)
 Completed in 5ms (View: 3, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing PagesController#home (for 127.0.0.1 at 2010-08-26 15:19:15) [GET]
+  Parameters: {"action"=>"home", "controller"=>"pages"}
+Rendering template within layouts/application
+Rendering pages/home
+Rendered layouts/_stylesheets (0.9ms)
+Rendered layouts/_header (1.6ms)
+Rendered layouts/_footer (0.9ms)
+Completed in 40ms (View: 38, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing PagesController#voicepin (for 127.0.0.1 at 2010-08-26 15:19:21) [GET]
+  Parameters: {"action"=>"voicepin", "controller"=>"pages"}
+
+ActionView::MissingTemplate (Missing template pages/voicepin.erb in view path app/views):
+  
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PagesController#home (for 127.0.0.1 at 2010-08-26 15:28:36) [GET]
+  Parameters: {"action"=>"home", "controller"=>"pages"}
+Rendering template within layouts/application
+Rendering pages/home
+Rendered layouts/_stylesheets (0.9ms)
+Rendered layouts/_header (1.6ms)
+Rendered layouts/_footer (0.9ms)
+Completed in 40ms (View: 39, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing VoicepinController#ask.json (for 127.0.0.1 at 2010-08-26 15:28:42) [GET]
+  Parameters: {"action"=>"ask.json", "controller"=>"voicepin"}
+
+ActionController::UnknownAction (No action responded to ask.json. Actions: clear_return_to, current_user, current_user=, current_user?, deny_access, redirect_back_or, sign_in, sign_out, signed_in?, store_location, and user_from_remember_token):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing VoicepinController#pinindex (for 127.0.0.1 at 2010-08-26 15:31:10) [GET]
+  Parameters: {"action"=>"pinindex", "controller"=>"voicepin"}
+
+ActionView::MissingTemplate (Missing template voicepin/pinindex.erb in view path app/views):
+  
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing VoicepinController#pinindex (for 127.0.0.1 at 2010-08-26 15:33:29) [GET]
+  Parameters: {"action"=>"pinindex", "controller"=>"voicepin"}
+
+ActionView::MissingTemplate (Missing template voicepin/pinindex.erb in view path app/views):
+  
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing VoicepinController#pinindex (for 127.0.0.1 at 2010-08-26 15:43:02) [GET]
+  Parameters: {"action"=>"pinindex", "controller"=>"voicepin"}
+
+ActionView::MissingTemplate (Missing template voicepin/pinindex.erb in view path app/views):
+  
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing VoicepinController#pinindex (for 127.0.0.1 at 2010-08-26 15:45:18) [GET]
+  Parameters: {"action"=>"pinindex", "controller"=>"voicepin"}
+Rendering template within layouts/application
+Rendering voicepin/pinindex
+Rendered layouts/_stylesheets (0.9ms)
+
+ActionView::TemplateError (undefined local variable or method `root_path' for #<ActionView::Base:0x1043bf7e0>) on line #3 of app/views/layouts/_header.html.erb:
+1: <div id="header" class="round">
+2: <% logo = image_tag("logo.png", :alt => "zVault Coud App2", :class => "round") %>
+3: <%= link_to logo, root_path %>
+4: <ul class="navigation round">
+5: <li><%= link_to "Home", root_path %></li>
+6: <li><%= link_to "Company", company_path %></li>
+
+    app/views/layouts/_header.html.erb:3
+    app/views/layouts/application.html.erb:10
+
+Rendered rescues/_trace (117.7ms)
+Rendered rescues/_request_and_response (1.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing VoicepinController#pinindex (for 127.0.0.1 at 2010-08-26 15:45:59) [GET]
+  Parameters: {"action"=>"pinindex", "controller"=>"voicepin"}
+Rendering template within layouts/application
+Rendering voicepin/pinindex
+Rendered layouts/_stylesheets (0.8ms)
+Rendered layouts/_header (10.6ms)
+Rendered layouts/_footer (1.2ms)
+Completed in 38ms (View: 36, DB: 0) | 200 OK [http://localhost/askpin]
