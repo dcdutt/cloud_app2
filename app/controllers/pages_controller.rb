@@ -1,4 +1,4 @@
-equire 'rubygems'
+require 'rubygems'
 require 'sinatra'
 require 'tropo-webapi-ruby'
 
