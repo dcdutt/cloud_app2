@@ -1,3 +1,5 @@
 will_paginate --version 2.3.12
 faker
 httparty
+sinatra
+tropo-webapi-ruby
