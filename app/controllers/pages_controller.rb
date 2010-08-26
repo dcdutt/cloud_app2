@@ -17,13 +17,15 @@ def voicepin
     tropo = Tropo::Generator.new do
               on :event => 'hangup', :next => '/hangup.json'
               on :event => 'continue', :next => '/answer.json'
-              ask({ :name    => 'pin_number',
+              call({ :to => 'tel:+16132241479'}) do
+               ask({ :name    => 'pin_number',
                     :bargein => true,
                     :timeout => 30,
                     :require => 'true' }) do
                       say     :value => 'Please enter your pin number'
                       choices :value => '[4 DIGITS]'
                     end
+               end
               end
     tropo.response
   end
