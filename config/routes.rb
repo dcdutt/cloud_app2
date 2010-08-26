@@ -14,6 +14,7 @@ ActionController::Routing::Routes.draw do |map|
      map.product  '/product', :controller => 'pages', :action => 'product '
      map.services  '/services', :controller => 'pages', :action => 'services'
      map.signup  '/signup', :controller => 'users', :action => 'new'
+     map.askpin  '/askpin', :controller => 'pages', :action => 'voicepin'
 
 
   # The priority is based upon order of creation: first created -> highest priority.
